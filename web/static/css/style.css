@@ -49,7 +49,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 3;
+    z-index: 999;
     top: 0;
     left: 0;
     right: 0;
@@ -57,7 +57,6 @@
     -moz-box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.75);
     box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.7);
     transition: all 0.7s;
-    padding: 0 30px;
 }
 
 .indicator {
@@ -76,7 +75,7 @@
 .header .container {
     display: flex;
     align-items: center;
-    padding: 14px 0;
+    padding: 14px 30px;
 }
 
 .header .logo {
@@ -91,12 +90,33 @@
 .header .menu {
     display: flex;
     align-items: center;
+    width: 100%;
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+.mobile-menu-button span {
+    width: 100%;
+    background-color: white;
+    height: 2px;
+    border-radius: var(--border-radius);
 }
 
 .menu .items {
     flex: 50%;
     display: flex;
     gap: 18px;
+}
+
+.menu .items .mobile-logo {
+    display: none;
+}
+
+.header .menu .mobile-close,
+.header .menu button {
+    display: none;
 }
 
 .menu .items a {
@@ -226,6 +246,12 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
+    font-weight: 700;
+}
+
+.expanded-item .back .back-title {
+    margin-bottom: 20px;
+
 }
 
 .expanded-item .front .front-title .undo,
@@ -394,6 +420,94 @@
     color: var(--light-blue-color);
 }
 
+.page.footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    background-color: var(--pink-color);
+}
+
+.wave {
+    position: relative;
+    top: -3px;
+}
+
+.footer-content {
+    color: white;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-info-logo {
+    max-width: 90px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-links-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-links-icons a {
+    color: inherit;
+}
+
+.footer-links-icons a i {
+    font-size: 30px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav ul li a {
+    color: var(--orange-color);
+    font-weight: 600;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-contacts-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-contacts-block a {
+    color: inherit;
+    font-weight: 600;
+}
+
+
+
+
 
 @media (max-width: 1440px) {
     .expanded-items {
@@ -461,9 +575,74 @@
     .expanded-items {
         gap: 20px;
     }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 767px) {
+    .mobile-menu-button {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 26px;
+    }
+
+    .header .container {
+        justify-content: space-between;
+    }
+
+    .header .menu {
+        justify-content: flex-start;
+        flex-direction: column;
+        position: fixed;
+        z-index: 999;
+        inset: 0;
+        background-color: var(--pink-color);
+        transform: translateX(100%);
+        transition: transform 0.3s;
+    }
+
+    .header .menu.active {
+        transform: translateX(30%);
+    }
+
+    .header .menu .mobile-close {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 28px;
+    }
+
+    .menu .items .mobile-logo {
+        display: block;
+        max-width: 70px;
+        margin-bottom: 12px;
+    }
+
+    .header .menu {
+        align-items: flex-start;
+        padding: 30px;
+    }
+
+    .header .menu .items {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .header .menu button {
+        display: block;
+        background-color: white;
+        color: var(--pink-color);
+        width: calc(100vw - 50%);
+    }
+
+
     .page {
         padding: 70px 0;
     }
@@ -514,6 +693,10 @@
 }
 
 @media (max-width: 576px) {
+    .header .menu.active {
+        transform: translateX(15%);
+    }
+
     .container {
         margin: 0 15px;
     }
@@ -551,5 +734,9 @@
 
     .price-item {
         max-width: calc(100vw - 30px);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

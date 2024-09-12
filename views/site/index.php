@@ -9,10 +9,10 @@
             <button type="button" class="btn active"><?= Yii::t('app', 'Записаться на пробное занятие') ?></button>
             <button type="button" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
         </div>
-        <div class="intro-image"><img src="/static/img/main-logo.svg" alt="Piranha"></div>
+        <div class="intro-image"><img data-lazysrc="/static/img/main-logo.svg" alt="Piranha"></div>
     </div>
 </div>
-<img src="/static/img/wave_pink.svg" alt="">
+<img class="wave" data-lazysrc="/static/img/wave_pink.svg" alt="wave">
 
 <div class="page privileges">
     <div class="container">
@@ -49,7 +49,7 @@
 
         <div class="page-content">
             <div class="about-content">
-                <div class="about-image"><img src="/static/img/about.jpg" alt="about"></div>
+                <div class="about-image"><img data-lazysrc="/static/img/about.jpg" alt="about"></div>
                 <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем детям и взрослым от 2,5 до 99 лет избавиться от страха воды, проплыть свои первые метры, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также улучшить осанку, вернуть крепкий сон и найти друзей в другой стране.') ?></div>
             </div>
 
@@ -79,14 +79,14 @@
                         <div class="front">
                             <div class="front-title">
                                 <div><?= $item['title'] ?></div>
-                                <div class="undo"><i class="icon-heart-circle"></i></div>
+                                <div class="undo"><i class="icon-undo"></i></div>
                             </div>
-                            <img src="<?= $item['imageSrc'] ?>" alt="logo">
+                            <img data-lazysrc="<?= $item['imageSrc'] ?>" alt="logo">
                         </div>
                         <div class="back">
                             <div class="back-title">
                                 <div><?= $item['title'] ?></div>
-                                <div class="undo"><i class="icon-heart-circle"></i></div>
+                                <div class="undo"><i class="icon-undo"></i></div>
                             </div>
                             <div><?= $item['text'] ?></div>
                         </div>
@@ -109,7 +109,7 @@
                 <?php foreach (\app\models\Price::getItems() as $item) { ?>
                     <div class="price-item">
                         <div class="price-item-top">
-                            <img src="/static/img/main-logo.svg" alt="logo">
+                            <img data-lazysrc="/static/img/main-logo.svg" alt="logo">
                             <span><?= $item['title'] ?></span>
                         </div>
                         <div class="price-item-mid">
@@ -141,7 +141,7 @@
             <div class="coach-items">
                 <?php foreach (\app\models\Coach::getItems() as $item) { ?>
                     <div class="coach-item">
-                        <div class="coach-item-image"><img src="/static/img/coach.jpg" alt="<?= $item['name'] ?>"></div>
+                        <div class="coach-item-image"><img data-lazysrc="/static/img/coach.jpg" alt="<?= $item['name'] ?>"></div>
                         <div class="coach-item-info">
                             <div class="coach-item-info-name"><?= $item['name'] ?></div>
                             <div class="coach-item-info-caption"><?= $item['caption'] ?></div>
@@ -153,20 +153,45 @@
     </div>
 </div>
 
-
-
-
-
-
-
-<div class="page">
-    <div class="container">
-        <div class="language-toggle">
-            <?php foreach (Yii::$app->translateManager->getLanguagesList() as $language) { ?>
-                <a href="<?= $this->getLangUrl($language['code']) ?>" class=<?= $language['code'] === Yii::$app->language ? 'active' : null ?>><?= $language['title'] ?></a>
-            <?php } ?>
+<div class="page footer">
+    <img class="wave" src="/static/img/wave.svg" alt="wave">
+    <div class="footer-content">
+        <div class="footer-info">
+            <div class="footer-info-logo"><img data-lazysrc="/static/img/main-logo.svg" alt="piranha"></div>
+            <div class="footer-info-location"><?= Yii::t('app', 'Tbilisi I Batumi, GEORGIA') ?></div>
         </div>
-        <h1><?= Yii::t('app', 'Название') ?></h1>
+        <div class="footer-links">
+            <p><?= Yii::t('app', 'Наши соц. сети') ?></p>
+            <div class="footer-links-icons">
+                <a href="https://www.instagram.com/piranha.ge/" class="icon-link"><i class="icon-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100084172242937" class="icon-link"><i class="icon-facebook"></i></a>
+                <a href="https://www.youtube.com/@kolotyginswim" class="icon-link"><i class="icon-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-nav">
+            <p><?= Yii::t('app', 'Меню') ?></p>
+            <ul class="footer-nav-items">
+                <li><a href="#"><?= Yii::t('app', 'О нас') ?></a></li>
+                <li><a href="#"><?= Yii::t('app', 'Команда') ?></a></li>
+                <li><a href="#"><?= Yii::t('app', 'Отзывы') ?></a></li>
+                <li><a href="#"><?= Yii::t('app', 'Услуги') ?></a></li>
+                <li><a href="#"><?= Yii::t('app', 'Записаться') ?></a></li>
+                <li><a href="#"><?= Yii::t('app', 'Адреса') ?></a></li>
+            </ul>
+        </div>
+        <div class="footer-contacts">
+            <p><?= Yii::t('app', 'Контакты') ?>:</p>
+            <div class="footer-contacts-block">
+                <a href="mailto: piranha.information@gmail.com">piranha.information@gmail.com</a>
+                <a href="tel: +995557918530">+995 557 918 530</a>
+                <a href="tel: +995597583484">+995 597 583 484</a>
+            </div>
+        </div>
     </div>
-
 </div>
+
+
+
+
+
+

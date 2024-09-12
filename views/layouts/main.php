@@ -61,6 +61,8 @@ preg_match($excludedUrlsPattern, Yii::$app->request->url, $matches);
                     gtag('config', 'G-VG2R4RJ3X5');
                 </script>
             <?php } ?>
+
+        <div id="overlay"></div>
         <?php $this->endBody() ?>
     </div>
 </body>

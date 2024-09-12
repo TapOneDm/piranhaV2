@@ -19,6 +19,11 @@ html, body {
     font-size: 20px;
     line-height: 1.3;
 }
+
+html.disable-scroll, body.disable-scroll {
+    overflow: hidden;
+}
+
 .wrapper {
     min-height: 100%;
     overflow: hidden;
@@ -45,6 +50,14 @@ img {
     display: flex;
     justify-content: center;
     padding: 110px 0;
+    transition: all 0.7s;
+    transform: translateY(100px);
+}
+
+.page-visible {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
 }
 
 .page.intro {
@@ -119,7 +132,125 @@ img {
     background-color: white;
     color: var(--pink-color);
 }
+
 .btn.active {
     background-color: white;
     color: var(--pink-color);
+}
+
+#overlay {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: var(--pink-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+#overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--pink-color);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.lang {
+    position: relative;
+}
+
+.lang a {
+    text-transform: uppercase;
+    color: var(--pink-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.lang a:hover {
+    color: var(--light-blue-color);
+}
+
+.lang-current {
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--pink-color);
+    background-color: white;
+    padding: 6px;
+    border-radius: var(--border-radius);
+}
+
+.lang-items {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    padding: 6px 10px;
+    margin-top: 10px;
+    border-radius: var(--border-radius);
+    transition: all 0.3s;
+}
+
+.lang:hover .lang-items {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bg {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .lang {
+        margin: 30px 0;
+    }
+    
+    .lang-items {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        transform: translateX(110%);
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .bg {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        z-index: 998;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .bg.active {
+        opacity: 1;
+        visibility: visible;
+    }
 }

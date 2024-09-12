@@ -2,12 +2,38 @@ let Piranha = (function () {
     'use strict';
 
     class Piranha {
-
-
+        documentHeight = document.documentElement.scrollHeight;
+        viewportHeight = document.documentElement.clientHeight;
+        
         constructor() {
             this.toggleHeader();
             this.indicateScroll();
+            this.mobileMenuOpen();
+            this.mobileMenuClose();
+            this.initLazyLoadImages();
+            this.dynamicAppear();
         }
+
+        dynamicAppear() {
+            function checkVisible(element) {
+                const rect = element.getBoundingClientRect();
+                var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+            }
+
+            const indexPages = document.querySelectorAll('.page')
+            $(window).on('scroll', function() {
+                indexPages.forEach((page, i) => {
+                    if (checkVisible(page) ) {
+                        page.classList.add('page-visible')
+                        this.documentHeight = document.documentElement.scrollHeight;
+                        this.viewportHeight = document.documentElement.clientHeight;
+                    }
+                })
+            })
+        }
+
+        
 
         toggleHeader() {
             const header = document.querySelector('.header');
@@ -19,13 +45,75 @@ let Piranha = (function () {
         }
 
         indicateScroll() {
-            let documentHeight = document.documentElement.scrollHeight;
-            let viewportHeight = document.documentElement.clientHeight;
+      
             let indicator = $('.indicator');
 
-            window.onscroll = function () {
-                let percentScroll = (scrollY / (documentHeight - viewportHeight)) * 100;
-                indicator[0].style.width = percentScroll + '%';
+            if (indicator[0]) {
+                window.onscroll = function () {
+                    let percentScroll = (scrollY / (documentHeight - viewportHeight)) * 100;
+                    indicator[0].style.width = percentScroll + '%';
+                }
+            }
+        }
+
+        mobileMenuOpen() {
+            $('.mobile-menu-button').on('click', function(e) {
+                $("body").addClass("disable-scroll");
+                $('.header .menu').addClass('active')
+                $('.bg').addClass('active')
+            })
+        }
+
+        mobileMenuClose() {
+            $(document).on('click', function(e) {
+                if ($(e.target).hasClass('bg') || $(e.target).hasClass('mobile-close')) {
+                    $('.header .menu').removeClass('active')
+                    $('.bg').removeClass('active')
+                    $("body").removeClass("disable-scroll");
+                }
+            })
+        }
+
+        initLazyLoadImages() {
+            const items = document.querySelectorAll('img[data-lazysrc], source[data-lazysrcset]');
+            if (!items?.length) {
+                return;
+            }
+
+            let fallbackItem = (item) => {
+                if (item.dataset?.lazysrc !== undefined) {
+                    item.src = item.dataset.lazysrc;
+                    item.removeAttribute('data-lazysrc');
+                }
+
+                if (item.dataset?.lazysrcset !== undefined) {
+                    item.srcset = item.dataset.lazysrcset;
+                    item.removeAttribute('data-lazysrcset');
+                }
+            }
+
+            if ('IntersectionObserver' in window) {
+                let intersectionObserver = new IntersectionObserver((entries, imgObserver) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const item = entry.target;
+
+                            if (['IMG', 'SOURCE'].includes(item.tagName)) {
+                                fallbackItem(item);
+                            }
+
+                            imgObserver.unobserve(item);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '30%'
+                });
+
+                items.forEach((item)=>intersectionObserver.observe(item));
+
+            } else {
+                items.forEach((item)=>fallbackItem(item));
             }
         }
     }
@@ -34,3 +122,8 @@ let Piranha = (function () {
 })();
     
 new Piranha();
+
+$(window).on('load', function(){
+    $('#overlay').addClass('hidden');
+    $('.page.intro').addClass('page-visible')
+ });
