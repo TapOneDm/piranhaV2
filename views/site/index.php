@@ -2,23 +2,28 @@
 
 ?>
 
-<div class="page intro">
+<div class="sign-up-button">
+    <button type="button"><i class="icon-pencil-alt"></i><span><?= Yii::t('app', 'Записаться на превое занятие') ?></span></button>
+</div>
+
+<div id="intro" class="page intro">
     <div class="container">
         <div class="intro-title"><?= Yii::t('app', 'Научим плавать, укрепим здоровье и исправим осанку. Вы полюбите спорт и уверенно будете держаться на воде.') ?></div>
         <div class="intro-actions">
             <button type="button" class="btn active"><?= Yii::t('app', 'Записаться на пробное занятие') ?></button>
             <button type="button" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
         </div>
+        <div class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Я взрослый') ?></button></div>
         <div class="intro-image"><img data-lazysrc="/static/img/main-logo.svg" alt="Piranha"></div>
     </div>
 </div>
 <img class="wave" data-lazysrc="/static/img/wave_pink.svg" alt="wave">
 
-<div class="page privileges">
+<div id="privileges" class="page privileges">
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', 'Если важно (не только) научиться <br/> плавать') ?></div>
-            <button class="caption-button"><?= Yii::t('app', 'Я могу помочь') ?></button>
+            <button class="caption-button"><?= Yii::t('app', 'Мы можем помочь') ?></button>
         </div>
 
         <div class="page-content">
@@ -40,7 +45,7 @@
     </div>
 </div>
 
-<div class="page about">
+<div id="about" class="page about">
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', 'О школе Piranha') ?></div>
@@ -49,7 +54,11 @@
 
         <div class="page-content">
             <div class="about-content">
-                <div class="about-image"><img data-lazysrc="/static/img/about.jpg" alt="about"></div>
+                <div class="about-images">
+                    <div class="about-image"><img data-lazysrc="/static/img/about.jpg" alt="about"></div>
+                    <div class="about-image"><img data-lazysrc="/static/img/about.jpg" alt="about"></div>
+                    <div class="about-image"><img data-lazysrc="/static/img/about.jpg" alt="about"></div>
+                </div>
                 <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем детям и взрослым от 2,5 до 99 лет избавиться от страха воды, проплыть свои первые метры, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также улучшить осанку, вернуть крепкий сон и найти друзей в другой стране.') ?></div>
             </div>
 
@@ -65,7 +74,7 @@
     </div>
 </div>
 
-<div class="page expanded">
+<div id="expanded" class="page expanded">
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', '«За» индивидуальный подход, <br/>раскрывающий потенциал каждого ученика') ?></div>
@@ -97,7 +106,7 @@
     </div>
 </div>
 
-<div class="page prices">
+<div id="prices" class="page prices">
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', 'Формат тренировок под любой запрос — от мини-групп <br/> до персональной стратегии') ?></div>
@@ -130,7 +139,7 @@
     </div>
 </div>
 
-<div class="page coach">
+<div id="coach" class="page coach">
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', 'Команда профессионалов своего дела') ?></div>
@@ -153,7 +162,7 @@
     </div>
 </div>
 
-<div class="page footer">
+<div id="footer" class="page footer">
     <img class="wave" src="/static/img/wave.svg" alt="wave">
     <div class="footer-content">
         <div class="footer-info">

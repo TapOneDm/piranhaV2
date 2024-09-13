@@ -12,6 +12,23 @@ let Piranha = (function () {
             this.mobileMenuClose();
             this.initLazyLoadImages();
             this.dynamicAppear();
+            this.smoothScroll();
+        }
+
+        smoothScroll(){
+            $('.header .menu .items li a').each((i, el) => {
+                $(el).on('click', function(e) {
+                    e.preventDefault()
+                    const selector = `#${$(this).data('anchor')}`;
+                    let scrollToElement = $(selector)[0];
+                    console.log(selector);
+                    if (scrollToElement) {
+                        scrollToElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                })
+            })
         }
 
         dynamicAppear() {
@@ -33,8 +50,6 @@ let Piranha = (function () {
             })
         }
 
-        
-
         toggleHeader() {
             const header = document.querySelector('.header');
             if (header) {
@@ -45,12 +60,11 @@ let Piranha = (function () {
         }
 
         indicateScroll() {
-      
             let indicator = $('.indicator');
 
             if (indicator[0]) {
                 window.onscroll = function () {
-                    let percentScroll = (scrollY / (documentHeight - viewportHeight)) * 100;
+                    let percentScroll = (scrollY / (this.documentHeight - this.viewportHeight)) * 100;
                     indicator[0].style.width = percentScroll + '%';
                 }
             }

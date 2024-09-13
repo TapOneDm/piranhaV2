@@ -24,10 +24,15 @@
     gap: 40px;
 }
 
+.intro-adult button,
 .intro-actions button {
     padding: 20px 34px;
     font-size: 20px;
     border-width: 2px;
+}
+
+.intro-adult {
+    margin-top: 40px;
 }
 
 .intro-image {
@@ -132,7 +137,7 @@
 
 .privileges-items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     gap: 60px;
 }
@@ -140,7 +145,7 @@
 .privileges-item {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 .privileges-item-caption {
@@ -155,11 +160,11 @@
 }
 
 .privileges-item-caption i {
-    font-size: 70px;
+    font-size: 60px;
 }
 
 .privileges-item-caption span {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -170,17 +175,32 @@
 
 .about-content {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 60px;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-images {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .about-content .about-image {
-    flex-shrink: 0;
     max-width: 600px;
-    width: 100%;
+    width: auto;
     overflow: hidden;
     border-radius: var(--border-radius);
+}
+
+@media (max-width: 998px) {
+    .about-content .about-image:nth-child(2),
+    .about-content .about-image:nth-child(3) {
+        display: none;
+    }
+
+    .about-content .about-image:nth-child(1) {
+        max-width: unset;
+    }
 }
 
 .about-content .about-text {
@@ -213,17 +233,26 @@
     color: var(--pink-color);
 }
 
-
+/* .expanded .page.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; */
+/* } */
 .expanded-items {
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
+    width: fit-content;
+    gap: 30px;
     padding: 60px;
 }
 
 .expanded-item {
     cursor: pointer;
     position: relative;
+    max-width: 400px;
+    height: auto;
 }
 
 .expanded-item .front,
@@ -280,7 +309,7 @@
 }
 
 .expanded-item .front img {
-    max-width: 340px;
+    max-width: 220px;
 }
 
 .expanded-item .back {
@@ -314,7 +343,7 @@
 .price-items {
     display: flex;
     gap: 30px;
-    overflow-x: auto;
+    overflow-x: scroll;
     width: 100%;
     padding: 30px;
     padding-bottom: 15px;
@@ -506,7 +535,32 @@
 }
 
 
+.sign-up-button {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    z-index: 100;
+}
 
+.sign-up-button button {
+    background-color: var(--orange-color);
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    justify-content: center;
+    color: white;
+    border-radius: var(--border-radius);
+    -webkit-box-shadow: -1px 9px 21px -9px rgba(250,191,13,1);
+    -moz-box-shadow: -1px 9px 21px -9px rgba(250,191,13,1);
+    box-shadow: -1px 9px 21px -9px rgba(250,191,13,1);
+    transition: opacity 0.3s;
+}
+
+.sign-up-button button:hover {
+    opacity: 0.9;
+}
 
 
 @media (max-width: 1440px) {
@@ -525,9 +579,8 @@
         font-size: 32px;
     }
 
-    .expanded-items {
-        padding: 0;
-        grid-template-columns: repeat(2 ,1fr);
+    .privileges-items {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .price-item {
@@ -542,6 +595,20 @@
 @media (max-width: 1140px) {
     .about-content .about-image {
         max-width: 400px;
+    }
+
+    .expanded-items {
+        padding: 0;
+        grid-template-columns: repeat(2 ,1fr);
+        width: 100%;
+    }
+
+    .expanded-item {
+        max-width: unset;
+    }
+
+    .expanded-item .front img {
+        max-width: 340px;
     }
 }
 
@@ -581,7 +648,13 @@
     }
 }
 
+
+
 @media (max-width: 767px) {
+    .sign-up-button button span {
+        display: none;
+    }
+
     .mobile-menu-button {
         cursor: pointer;
         display: flex;
@@ -655,6 +728,13 @@
         flex-direction: column;
     }
 
+    .intro-adult {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
     .privileges-items {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -693,6 +773,10 @@
 }
 
 @media (max-width: 576px) {
+    .intro-adult {
+        margin-top: 14px;
+    }
+    
     .header .menu.active {
         transform: translateX(15%);
     }
