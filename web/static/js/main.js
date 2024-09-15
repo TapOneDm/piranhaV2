@@ -6,7 +6,7 @@ let Piranha = (function () {
         viewportHeight = document.documentElement.clientHeight;
         
         constructor() {
-            this.toggleHeader();
+            this.toggleHeaderColor();
             this.indicateScroll();
             this.mobileMenuOpen();
             this.mobileMenuClose();
@@ -16,6 +16,31 @@ let Piranha = (function () {
             this.openModal();
             this.closeModal();
             this.initSliders();
+            // this.toggleHeaderPosition();
+        }
+
+        toggleHeaderPosition() {
+            var prevScrollpos = window.pageYOffset;
+
+            /* Get the header element and it's position */
+            var headerDiv = document.querySelector(".header");
+            var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+            
+            window.onscroll = function() {
+              var currentScrollPos = window.pageYOffset;
+            
+              /* if we're scrolling up, or we haven't passed the header,
+                 show the header at the top */
+              if (prevScrollpos > currentScrollPos  || currentScrollPos < headerBottom){  
+                  headerDiv.style.top = "0";
+              }
+              else{
+                  /* otherwise we're scrolling down & have passed the header so hide it */
+                  headerDiv.style.top = "-7.2rem";
+              } 
+            
+              prevScrollpos = currentScrollPos;
+            }
         }
 
         initSliders() {
@@ -92,16 +117,18 @@ let Piranha = (function () {
         }
 
         smoothScroll(){
-            $('.header .menu .items li a').each((i, el) => {
+            $('a, button').each((i, el) => {
                 $(el).on('click', function(e) {
-                    e.preventDefault()
-                    const selector = `#${$(this).data('anchor')}`;
-                    let scrollToElement = $(selector)[0];
-                    console.log(selector);
-                    if (scrollToElement) {
-                        scrollToElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
+                    if ($(this).data('anchor')) {
+                        e.preventDefault()
+                        const selector = `#${$(this).data('anchor')}`;
+                        let scrollToElement = $(selector)[0];
+    
+                        if (scrollToElement) {
+                            scrollToElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
                     }
                 })
             })
@@ -126,7 +153,7 @@ let Piranha = (function () {
             })
         }
 
-        toggleHeader() {
+        toggleHeaderColor() {
             const header = document.querySelector('.header');
             if (header) {
                 window.addEventListener('scroll', () => {

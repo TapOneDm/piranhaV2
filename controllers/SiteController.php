@@ -61,6 +61,11 @@ class SiteController extends BaseController
     {
         return $this->render('rules');
     }
+
+    public function actionGallery()
+    {
+        return $this->render('gallery');
+    }
     
     public function actionSign()
     {

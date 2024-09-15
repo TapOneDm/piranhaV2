@@ -65,6 +65,7 @@ $config = [
             'rules' => [
     		'/rules' => 'site/rules',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+                '/gallery' => 'site/gallery'
             ],
         ],
         'telegram' => [

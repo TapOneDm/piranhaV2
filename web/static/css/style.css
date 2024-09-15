@@ -73,7 +73,7 @@
 .indicator {
     width: 0%;
     height: 6px;
-    z-index: 5;
+    z-index: -1;
     background-color: var(--light-pink-color);
     border-radius: var(--border-radius);
 }
@@ -337,6 +337,10 @@
     line-height: 1.7;
 }
 
+.expanded-item .back::-webkit-scrollbar {
+    width: 4px;
+  }
+
 .expanded-item:hover > .front {
     transform: perspective(900px) rotateY(-180deg);
 }
@@ -345,17 +349,6 @@
     transform: perspective(900px) rotateY(0deg);
 }
 
-/* .prices .page.content {
-    overflow: hidden;
-} */
-
-/* .prices .page-caption .caption-text {
-    margin: 0 30px;
-} */
-
-/* .prices .container {
-    margin: 0;
-} */
 
 .price-item {
     display: flex;
@@ -661,10 +654,6 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* .price-item {
-        max-width: 480px;
-    } */
-
     .coach-items {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -845,10 +834,6 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
-    /* .price-item {
-        max-width: 440px;
-    } */
-
     .price-item-top span {
         font-size: 20px;
     }
@@ -905,14 +890,6 @@
     .privileges-item-text {
         text-align: center;
     }
-
-    /* .price-items {
-        padding: 0 15px;
-    }
-
-    .price-item {
-        max-width: calc(100vw - 30px);
-    } */
 
     .footer-content {
         grid-template-columns: repeat(1, 1fr);

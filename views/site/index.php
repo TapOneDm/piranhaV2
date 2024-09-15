@@ -11,13 +11,13 @@
         <div class="intro-title"><?= Yii::t('app', 'Научим плавать, укрепим здоровье и исправим осанку. Вы полюбите спорт и уверенно будете держаться на воде.') ?></div>
         <div class="intro-actions">
             <button data-modal-open data-modal="modal-sign" type="button" class="btn active"><?= Yii::t('app', 'Записаться на пробное занятие') ?></button>
-            <button type="button" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
+            <button type="button" data-anchor="prices" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
         </div>
         <div data-modal-open data-modal="modal-adult" class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Я взрослый') ?></button></div>
-        <div class="intro-image"><img data-lazysrc="/static/img/main-logo.svg" alt="Piranha"></div>
+        <div class="intro-image"><img src="/static/img/main-logo.svg" alt="Piranha"></div>
     </div>
 </div>
-<img class="wave" data-lazysrc="/static/img/wave_pink.svg" alt="wave">
+<img class="wave" src="/static/img/wave_pink.svg" alt="wave">
 
 <div id="privileges" class="page privileges">
     <div class="container">
@@ -55,9 +55,9 @@
         <div class="page-content">
             <div class="about-content">
                 <div class="about-images">
-                    <div class="about-image"><img data-lazysrc="/static/img/about_1.jpg" alt="about"></div>
-                    <div class="about-image"><img data-lazysrc="/static/img/about_2.jpg" alt="about"></div>
-                    <div class="about-image"><img data-lazysrc="/static/img/about_3.jpg" alt="about"></div>
+                    <div class="about-image"><img src="/static/img/about_1.jpg" alt="about"></div>
+                    <div class="about-image"><img src="/static/img/about_2.jpg" alt="about"></div>
+                    <div class="about-image"><img src="/static/img/about_3.jpg" alt="about"></div>
                 </div>
                 <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем детям и взрослым от 2,5 до 99 лет избавиться от страха воды, проплыть свои первые метры, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также улучшить осанку, вернуть крепкий сон и найти друзей в другой стране.') ?></div>
             </div>
@@ -90,7 +90,7 @@
                                 <div><?= $item['title'] ?></div>
                                 <div class="undo"><i class="icon-undo"></i></div>
                             </div>
-                            <img data-lazysrc="<?= $item['imageSrc'] ?>" alt="logo">
+                            <img src="<?= $item['imageSrc'] ?>" alt="logo">
                         </div>
                         <div class="back">
                             <div class="back-title">
@@ -116,7 +116,7 @@
                 <?php foreach (\app\models\Price::getItems() as $item) { ?>
                     <div class="price-item">
                         <div class="price-item-top">
-                            <img data-lazysrc="<?= $item['imageSrc'] ?>" alt="<?= $item['title'] ?>">
+                            <img src="<?= $item['imageSrc'] ?>" alt="<?= $item['title'] ?>">
                         </div>
                         <div class="price-item-mid">
                             <span><?= $item['title'] ?></span>
@@ -154,7 +154,7 @@
             <div class="coach-items">
                 <?php foreach (\app\models\Coach::getItems() as $item) { ?>
                     <div class="coach-item">
-                        <div class="coach-item-image"><img data-lazysrc="/static/img/coach.jpg" alt="<?= $item['name'] ?>"></div>
+                        <div class="coach-item-image"><img src="/static/img/coach.jpg" alt="<?= $item['name'] ?>"></div>
                         <div class="coach-item-info">
                             <div class="coach-item-info-name"><?= $item['name'] ?></div>
                             <div class="coach-item-info-caption"><?= $item['caption'] ?></div>
@@ -166,11 +166,11 @@
     </div>
 </div>
 
-<div class="page address">
+<div id="address" class="page address">
 <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', 'Наши адреса') ?></div>
-            <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Мы на карте') ?></button>
+            <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'Мы на карте') ?></button>
         </div>
 
         <div class="page-content">
@@ -200,7 +200,7 @@
     <img class="wave" src="/static/img/wave.svg" alt="wave">
     <div class="footer-content">
         <div class="footer-info">
-            <div class="footer-info-logo"><img data-lazysrc="/static/img/main-logo.svg" alt="piranha"></div>
+            <div class="footer-info-logo"><img src="/static/img/main-logo.svg" alt="piranha"></div>
             <div class="footer-info-location"><?= Yii::t('app', 'Tbilisi, GEORGIA') ?></div>
         </div>
         <div class="footer-links">
@@ -214,12 +214,12 @@
         <div class="footer-nav">
             <p><?= Yii::t('app', 'Меню') ?></p>
             <ul class="footer-nav-items">
-                <li><a href="#"><?= Yii::t('app', 'О нас') ?></a></li>
-                <li><a href="#"><?= Yii::t('app', 'Команда') ?></a></li>
-                <li><a href="#"><?= Yii::t('app', 'Отзывы') ?></a></li>
-                <li><a href="#"><?= Yii::t('app', 'Услуги') ?></a></li>
-                <li><a href="#"><?= Yii::t('app', 'Записаться') ?></a></li>
-                <li><a href="#"><?= Yii::t('app', 'Адреса') ?></a></li>
+                <li><a href="#" data-anchor="about"><?= Yii::t('app', 'О нас') ?></a></li>
+                <li><a href="#" data-anchor="expanded"><?= Yii::t('app', 'Подход') ?></a></li>
+                <li><a href="#" data-anchor="prices"><?= Yii::t('app', 'Услуги') ?></a></li>
+                <li><a href="#" data-anchor="coach"><?= Yii::t('app', 'Команда') ?></a></li>
+                <li><a href="#" data-anchor="address"><?= Yii::t('app', 'Адреса') ?></a></li>
+                <li><a href="#" data-anchor="reviews"><?= Yii::t('app', 'Отзывы') ?></a></li>
             </ul>
         </div>
         <div class="footer-contacts">
