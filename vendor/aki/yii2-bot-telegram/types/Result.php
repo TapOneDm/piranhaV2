@@ -18,6 +18,8 @@ class Result extends Type
 
    public $sender_chat;
 
+   public $link_preview_options;
+
    public $date;
 
    public $text;
@@ -59,6 +61,12 @@ class Result extends Type
    public $edit_date;
 
     public $forward_sender_name;
+
+   public $message_thread_id;
+
+   public $reply_to_message;
+   
+   public $is_topic_message;
 
    /**
     * 

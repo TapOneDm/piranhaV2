@@ -3,17 +3,17 @@
 ?>
 
 <div class="sign-up-button">
-    <button type="button"><i class="icon-pencil-alt"></i><span><?= Yii::t('app', 'Записаться на превое занятие') ?></span></button>
+    <button data-modal-open data-modal="modal-sign" type="button"><i class="icon-pencil-alt"></i><span><?= Yii::t('app', 'Записаться на превое занятие') ?></span></button>
 </div>
 
 <div id="intro" class="page intro">
     <div class="container">
         <div class="intro-title"><?= Yii::t('app', 'Научим плавать, укрепим здоровье и исправим осанку. Вы полюбите спорт и уверенно будете держаться на воде.') ?></div>
         <div class="intro-actions">
-            <button type="button" class="btn active"><?= Yii::t('app', 'Записаться на пробное занятие') ?></button>
+            <button data-modal-open data-modal="modal-sign" type="button" class="btn active"><?= Yii::t('app', 'Записаться на пробное занятие') ?></button>
             <button type="button" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
         </div>
-        <div class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Я взрослый') ?></button></div>
+        <div data-modal-open data-modal="modal-adult" class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Я взрослый') ?></button></div>
         <div class="intro-image"><img data-lazysrc="/static/img/main-logo.svg" alt="Piranha"></div>
     </div>
 </div>
@@ -48,16 +48,16 @@
 <div id="about" class="page about">
     <div class="container">
         <div class="page-caption">
-            <div class="caption-text"><?= Yii::t('app', 'О школе Piranha') ?></div>
+            <div class="caption-text"><?= Yii::t('app', 'Школа Piranha') ?></div>
             <button class="caption-button right"><?= Yii::t('app', 'О нас') ?></button>
         </div>
 
         <div class="page-content">
             <div class="about-content">
                 <div class="about-images">
-                    <div class="about-image"><img data-lazysrc="/static/img/about.jpg" alt="about"></div>
-                    <div class="about-image"><img data-lazysrc="/static/img/about.jpg" alt="about"></div>
-                    <div class="about-image"><img data-lazysrc="/static/img/about.jpg" alt="about"></div>
+                    <div class="about-image"><img data-lazysrc="/static/img/about_1.jpg" alt="about"></div>
+                    <div class="about-image"><img data-lazysrc="/static/img/about_2.jpg" alt="about"></div>
+                    <div class="about-image"><img data-lazysrc="/static/img/about_3.jpg" alt="about"></div>
                 </div>
                 <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем детям и взрослым от 2,5 до 99 лет избавиться от страха воды, проплыть свои первые метры, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также улучшить осанку, вернуть крепкий сон и найти друзей в другой стране.') ?></div>
             </div>
@@ -78,7 +78,7 @@
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', '«За» индивидуальный подход, <br/>раскрывающий потенциал каждого ученика') ?></div>
-            <button class="caption-button"><?= Yii::t('app', 'Как я учу') ?></button>
+            <button class="caption-button"><?= Yii::t('app', 'Как мы учим') ?></button>
         </div>
 
         <div class="page-content">
@@ -94,8 +94,6 @@
                         </div>
                         <div class="back">
                             <div class="back-title">
-                                <div><?= $item['title'] ?></div>
-                                <div class="undo"><i class="icon-undo"></i></div>
                             </div>
                             <div><?= $item['text'] ?></div>
                         </div>
@@ -110,7 +108,7 @@
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', 'Формат тренировок под любой запрос — от мини-групп <br/> до персональной стратегии') ?></div>
-            <button class="caption-button right"><?= Yii::t('app', 'Записаться') ?></button>
+            <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'Записаться') ?></button>
         </div>
 
         <div class="page-content">
@@ -118,7 +116,7 @@
                 <?php foreach (\app\models\Price::getItems() as $item) { ?>
                     <div class="price-item">
                         <div class="price-item-top">
-                            <img data-lazysrc="/static/img/main-logo.svg" alt="logo">
+                            <img data-lazysrc="<?= $item['imageSrc'] ?>" alt="<?= $item['title'] ?>">
                             <span><?= $item['title'] ?></span>
                         </div>
                         <div class="price-item-mid">
@@ -130,7 +128,7 @@
                         </div>
                         <div class="price-item-bottom">
                             <div class="price-hint"><?= $item['price'] ?></div>
-                            <button type="button" class="btn pink"><?= Yii::t('app', 'Записаться') ?></button>
+                            <button data-modal-open data-modal="modal-sign" type="button" class="btn pink"><?= Yii::t('app', 'Записаться') ?></button>
                         </div>
                     </div>
                 <?php } ?>
@@ -167,7 +165,7 @@
     <div class="footer-content">
         <div class="footer-info">
             <div class="footer-info-logo"><img data-lazysrc="/static/img/main-logo.svg" alt="piranha"></div>
-            <div class="footer-info-location"><?= Yii::t('app', 'Tbilisi I Batumi, GEORGIA') ?></div>
+            <div class="footer-info-location"><?= Yii::t('app', 'Tbilisi, GEORGIA') ?></div>
         </div>
         <div class="footer-links">
             <p><?= Yii::t('app', 'Наши соц. сети') ?></p>
@@ -192,7 +190,6 @@
             <p><?= Yii::t('app', 'Контакты') ?>:</p>
             <div class="footer-contacts-block">
                 <a href="mailto: piranha.information@gmail.com">piranha.information@gmail.com</a>
-                <a href="tel: +995557918530">+995 557 918 530</a>
                 <a href="tel: +995597583484">+995 597 583 484</a>
             </div>
         </div>

@@ -1,0 +1,114 @@
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.modal .modal-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    padding: 40px;
+    background-color: var(--pink-color);
+    border-radius: var(--border-radius);
+    max-height: 600px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: modalAppear 0.4s;
+    color: white;
+}
+
+.modal-adult .modal-content {
+    max-width: unset;
+    max-height: unset;
+}
+
+.modal-content .modal-title {
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.modal-content .modal-body {
+    flex: 1;
+    overflow: auto;
+    padding: 20px 0;
+}
+
+.modal-content .modal-actions {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal-content .modal-actions button {
+    color: white;
+    border: 2px solid white;
+    border-radius: var(--border-radius);
+    padding: 6px 10px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-adult,
+.modal-sign {
+    display: none;
+}
+
+@keyframes modalAppear {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+.modal-content .modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+.modal-content .modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.modal-content .modal-body::-webkit-scrollbar-thumb {
+    background: var(--orange-color);
+}
+
+/* Handle on hover */
+.modal-content .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width: 767px) {
+    .modal .modal-content {
+        padding: 20px;
+    }
+    .modal-content {
+        font-size: 16px;
+    }
+    .modal-content .modal-title {
+        padding-bottom: 10px;
+    }
+}
+
+

@@ -22,7 +22,8 @@
         "kartik-v/yii2-editors": "dev-master",
         "mihaildev/yii2-ckeditor": "*",
         "cetver/yii2-language-selector": "^1.0",
-        "yiithings/yii2-dotenv": "^1.1"
+        "yiithings/yii2-dotenv": "^1.1",
+        "udokmeci/yii2-phone-validator" : "~1.0.4"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

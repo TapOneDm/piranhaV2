@@ -24,6 +24,7 @@ class AppAsset extends AssetBundle
         'css/fonts.css',
         'fonts/piranha_icons/style.css',
         'css/reset.css',
+        'css/modal.css',
         'css/style.css',
     ];
     public $js = [

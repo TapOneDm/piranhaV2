@@ -71,6 +71,9 @@ class TelegramBase extends Component
             } else {
                 try {
                     $array = json_decode($input, true);
+                    if (!empty($array['message']['via_bot'])) {
+                        unset($array['message']['via_bot']);
+                    }
                     $this->_input = new Input($array);
                 }
                 catch (Exception $ex) {
@@ -122,11 +125,11 @@ class TelegramBase extends Component
     /**
      * send request
      * @param String $method
-     * @param array|null $params
+     * @param array $params
      * @return array
      * @throws GuzzleException
      */
-    public function send(string $method, ?array $params = null): array
+    public function send($method, $params = [])
     {
         $request_params = $this->initializeParams($params);
         $response = $this->getClient()->post('/bot' . $this->botToken . $method, $request_params);

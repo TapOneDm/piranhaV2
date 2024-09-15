@@ -3,14 +3,10 @@
 namespace app\controllers;
 
 use app\controllers\base\BaseController;
-use app\models\Contact;
-use app\models\Review;
-use app\models\User;
+use app\models\Sign;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use Exception;
 
 class SiteController extends BaseController
 {
@@ -65,21 +61,19 @@ class SiteController extends BaseController
     {
         return $this->render('rules');
     }
-
-    public function actionContactRequest()
+    
+    public function actionSign()
     {
-        $model = new Contact();
-
+        $model = new Sign();
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-
             if ($model->validate() && $model->save()) {
-                Yii::$app->session->setFlash(Contact::SUCCESS_SENT_FLASH_NAME, true);
                 $model->sendTelegramMessage();
-                $model = new Contact();
+                $model = new Sign();
+                $this->renderPartial('_sign-form', ['result' => true]); 
             }
+            return $this->renderPartial('_sign-form', ['result' => false]);
         }
-
-        return $this->renderAjax('/forms/_contact-form', ['model' => $model]);
+        return $this->renderPartial('_sign-form', ['result' => false]);
     }
 }

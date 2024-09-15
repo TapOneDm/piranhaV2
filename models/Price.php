@@ -12,6 +12,7 @@ class Price extends Model {
         return [
             [
                 'title' => Yii::t('app', 'Мини-группа (детская)'),
+                'imageSrc' => '/static/img/kids.jpg',
                 'points' => [
                     Yii::t('app', 'командный дух и навыки взаимодействия'),
                     Yii::t('app', 'взаимная поддержка и мотивация'),
@@ -23,6 +24,7 @@ class Price extends Model {
             ],
             [
                 'title' => Yii::t('app', 'Сплит-тренировки (2 человека)'),
+                'imageSrc' => '/static/img/split.jpg',
                 'points' => [
                     Yii::t('app', 'можете заниматься с другом или с ребёнком'),
                     Yii::t('app', 'Развитие навыков сотрудничества и взаимопомощи'),
@@ -34,6 +36,7 @@ class Price extends Model {
             ],
             [
                 'title' => Yii::t('app', 'Индивидуальная тренировка'),
+                'imageSrc' => '/static/img/one.jpg',
                 'points' => [
                     Yii::t('app', 'Полное внимание тренера на одного ученика'),
                     Yii::t('app', 'Персонализированный подход к технике и прогрессу'),
@@ -45,6 +48,7 @@ class Price extends Model {
             ],
             [
                 'title' => Yii::t('app', 'Мини-группа (взрослая)'),
+                'imageSrc' => '/static/img/adult.jpg',
                 'points' => [
                     Yii::t('app', 'Персонализированный подход для достижения индивидуальных целей (от сброса веса до устранения болей в спине)'),
                     Yii::t('app', 'Взаимная мотивация и поддержка в группе'),

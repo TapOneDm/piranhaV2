@@ -13,15 +13,6 @@ return array (
     ),
     'bootstrap' => 'yii\\bootstrap5\\i18n\\TranslationBootstrap',
   ),
-  'yiisoft/yii2-debug' => 
-  array (
-    'name' => 'yiisoft/yii2-debug',
-    'version' => '2.1.24.0',
-    'alias' => 
-    array (
-      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug/src',
-    ),
-  ),
   'yiisoft/yii2-faker' => 
   array (
     'name' => 'yiisoft/yii2-faker',
@@ -47,15 +38,6 @@ return array (
     'alias' => 
     array (
       '@yii/symfonymailer' => $vendorDir . '/yiisoft/yii2-symfonymailer/src',
-    ),
-  ),
-  'aki/yii2-bot-telegram' => 
-  array (
-    'name' => 'aki/yii2-bot-telegram',
-    'version' => '3.1.6.0',
-    'alias' => 
-    array (
-      '@aki/telegram' => $vendorDir . '/aki/yii2-bot-telegram',
     ),
   ),
   'kartik-v/yii2-krajee-base' => 
@@ -101,6 +83,24 @@ return array (
     'alias' => 
     array (
       '@yiithings/dotenv' => $vendorDir . '/yiithings/yii2-dotenv/src',
+    ),
+  ),
+  'aki/yii2-bot-telegram' => 
+  array (
+    'name' => 'aki/yii2-bot-telegram',
+    'version' => '3.1.10.0',
+    'alias' => 
+    array (
+      '@aki/telegram' => $vendorDir . '/aki/yii2-bot-telegram',
+    ),
+  ),
+  'yiisoft/yii2-debug' => 
+  array (
+    'name' => 'yiisoft/yii2-debug',
+    'version' => '2.1.25.0',
+    'alias' => 
+    array (
+      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug/src',
     ),
   ),
 );

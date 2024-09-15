@@ -49,6 +49,7 @@ preg_match($excludedUrlsPattern, Yii::$app->request->url, $matches);
         <div class="wrapper">
             <?= $this->render('header') ?>
             <?= $content ?>
+            <?= $this->render('../site/_modals') ?>
         </div>
             <?php if (1 > 2) { ?>
                 <!-- Google tag (gtag.js) -->

@@ -13,6 +13,24 @@ let Piranha = (function () {
             this.initLazyLoadImages();
             this.dynamicAppear();
             this.smoothScroll();
+            this.openModal();
+            this.closeModal();
+        }
+
+        openModal() {
+            $('[data-modal-open]').each((i, el) => {
+                $(el).on('click', () => {
+                    $(`.${$(el).attr('data-modal')}`).fadeIn()
+                    $("body").addClass("disable-scroll");
+                })
+            })
+        }
+
+        closeModal() {
+            $('[data-modal-close]').on('click', () => {
+                $('.modal').fadeOut();
+                $("body").removeClass("disable-scroll");
+            })
         }
 
         smoothScroll(){
