@@ -128,7 +128,13 @@
                         </div>
                         <div class="price-item-bottom">
                             <div class="price-hint"><?= $item['price'] ?></div>
-                            <button data-modal-open data-modal="modal-sign" type="button" class="btn pink"><?= Yii::t('app', 'Записаться') ?></button>
+                            <button
+                                data-modal-open
+                                data-check="<?= $item['check'] ?>"
+                                data-modal="modal-sign"
+                                type="button"
+                                class="btn pink"
+                            ><?= Yii::t('app', 'Записаться') ?></button>
                         </div>
                     </div>
                 <?php } ?>
@@ -152,6 +158,36 @@
                         <div class="coach-item-info">
                             <div class="coach-item-info-name"><?= $item['name'] ?></div>
                             <div class="coach-item-info-caption"><?= $item['caption'] ?></div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page address">
+<div class="container">
+        <div class="page-caption">
+            <div class="caption-text"><?= Yii::t('app', 'Наши адреса') ?></div>
+            <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Мы на карте') ?></button>
+        </div>
+
+        <div class="page-content">
+            <div class="address-items">
+                <?php foreach(\app\models\Address::getItems() as $item) { ?>
+                    <div class="address-item">
+                        <div class="item-image">
+                            <img src="<?= $item['imageSrc'] ?>" alt="<?= $item['title'] ?>">
+                        </div>
+                        <div class="item-content">
+                            <div class="item-content-title"><?= $item['title'] ?></div>
+                            <div class="item-content-text"><?= $item['text'] ?></div>
+                            <a
+                                href="<?= $item['coords'] ?>"
+                                class="item-content-link"
+                                target="_blank"
+                            ><?= Yii::t('app', 'Показать на карте') ?></a>
                         </div>
                     </div>
                 <?php } ?>

@@ -15,11 +15,43 @@ let Piranha = (function () {
             this.smoothScroll();
             this.openModal();
             this.closeModal();
+            this.initAddressSlider();
+        }
+
+        initAddressSlider() {
+            $('.address-items').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                dots: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                      breakpoint: 1140,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                      }
+                    },
+                    {
+                      breakpoint: 767,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                      }
+                    }
+                ],
+            });
         }
 
         openModal() {
             $('[data-modal-open]').each((i, el) => {
                 $(el).on('click', () => {
+                    if ($(el).data('check')) {
+                        let val = $(el).data('check')
+                        $(`#sign-form input[value=${val}]`).prop("checked", true);
+                    }
+
                     $(`.${$(el).attr('data-modal')}`).fadeIn()
                     $("body").addClass("disable-scroll");
                 })

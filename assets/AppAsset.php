@@ -22,13 +22,16 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/variables.css',
         'css/fonts.css',
+        'js/vendor/slick/slick/slick.css',
+        'js/vendor/slick/slick/slick-theme.css',
         'fonts/piranha_icons/style.css',
         'css/reset.css',
         'css/modal.css',
         'css/style.css',
     ];
     public $js = [
-        'js/main.js'
+        'js/vendor/slick/slick/slick.min.js',
+        'js/main.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

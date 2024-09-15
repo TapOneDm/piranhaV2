@@ -11,6 +11,7 @@ class Price extends Model {
     {
         return [
             [
+                'check' => 'kids',
                 'title' => Yii::t('app', 'Мини-группа (детская)'),
                 'imageSrc' => '/static/img/kids.jpg',
                 'points' => [
@@ -23,6 +24,7 @@ class Price extends Model {
                 'price' => Yii::t('app', 'от 40 лари за тренировку'),
             ],
             [
+                'check' => 'split',
                 'title' => Yii::t('app', 'Сплит-тренировки (2 человека)'),
                 'imageSrc' => '/static/img/split.jpg',
                 'points' => [
@@ -35,6 +37,7 @@ class Price extends Model {
                 'price' => Yii::t('app', 'от 50 лари c человека за тренировку'),
             ],
             [
+                'check' => 'one',
                 'title' => Yii::t('app', 'Индивидуальная тренировка'),
                 'imageSrc' => '/static/img/one.jpg',
                 'points' => [
@@ -47,6 +50,7 @@ class Price extends Model {
                 'price' => Yii::t('app', 'От 70 лари за тренировку'),
             ],
             [
+                'check' => 'adult',
                 'title' => Yii::t('app', 'Мини-группа (взрослая)'),
                 'imageSrc' => '/static/img/adult.jpg',
                 'points' => [
