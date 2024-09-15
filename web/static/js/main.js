@@ -15,10 +15,10 @@ let Piranha = (function () {
             this.smoothScroll();
             this.openModal();
             this.closeModal();
-            this.initAddressSlider();
+            this.initSliders();
         }
 
-        initAddressSlider() {
+        initSliders() {
             $('.address-items').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
@@ -35,6 +35,31 @@ let Piranha = (function () {
                     },
                     {
                       breakpoint: 767,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                      }
+                    }
+                ],
+            });
+
+            $('.price-items').slick({
+                slidesToShow: 3,
+                infinite: false,
+                slidesToScroll: 1,
+                autoplay: false,
+                dots: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                      breakpoint: 1240,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                      }
+                    },
+                    {
+                      breakpoint: 998,
                       settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,

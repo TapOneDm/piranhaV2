@@ -117,9 +117,9 @@
                     <div class="price-item">
                         <div class="price-item-top">
                             <img data-lazysrc="<?= $item['imageSrc'] ?>" alt="<?= $item['title'] ?>">
-                            <span><?= $item['title'] ?></span>
                         </div>
                         <div class="price-item-mid">
+                            <span><?= $item['title'] ?></span>
                             <ul>
                                 <?php foreach($item['points'] as $point) { ?>
                                     <li><?= $point ?></li>
