@@ -20,7 +20,7 @@ $model = new app\models\Sign();
 
     <?= $form->field($model, 'name')->textInput(['placeholder' => $model->getAttributeLabel('name')])->label(false); ?>
     <?= $form->field($model, 'phone')->textInput(['placeholder' => $model->getAttributeLabel('phone')])->label(false); ?>
-    <?= $form->field($model, 'train_type')->radioList($model->getTrainTypeList())->label(true) ?>
+    <?= $form->field($model, 'train_type')->radioList($model->getTrainTypeList())->label(false) ?>
 
     <?php ActiveForm::end() ?>
     

@@ -23,7 +23,7 @@
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', 'Если важно (не только) научиться <br/> плавать') ?></div>
-            <button class="caption-button"><?= Yii::t('app', 'Мы можем помочь') ?></button>
+            <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Мы можем помочь') ?></button>
         </div>
 
         <div class="page-content">
@@ -49,7 +49,7 @@
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', 'Школа Piranha') ?></div>
-            <button class="caption-button right"><?= Yii::t('app', 'О нас') ?></button>
+            <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'О нас') ?></button>
         </div>
 
         <div class="page-content">
@@ -78,7 +78,7 @@
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', '«За» индивидуальный подход, <br/>раскрывающий потенциал каждого ученика') ?></div>
-            <button class="caption-button"><?= Yii::t('app', 'Как мы учим') ?></button>
+            <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Как мы учим') ?></button>
         </div>
 
         <div class="page-content">
@@ -141,7 +141,7 @@
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', 'Команда профессионалов своего дела') ?></div>
-            <button class="caption-button"><?= Yii::t('app', 'Команда') ?></button>
+            <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Команда') ?></button>
         </div>
 
         <div class="page-content">
