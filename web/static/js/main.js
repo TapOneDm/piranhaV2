@@ -28,6 +28,7 @@ let Piranha = (function () {
 
         closeModal() {
             $('[data-modal-close]').on('click', () => {
+                $('.send-success, .send-error').css('display', 'none');
                 $('.modal').fadeOut();
                 $("body").removeClass("disable-scroll");
             })
