@@ -49,12 +49,11 @@ class Sign extends \yii\db\ActiveRecord
     }
 
     public function sendTelegramMessage() {
-        $dt = new \DateTime($this->dt, new DateTimeZone('Europe/Moscow'));
         $message =
             "Заявка с сайта\n" .
             "\n" .
-            "🗓️ " . $dt->format('d.m.Y') . "\n" .
-            "🕒 " . $dt->format('H:i:s') . "\n" .
+            "🗓️ " . date('d.m.Y') . "\n" .
+            "🕒 " . date('H:i:s') . "\n" .
             "\n" .
             "👤 " . $this->name . "\n" .
             "📱 " . $this->phone . "\n" .
