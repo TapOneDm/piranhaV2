@@ -23,13 +23,5 @@ $model = new app\models\Sign();
     <?= $form->field($model, 'train_type')->radioList($model->getTrainTypeList())->label(false) ?>
 
     <?php ActiveForm::end() ?>
-    
-    <?php if (isset($result)) { ?>
-        <?php if (!empty($result)) { ?>
-            <div class="send-success"><?= Yii::t('app', 'Отправлено успешно!') ?></div>
-        <?php } else { ?>
-            <div class="send-error"><?= Yii::t('app', 'Что-то пошло не так, попробуйте еще раз') ?></div>
-        <?php }?>
-    <?php } ?> 
 
 <?php Pjax::end(); ?>

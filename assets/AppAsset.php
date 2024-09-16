@@ -22,6 +22,7 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/variables.css',
         'css/fonts.css',
+        'js/vendor/fancybox/fancybox.css',
         'js/vendor/slick/slick/slick.css',
         'js/vendor/slick/slick/slick-theme.css',
         'fonts/piranha_icons/style.css',
@@ -30,6 +31,7 @@ class AppAsset extends AssetBundle
         'css/style.css',
     ];
     public $js = [
+        'js/vendor/fancybox/fancybox.min.js',
         'js/vendor/slick/slick/slick.min.js',
         'js/main.js',
     ];

@@ -5,7 +5,7 @@
             <?= $this->render('_sign-form') ?>
         </div>
         <div class="modal-actions">
-            <button onclick="$('#sign-form').yiiActiveForm('submitForm');" type="submit"><?= Yii::t('app', 'Записаться') ?></button>
+            <button onclick="$('#sign-form').yiiActiveForm('submitForm');" type="submit" class="primary"><?= Yii::t('app', 'Записаться') ?></button>
             <button onclick="$('#sign-form')[0].reset()" data-modal-close type="button"><?= Yii::t('app', 'Закрыть') ?></button>
         </div>
     </div>

@@ -12,7 +12,7 @@
                 <li><a href="#" data-anchor="coach"><?= Yii::t('app', 'Команда') ?></a></li>
                 <li><a href="#" data-anchor="address"><?= Yii::t('app', 'Адреса') ?></a></li>
                 <li><a href="#" data-anchor="reviews"><?= Yii::t('app', 'Отзывы') ?></a></li>
-                <!-- <li><a href="<?= /*yii\helpers\Url::to(['/gallery']) */ ''?>"><?= Yii::t('app', 'Галерея') ?></a></li> -->
+                <li><a href="<?= yii\helpers\Url::to(['/gallery']) ?>"><?= Yii::t('app', 'Галерея') ?></a></li>
             </ul>
             <?= $this->render('_lang') ?>
             <button data-modal-open data-modal="modal-sign" class="btn"><?= Yii::t('app', 'Записаться') ?></button>

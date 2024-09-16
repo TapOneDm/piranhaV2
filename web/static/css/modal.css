@@ -64,9 +64,29 @@
     justify-content: center;
 }
 
+.modal-content .modal-actions button.primary {
+    background-color: white;
+    color: var(--pink-color);
+}
+
 .modal-adult,
-.modal-sign {
+.modal-sign,
+.modal-benefit,
+.modal-ajax-error,
+.modal-ajax-success {
     display: none;
+}
+
+.modal-ajax-success .modal-content,
+.modal-ajax-error .modal-content,
+.modal-benefit .modal-content {
+    height: fit-content;
+}
+
+.modal-ajax-success .modal-content, .modal-body,
+.modal-ajax-error .modal-content, .modal-body,
+.modal-benefit .modal-content .modal-body {
+    text-align: center;
 }
 
 @keyframes modalAppear {

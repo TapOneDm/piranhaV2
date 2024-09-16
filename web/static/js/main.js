@@ -7,7 +7,6 @@ let Piranha = (function () {
         
         constructor() {
             this.toggleHeaderColor();
-            this.indicateScroll();
             this.mobileMenuOpen();
             this.mobileMenuClose();
             this.initLazyLoadImages();
@@ -16,30 +15,39 @@ let Piranha = (function () {
             this.openModal();
             this.closeModal();
             this.initSliders();
-            // this.toggleHeaderPosition();
+            // this.initMasonry();
+            this.toggleHeaderPosition();
+        }
+
+        initMasonry() {
+            $('.review-items').masonry({
+                itemSelector: ".review-item"
+            })
         }
 
         toggleHeaderPosition() {
-            var prevScrollpos = window.pageYOffset;
+            var prevScrollpos = window.scrollY;
 
             /* Get the header element and it's position */
             var headerDiv = document.querySelector(".header");
-            var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+            let indicator = document.querySelector('.indicator');
+
+            let headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
             
             window.onscroll = function() {
-              var currentScrollPos = window.pageYOffset;
+                let percentScroll = (scrollY / (this.documentHeight - this.viewportHeight)) * 100;
+                indicator.style.width = percentScroll + '%';
+                let currentScrollPos = window.scrollY;
             
-              /* if we're scrolling up, or we haven't passed the header,
-                 show the header at the top */
-              if (prevScrollpos > currentScrollPos  || currentScrollPos < headerBottom){  
-                  headerDiv.style.top = "0";
-              }
-              else{
-                  /* otherwise we're scrolling down & have passed the header so hide it */
-                  headerDiv.style.top = "-7.2rem";
-              } 
+                /* if we're scrolling up, or we haven't passed the header,  show the header at the top */
+                if (prevScrollpos > currentScrollPos  || currentScrollPos < headerBottom){  
+                    headerDiv.style.top = "0";
+                } else{
+                    /* otherwise we're scrolling down & have passed the header so hide it */
+                    headerDiv.style.top = "-7.2rem";
+                } 
             
-              prevScrollpos = currentScrollPos;
+                prevScrollpos = currentScrollPos;
             }
         }
 
@@ -92,15 +100,29 @@ let Piranha = (function () {
                     }
                 ],
             });
+
+            $('.review-items').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: false,
+                dots: true,
+            });
         }
 
         openModal() {
+            let self = this;
             $('[data-modal-open]').each((i, el) => {
-                $(el).on('click', () => {
+                $(el).on('click', function() {
                     if ($(el).data('check')) {
                         let val = $(el).data('check')
                         $(`#sign-form input[value=${val}]`).prop("checked", true);
                     }
+
+                    if ($(this).data('benefit')) {
+                        self.setCookie('benefit', 'true', 1);
+                    }
+
+                    $('.modal').fadeOut();
 
                     $(`.${$(el).attr('data-modal')}`).fadeIn()
                     $("body").addClass("disable-scroll");
@@ -109,7 +131,12 @@ let Piranha = (function () {
         }
 
         closeModal() {
-            $('[data-modal-close]').on('click', () => {
+            let self = this;
+            $('[data-modal-close]').on('click', function() {
+                if ($(this).data('benefit')) {
+                    self.setCookie('benefit', 'true', 1);
+                }
+
                 $('.send-success, .send-error').css('display', 'none');
                 $('.modal').fadeOut();
                 $("body").removeClass("disable-scroll");
@@ -162,16 +189,16 @@ let Piranha = (function () {
             }
         }
 
-        indicateScroll() {
-            let indicator = $('.indicator');
+        // indicateScroll() {
+        //     let indicator = $('.indicator');
 
-            if (indicator[0]) {
-                window.onscroll = function () {
-                    let percentScroll = (scrollY / (this.documentHeight - this.viewportHeight)) * 100;
-                    indicator[0].style.width = percentScroll + '%';
-                }
-            }
-        }
+        //     if (indicator[0]) {
+        //         window.onscroll = function () {
+        //             let percentScroll = (scrollY / (this.documentHeight - this.viewportHeight)) * 100;
+        //             indicator[0].style.width = percentScroll + '%';
+        //         }
+        //     }
+        // }
 
         mobileMenuOpen() {
             $('.mobile-menu-button').on('click', function(e) {
@@ -233,14 +260,75 @@ let Piranha = (function () {
                 items.forEach((item)=>fallbackItem(item));
             }
         }
+
+        setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+        
+        getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+        
+        eraseCookie(name) {   
+            document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
     }
     
     return Piranha;        
 })();
     
-new Piranha();
+let piranha = new Piranha();
+
 
 $(window).on('load', function(){
     $('#overlay').addClass('hidden');
     $('.page.intro').addClass('page-visible')
- });
+
+    let benefitCookie = piranha.getCookie('benefit');
+    if (!benefitCookie) {
+        setTimeout(() => {
+            $('.modal-benefit').fadeIn();
+            $("body").addClass("disable-scroll");
+        }, 3000)
+    }
+});
+
+$(document).on("pjax:start", function() {
+    $('.send-success, .send-error').css('display', 'none');
+    $('button[type="submit"]').attr('disabled', true)
+})
+
+$(document).on("beforeValidate", "form", function() {
+    $(this).find(':submit').attr('disabled', true);
+}).on("afterValidate", "form", function(e, msg, errorAttributes) {
+    if (errorAttributes.length > 0) {
+        $(this).find(':submit').attr('disabled', false);
+    }
+});
+
+$(document).on("pjax:complete", function() {
+    $('button[type="submit"]').removeAttr('disabled');
+})
+
+$(document).on("pjax:success", function() {
+    $('.modal').fadeOut();
+    $('.modal-ajax-success').fadeIn()
+})
+
+$(document).on("pjax:error", function() {
+    $('.modal').fadeOut();
+    $('.modal-ajax-error').fadeIn();
+})

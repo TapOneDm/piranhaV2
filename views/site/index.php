@@ -55,9 +55,9 @@
         <div class="page-content">
             <div class="about-content">
                 <div class="about-images">
-                    <div class="about-image"><img src="/static/img/about_1.jpg" alt="about"></div>
-                    <div class="about-image"><img src="/static/img/about_2.jpg" alt="about"></div>
-                    <div class="about-image"><img src="/static/img/about_3.jpg" alt="about"></div>
+                    <div class="about-image"><img src="/static/img/about/about_1.jpg" alt="about"></div>
+                    <div class="about-image"><img src="/static/img/about/about_2.jpg" alt="about"></div>
+                    <div class="about-image"><img src="/static/img/about/about_3.jpg" alt="about"></div>
                 </div>
                 <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем детям и взрослым от 2,5 до 99 лет избавиться от страха воды, проплыть свои первые метры, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также улучшить осанку, вернуть крепкий сон и найти друзей в другой стране.') ?></div>
             </div>
@@ -154,7 +154,7 @@
             <div class="coach-items">
                 <?php foreach (\app\models\Coach::getItems() as $item) { ?>
                     <div class="coach-item">
-                        <div class="coach-item-image"><img src="/static/img/coach.jpg" alt="<?= $item['name'] ?>"></div>
+                        <div class="coach-item-image"><img src="/static/img/coach/coach.jpg" alt="<?= $item['name'] ?>"></div>
                         <div class="coach-item-info">
                             <div class="coach-item-info-name"><?= $item['name'] ?></div>
                             <div class="coach-item-info-caption"><?= $item['caption'] ?></div>
@@ -167,7 +167,7 @@
 </div>
 
 <div id="address" class="page address">
-<div class="container">
+    <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', 'Наши адреса') ?></div>
             <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'Мы на карте') ?></button>
@@ -194,6 +194,31 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="page review">
+    <div class="container">
+        <div class="page-caption">
+            <div class="caption-text"><?= Yii::t('app', 'Ученики, которые пришли к желаемому результату') ?></div>
+            <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'Отзывы') ?></button>
+        </div>
+        <div class="page-content">
+            <div class="row">
+                <div class="column">
+                    <a href="/static/img/review/review_3.jpg" data-fancybox="reviews"><img src="/static/img/review/review_3.jpg" alt="review"></a>
+                    <a href="/static/img/review/review_1.jpg" data-fancybox="reviews"><img src="/static/img/review/review_1.jpg" alt="review"></a>
+                </div>
+                <div class="column">
+                    <a href="/static/img/review/review_4.jpg" data-fancybox="reviews"><img src="/static/img/review/review_4.jpg" alt="review"></a>
+                    <a href="/static/img/review/review_5.jpg" data-fancybox="reviews"><img src="/static/img/review/review_5.jpg" alt="review"></a>
+                </div>
+                <div class="column">
+                    <a href="/static/img/review/review_2.jpg" data-fancybox="reviews"><img src="/static/img/review/review_2.jpg" alt="review"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <div id="footer" class="page footer">

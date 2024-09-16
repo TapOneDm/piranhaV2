@@ -14,7 +14,7 @@
     line-height: 1.7;
 }
 
-.intro-title + .intro-actions {
+.intro-title+.intro-actions {
     margin-top: 40px;
 }
 
@@ -34,6 +34,8 @@
 }
 
 .intro-adult button {
+    position: relative;
+    z-index: 2;
     padding: 10px 24px;
 }
 
@@ -64,9 +66,9 @@
     top: 0;
     left: 0;
     right: 0;
-    -webkit-box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.75);
-    box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0px 1px 15px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 15px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 15px -5px rgba(0, 0, 0, 0.7);
     transition: all 0.7s;
 }
 
@@ -157,7 +159,7 @@
 .privileges-item-caption {
     display: flex;
     align-items: center;
-    gap: 20px;    
+    gap: 20px;
 }
 
 .privileges-item-caption i,
@@ -200,6 +202,43 @@
     border-radius: var(--border-radius);
 }
 
+.review-items .slick-track {
+    display: flex;
+    align-items: center;
+}
+
+.review .row {
+    display: flex;
+    gap: 14px;
+}
+
+.review .column {
+    flex: 33.33333%;
+    max-width: 33.33333%;
+}
+
+.review .column img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.review .column a:not(:first-child) {
+    display: block;
+    margin-top: 14px;
+}
+
+@media (max-width: 767px) {
+    .review .row {
+        display: inline-grid;
+        grid-template-columns:  1fr;
+    }
+    .review .column {
+        max-width: fit-content;
+    }
+    .review .column a {
+        height: fit-content;
+    }
+}
 
 @media (max-width: 998px) {
     .about-images {
@@ -339,13 +378,13 @@
 
 .expanded-item .back::-webkit-scrollbar {
     width: 4px;
-  }
+}
 
-.expanded-item:hover > .front {
+.expanded-item:hover>.front {
     transform: perspective(900px) rotateY(-180deg);
 }
 
-.expanded-item:hover > .back {
+.expanded-item:hover>.back {
     transform: perspective(900px) rotateY(0deg);
 }
 
@@ -396,7 +435,7 @@
 
 .price-item-mid ul::-webkit-scrollbar {
     width: 4px;
-  }
+}
 
 .price-item-mid ul li {
     list-style-type: disc;
@@ -559,9 +598,9 @@
     justify-content: center;
     color: white;
     border-radius: var(--border-radius);
-    -webkit-box-shadow: -1px 9px 21px -9px rgba(250,191,13,1);
-    -moz-box-shadow: -1px 9px 21px -9px rgba(250,191,13,1);
-    box-shadow: -1px 9px 21px -9px rgba(250,191,13,1);
+    -webkit-box-shadow: -1px 9px 21px -9px rgba(250, 191, 13, 1);
+    -moz-box-shadow: -1px 9px 21px -9px rgba(250, 191, 13, 1);
+    box-shadow: -1px 9px 21px -9px rgba(250, 191, 13, 1);
     transition: opacity 0.3s;
 }
 
@@ -624,7 +663,7 @@
     font-weight: 600;
 }
 
- .slick-slide {
+.slick-slide {
     margin: 0 15px;
 }
 
@@ -646,6 +685,7 @@
     .page {
         padding: 90px 0;
     }
+
     .intro-title {
         font-size: 32px;
     }
@@ -666,7 +706,7 @@
 
     .expanded-items {
         padding: 0;
-        grid-template-columns: repeat(2 ,1fr);
+        grid-template-columns: repeat(2, 1fr);
         width: 100%;
     }
 
@@ -868,7 +908,7 @@
         font-size: 24px;
     }
 
-    .intro-title + .intro-actions {
+    .intro-title+.intro-actions {
         margin-top: 70px;
         gap: 14px;
     }
@@ -880,7 +920,7 @@
     .privileges-items {
         gap: 40px;
     }
-    
+
     .privileges-item {
         align-items: center;
         justify-content: center;
@@ -913,7 +953,7 @@ form .form-group {
     display: flex;
 }
 
-form .form-group + .form-group:not(.field-sign-train_type) {
+form .form-group+.form-group:not(.field-sign-train_type) {
     margin-top: 26px;
 }
 
@@ -957,7 +997,11 @@ form .form-group .help-block {
         gap: 20px;
     }
 
-    form .form-group + .form-group:not(.field-sign-train_type) {
+    #sign-train_type label {
+        text-align-last: left;
+    }
+
+    form .form-group+.form-group:not(.field-sign-train_type) {
         margin-top: 36px;
     }
 
@@ -970,6 +1014,7 @@ form .form-group .help-block {
     .field-sign-train_type {
         margin-top: 0;
     }
+
     form .form-group .help-block {
         bottom: -40px;
     }
@@ -1019,3 +1064,29 @@ label {
     text-align: center;
     color: aquamarine;
 }
+
+.gallery-items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .gallery-items .column {
+    flex: 33.33333%;
+    max-width: 33.33333%;
+    padding: 0 4px;
+  }
+  
+  .gallery-items img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .gallery-items .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
