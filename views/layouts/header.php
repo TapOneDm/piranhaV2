@@ -11,7 +11,7 @@
                 <li><a href="#" data-anchor="prices"><?= Yii::t('app', 'Услуги') ?></a></li>
                 <li><a href="#" data-anchor="coach"><?= Yii::t('app', 'Команда') ?></a></li>
                 <li><a href="#" data-anchor="address"><?= Yii::t('app', 'Адреса') ?></a></li>
-                <li><a href="#" data-anchor="reviews"><?= Yii::t('app', 'Отзывы') ?></a></li>
+                <li><a href="#" data-anchor="review"><?= Yii::t('app', 'Отзывы') ?></a></li>
                 <li><a href="<?= yii\helpers\Url::to(['/gallery']) ?>"><?= Yii::t('app', 'Галерея') ?></a></li>
             </ul>
             <?= $this->render('_lang') ?>

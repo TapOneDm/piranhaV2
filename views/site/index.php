@@ -196,7 +196,7 @@
     </div>
 </div>
 
-<div class="page review">
+<div id="review" class="page review">
     <div class="container">
         <div class="page-caption">
             <div class="caption-text"><?= Yii::t('app', 'Ученики, которые пришли к желаемому результату') ?></div>
@@ -244,7 +244,7 @@
                 <li><a href="#" data-anchor="prices"><?= Yii::t('app', 'Услуги') ?></a></li>
                 <li><a href="#" data-anchor="coach"><?= Yii::t('app', 'Команда') ?></a></li>
                 <li><a href="#" data-anchor="address"><?= Yii::t('app', 'Адреса') ?></a></li>
-                <li><a href="#" data-anchor="reviews"><?= Yii::t('app', 'Отзывы') ?></a></li>
+                <li><a href="#" data-anchor="review"><?= Yii::t('app', 'Отзывы') ?></a></li>
             </ul>
         </div>
         <div class="footer-contacts">
