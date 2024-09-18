@@ -8,7 +8,7 @@ $config = [
     'language' => 'ru',
     'sourceLanguage' => 'ru-Ru',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'assetsAutoCompress'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -57,15 +57,19 @@ $config = [
         'view' => [
             'class' => '\app\components\View'
         ],
+        'assetsAutoCompress' => [
+            'class' => '\skeeks\yii2\assetsAuto\AssetsAutoCompressComponent',
+        ],
         'urlManager' => [
             'class'=>'\app\components\UrlManager',
             'enablePrettyUrl' => true,
             'enableStrictParsing' => false,
             'showScriptName' => false,
             'rules' => [
-    		'/rules' => 'site/rules',
+                '/' => 'site/index',
+                '/gallery' => 'site/gallery',
+                '/rules' => 'site/rules',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
-                '/gallery' => 'site/gallery'
             ],
         ],
         'telegram' => [

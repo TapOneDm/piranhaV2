@@ -26,12 +26,12 @@ let Piranha = (function () {
         }
 
         toggleHeaderPosition() {
-            var prevScrollpos = window.scrollY;
+            let prevScrollpos = window.scrollY;
 
             /* Get the header element and it's position */
-            var headerDiv = document.querySelector(".header");
+            let headerDiv = document.querySelector(".header");
             let indicator = document.querySelector('.indicator');
-
+            let firstPageDiv = document.querySelector('.page');
             let headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
             
             window.onscroll = function() {
@@ -42,9 +42,11 @@ let Piranha = (function () {
                 /* if we're scrolling up, or we haven't passed the header,  show the header at the top */
                 if (prevScrollpos > currentScrollPos  || currentScrollPos < headerBottom){  
                     headerDiv.style.top = "0";
+                    firstPageDiv.style.paddingTop = "8.2rem";
                 } else{
                     /* otherwise we're scrolling down & have passed the header so hide it */
-                    headerDiv.style.top = "-7.2rem";
+                    headerDiv.style.top = `-${(headerDiv.offsetHeight - 6)}px`;
+                    firstPageDiv.style.paddingTop = "8.2rem";
                 } 
             
                 prevScrollpos = currentScrollPos;

@@ -1,5 +1,10 @@
 <?php
 
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => Yii::t('app', 'Добро пожаловать в школу плавания PIRANHA. Мы единственные в Тбилиси, кто успешно работает с тремя категориями пловцов: начальное обучение (дети), взрослые и спортсмены с разрядом.')
+]);
+
 ?>
 
 <div class="sign-up-button">
@@ -8,7 +13,7 @@
 
 <div id="intro" class="page intro">
     <div class="container">
-        <div class="intro-title"><?= Yii::t('app', 'Научим плавать, укрепим здоровье и исправим осанку. Вы полюбите спорт и уверенно будете держаться на воде.') ?></div>
+        <h1 class="intro-title"><?= Yii::t('app', 'Научим плавать, укрепим здоровье и исправим осанку. Вы полюбите спорт и уверенно будете держаться на воде.') ?></h1>
         <div class="intro-actions">
             <button data-modal-open data-modal="modal-sign" type="button" class="btn active"><?= Yii::t('app', 'Записаться на пробное занятие') ?></button>
             <button type="button" data-anchor="prices" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
@@ -22,7 +27,7 @@
 <div id="privileges" class="page privileges">
     <div class="container">
         <div class="page-caption">
-            <div class="caption-text"><?= Yii::t('app', 'Если важно (не только) научиться <br/> плавать') ?></div>
+            <h2 class="caption-text"><?= Yii::t('app', 'Если важно (не только) научиться <br/> плавать') ?></h2>
             <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Мы можем помочь') ?></button>
         </div>
 
@@ -48,7 +53,7 @@
 <div id="about" class="page about">
     <div class="container">
         <div class="page-caption">
-            <div class="caption-text"><?= Yii::t('app', 'Школа Piranha') ?></div>
+            <h2 class="caption-text"><?= Yii::t('app', 'Школа Piranha') ?></h2>
             <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'О нас') ?></button>
         </div>
 
@@ -77,7 +82,7 @@
 <div id="expanded" class="page expanded">
     <div class="container">
         <div class="page-caption">
-            <div class="caption-text"><?= Yii::t('app', '«За» индивидуальный подход, <br/>раскрывающий потенциал каждого ученика') ?></div>
+            <h2 class="caption-text"><?= Yii::t('app', '«За» индивидуальный подход, <br/>раскрывающий потенциал каждого ученика') ?></h2>
             <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Как мы учим') ?></button>
         </div>
 
@@ -107,7 +112,7 @@
 <div id="prices" class="page prices">
     <div class="container">
         <div class="page-caption">
-            <div class="caption-text"><?= Yii::t('app', 'Формат тренировок под любой запрос — от мини-групп <br/> до персональной стратегии') ?></div>
+            <h2 class="caption-text"><?= Yii::t('app', 'Формат тренировок под любой запрос — от мини-групп <br/> до персональной стратегии') ?></h2>
             <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'Записаться') ?></button>
         </div>
 
@@ -146,7 +151,7 @@
 <div id="coach" class="page coach">
     <div class="container">
         <div class="page-caption">
-            <div class="caption-text"><?= Yii::t('app', 'Команда профессионалов своего дела') ?></div>
+            <h2 class="caption-text"><?= Yii::t('app', 'Команда профессионалов своего дела') ?></h2>
             <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Команда') ?></button>
         </div>
 
@@ -169,7 +174,7 @@
 <div id="address" class="page address">
     <div class="container">
         <div class="page-caption">
-            <div class="caption-text"><?= Yii::t('app', 'Наши адреса') ?></div>
+            <h2 class="caption-text"><?= Yii::t('app', 'Наши адреса') ?></h2>
             <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'Мы на карте') ?></button>
         </div>
 
@@ -199,7 +204,7 @@
 <div id="review" class="page review">
     <div class="container">
         <div class="page-caption">
-            <div class="caption-text"><?= Yii::t('app', 'Ученики, которые пришли к желаемому результату') ?></div>
+            <h2 class="caption-text"><?= Yii::t('app', 'Ученики, которые пришли к желаемому результату') ?></h2>
             <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'Отзывы') ?></button>
         </div>
         <div class="page-content">
@@ -218,47 +223,4 @@
             </div>
         </div>
     </div>
-
 </div>
-
-<div id="footer" class="page footer">
-    <img class="wave" src="/static/img/wave.svg" alt="wave">
-    <div class="footer-content">
-        <div class="footer-info">
-            <div class="footer-info-logo"><img src="/static/img/main-logo.svg" alt="piranha"></div>
-            <div class="footer-info-location"><?= Yii::t('app', 'Tbilisi, GEORGIA') ?></div>
-        </div>
-        <div class="footer-links">
-            <p><?= Yii::t('app', 'Наши соц. сети') ?></p>
-            <div class="footer-links-icons">
-                <a href="https://www.instagram.com/piranha.ge/" class="icon-link"><i class="icon-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100084172242937" class="icon-link"><i class="icon-facebook"></i></a>
-                <a href="https://www.youtube.com/@kolotyginswim" class="icon-link"><i class="icon-youtube"></i></a>
-            </div>
-        </div>
-        <div class="footer-nav">
-            <p><?= Yii::t('app', 'Меню') ?></p>
-            <ul class="footer-nav-items">
-                <li><a href="#" data-anchor="about"><?= Yii::t('app', 'О нас') ?></a></li>
-                <li><a href="#" data-anchor="expanded"><?= Yii::t('app', 'Подход') ?></a></li>
-                <li><a href="#" data-anchor="prices"><?= Yii::t('app', 'Услуги') ?></a></li>
-                <li><a href="#" data-anchor="coach"><?= Yii::t('app', 'Команда') ?></a></li>
-                <li><a href="#" data-anchor="address"><?= Yii::t('app', 'Адреса') ?></a></li>
-                <li><a href="#" data-anchor="review"><?= Yii::t('app', 'Отзывы') ?></a></li>
-            </ul>
-        </div>
-        <div class="footer-contacts">
-            <p><?= Yii::t('app', 'Контакты') ?>:</p>
-            <div class="footer-contacts-block">
-                <a href="mailto: piranha.information@gmail.com">piranha.information@gmail.com</a>
-                <a href="tel: +995597583484">+995 597 583 484</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-

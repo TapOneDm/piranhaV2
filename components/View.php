@@ -3,6 +3,7 @@
 namespace app\components;
 
 use Yii;
+use yii\helpers\Url;
 
 
 class View extends \yii\web\View {
@@ -18,25 +19,6 @@ class View extends \yii\web\View {
         return Yii::$app->request->hostInfo . '/'. Yii::$app->language .'/';
     }
 
-    // public function registerCssFile($url, $depends = [], $options = [], $key = null) {
-    //     parent::registerCssFile($this->addModifyTimeToUrl($url),$depends,$options,$key);
-    // }
-
-    // public function registerJsFile($url, $depends = [], $options = [], $key = null) {
-    //     parent::registerJsFile($this->addModifyTimeToUrl($url),$depends,$options,$key);
-    // }
-
-    public function getLangShort() {
-        static $language;
-
-        if (!$language) {
-            preg_match('%^([a-z]+)%',Yii::$app->language,$m);
-            $language=$m[1];
-        }
-
-        return $language;
-    }
-
     public function getLangUrl($language) {
         parse_str(Yii::$app->request->queryString, $params);
         $paramsStr = http_build_query($params);
@@ -44,60 +26,34 @@ class View extends \yii\web\View {
         return '/' . $language . preg_replace('%^('.implode('|', Yii::$app->translateManager->supportedLanguages).')/%','/',Yii::$app->request->pathInfo) . ($paramsStr != '' ? '?' . $paramsStr : '');
     }
 
-    public function getLangOtherUrl() {
-        $url=$this->getLangShort()=='ru' ? '/en':'';
-        $url.=Yii::$app->request->url;
+    public function initMetaTags()
+    {
+        $this->registerMetaTag(['property' => 'og:title', 'content' => $this->title]);
+        $this->registerMetaTag(['property' => 'og:site_name', 'content' => Yii::t('app', 'Piranha Swimming School')]);
 
-        return $url;
-    }
+        $this->registerMetaTag(['property' => 'og:url', 'content' => Url::canonical()]);
+        $this->registerMetaTag(['property' => 'og:type', 'content' => 'website']);
+        $this->registerMetaTag(['property' => 'og:locale', 'content' => Yii::$app->language]);
 
-    public function getLangENUrl() {
-        $url='/en';
-        $url.=Yii::$app->request->url;
-        return $url;
-    }
-
-    public function getLangOtherName() {
-        return $this->getLangShort()=='ru' ? 'RU':'EN';
-    }
-
-    public function addOgMetaTags($title,$image,$description,$hash='') {
-        $image=Yii::$app->request->hostInfo.$image;
-        $this->registerMetaTag([
-            'property'=>'og:image',
-            'content'=>$image
-        ]);
-
-        $this->registerMetaTag([
-            'property'=>'og:title',
-            'content'=>$title
-        ]);
-
-        $this->registerMetaTag([
-            'property'=>'og:description',
-            'content'=>$description
-        ]);
-
-        $this->registerMetaTag([
-            'property'=>'og:url',
-            'content'=>Yii::$app->request->hostInfo.Yii::$app->request->url.($hash!='' ? "#$hash":'')
-        ]);
-
-        $this->registerMetaTag([
-            'property'=>'fb:app_id',
-            'content'=>'544551942400366'
-        ]);
-    }
-
-    public function getTrField($field) {
-        return $field.'_'.Yii::$app->language;
-    }
-
-    function getLangItems() {
-        $items = [];
-        foreach (Yii::$app->translateManager->supportedLanguages as $language) {
-            $items[] = ['label' => $language, 'url' => $this->getLangUrl($language), 'active' => $language === Yii::$app->language];
+        if (empty($this->metaTags['og:image'])) {
+            $this->registerMetaTag(['property' => 'og:image', 'content' => Url::to('/static/img/og-image.png', true)]);
         }
-        return $items;
+
+        if (empty($this->metaTags['og:description']) && !empty($this->metaTags['description'])) {
+            $description = preg_replace('/<.*content=\"(.*)\">/', '$1', $this->metaTags['description']);
+            $this->registerMetaTag(['property' => 'og:description', 'content' => $description]);
+        }
+
+        /*$this->registerMetaTag(['name' => 'twitter:card', 'content' => 'summary_large_image']);
+        $this->registerMetaTag(['name' => 'twitter:site', 'content' => '']);
+        $this->registerMetaTag(['name' => 'twitter:title', 'content' => '']);
+        $this->registerMetaTag(['name' => 'twitter:description', 'content' => '']);
+        $this->registerMetaTag(['name' => 'twitter:image', 'content' => '']);*/
+    }
+
+    public function registerMetaTag($options, $key = null)
+    {
+        $key = $options['name'] ?? $options['property'] ?? null;
+        parent::registerMetaTag($options, $key);
     }
 }

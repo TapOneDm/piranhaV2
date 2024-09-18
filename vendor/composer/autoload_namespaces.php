@@ -7,6 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'udokmeci\\yii2PhoneValidator' => array($vendorDir . '/udokmeci/yii2-phone-validator/src'),
+    'Props\\' => array($vendorDir . '/mrclay/props-dic/src'),
+    'Pimple' => array($vendorDir . '/pimple/pimple/src'),
+    'JShrink' => array($vendorDir . '/tedivm/jshrink/src'),
+    'JSMin\\' => array($vendorDir . '/mrclay/jsmin-php/src'),
     'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
     'Diff' => array($vendorDir . '/phpspec/php-diff/lib'),
     'Behat\\Gherkin' => array($vendorDir . '/behat/gherkin/src'),

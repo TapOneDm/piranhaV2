@@ -1,7 +1,7 @@
 <div class="page gallery">
     <div class="container">
         <div class="page-caption">
-            <div class="caption-text"><?= Yii::t('app', 'Галерея') ?></div>
+            <h1 class="caption-text"><?= Yii::t('app', 'Галерея') ?></h1>
             <button class="caption-button right"><?= Yii::t('app', 'Фото') ?></button>
         </div>
         <div class="page-content">
