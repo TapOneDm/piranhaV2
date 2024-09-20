@@ -8,6 +8,7 @@ $config = [
     'language' => 'ru',
     'sourceLanguage' => 'ru-Ru',
     'basePath' => dirname(__DIR__),
+    // 'bootstrap' => ['log'],
     'bootstrap' => ['log', 'assetsAutoCompress'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',

@@ -959,6 +959,7 @@ form .field-sign-train_type {
 form .form-group {
     position: relative;
     display: flex;
+    flex-direction: column;
 }
 
 form .form-group+.form-group:not(.field-sign-train_type) {
@@ -993,11 +994,9 @@ form .form-group input[type="text"]::placeholder {
 }
 
 form .form-group .help-block {
-    position: absolute;
-    bottom: -30px;
     font-size: 16px;
     font-weight: 600;
-    color: var(--orange-color);
+    color: rgb(248, 244, 27);
 }
 
 #sign-train_type {
