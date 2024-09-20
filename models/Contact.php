@@ -48,8 +48,8 @@ class Contact extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'dt' => 'Dt',
-            'name' => Yii::$app->language === 'ru' ? 'ФИО' : 'Name',
-            'phone' => Yii::$app->language === 'ru' ? 'Номер телефона' : 'Phone',
+            'name' => Yii::t('app', 'ФИО'),
+            'phone' => Yii::t('app', 'Номер телефона или ник в телеграмме'),
         ];
     }
 

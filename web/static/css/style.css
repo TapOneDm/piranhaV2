@@ -436,7 +436,8 @@
 
 .price-item-mid ul li {
     list-style-type: disc;
-    text-transform: capitalize;
+    text-transform: lowercase;
+    /* text-transform: capitalize; */
 }
 
 .price-item-mid ul li::marker {
@@ -502,6 +503,10 @@
 .wave {
     position: relative;
     top: -3px;
+}
+
+.footer .container {
+    margin: 0 auto;
 }
 
 .footer-content {
@@ -977,6 +982,14 @@ form .form-group input[type="text"] {
 form .form-group input[type="text"]::placeholder {
     color: white;
     opacity: 0.5;
+    font-size: 16px;
+}
+
+@media (max-width: 576px) {
+    form .form-group input[type="text"]::placeholder {
+        font-size: 14px;
+        word-wrap: break-word;
+    }
 }
 
 form .form-group .help-block {
@@ -1114,4 +1127,9 @@ label {
 
 .page.rules .page-content ul li:not(:first-child) {
     margin-top: 24px;
+}
+
+li a[data-anchor="prices"] {
+    font-weight: 700 !important;
+    color: rgb(248, 244, 27) !important;
 }

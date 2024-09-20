@@ -43,7 +43,7 @@ class Sign extends \yii\db\ActiveRecord
             'id' => 'ID',
             'dt' => 'Dt',
             'name' => Yii::t('app', 'Как вас зовут'),
-            'phone' => Yii::t('app', 'Номер телефона'),
+            'phone' => Yii::t('app', 'Номер телефона или ник в телеграмме'),
             'train_type' => Yii::t('app', 'Тип тренировки'),
         ];
     }

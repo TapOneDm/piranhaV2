@@ -67,8 +67,6 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '/' => 'site/index',
-                '/gallery' => 'site/gallery',
-                '/rules' => 'site/rules',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],

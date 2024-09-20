@@ -27,12 +27,13 @@ class Address extends Model {
                 'title' => Yii::t('app', 'БАССЕЙН ШКОЛЫ №35'),
                 'text' => Yii::t('app', 'Бассейн в районе Сабуртало'),
                 'coords' => 'https://yandex.by/maps/10277/tbilisi/?ll=44.723920%2C41.720992&mode=search&sll=44.724257%2C41.721016&text=41.721016%2C44.724257&z=17'
-            ],            [
-                'imageSrc' => '/static/img/address/olympic.jpg',                
-                'title' => Yii::t('app', 'OLYMPIC'),
-                'text' => Yii::t('app', 'Бассейн в районе Исани'),
-                'coords' => 'https://yandex.by/maps/10277/tbilisi/?ll=44.835419%2C41.682312&mode=search&sll=44.843687%2C41.674084&text=41.674084%2C44.843687&z=15'
             ],
+            // [
+            //     'imageSrc' => '/static/img/address/olympic.jpg',                
+            //     'title' => Yii::t('app', 'OLYMPIC'),
+            //     'text' => Yii::t('app', 'Бассейн в районе Исани'),
+            //     'coords' => 'https://yandex.by/maps/10277/tbilisi/?ll=44.835419%2C41.682312&mode=search&sll=44.843687%2C41.674084&text=41.674084%2C44.843687&z=15'
+            // ],
         ];
     }
 }
