@@ -60,9 +60,9 @@ $this->registerMetaTag([
         <div class="page-content">
             <div class="about-content">
                 <div class="about-images">
-                    <div class="about-image"><img src="/static/img/about/about_1.jpg" alt="about"></div>
-                    <div class="about-image"><img src="/static/img/about/about_2.jpg" alt="about"></div>
-                    <div class="about-image"><img src="/static/img/about/about_3.jpg" alt="about"></div>
+                    <a href="/static/img/about/about_1.jpg" data-fancybox="about" class="about-image"><img src="/static/img/about/about_1.jpg" alt="about_1"></a>
+                    <a href="/static/img/about/about_2.jpg" data-fancybox="about" class="about-image"><img src="/static/img/about/about_2.jpg" alt="about_2"></a>
+                    <a href="/static/img/about/about_3.jpg" data-fancybox="about" class="about-image"><img src="/static/img/about/about_3.jpg" alt="about_3"></a>
                 </div>
                 <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем детям и взрослым от 2,5 до 99 лет избавиться от страха воды, проплыть свои первые метры, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также улучшить осанку, вернуть крепкий сон и найти друзей в другой стране.') ?></div>
             </div>

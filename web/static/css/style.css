@@ -22,8 +22,9 @@
     position: relative;
     z-index: 2;
     display: flex;
-    align-items: center;
-    gap: 40px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
 }
 
 
@@ -33,14 +34,16 @@
     border-width: 2px;
 }
 
-.intro-adult button {
-    position: relative;
-    z-index: 2;
-    padding: 10px 24px;
+.intro-adult {
+    width: fit-content;
+    margin-top: 20px;
 }
 
-.intro-adult {
-    margin-top: 40px;
+.intro-adult button {
+    position: relative;
+    border-width: 2px;
+    z-index: 2;
+    padding: 20px 34px;
 }
 
 .intro-image {
@@ -856,9 +859,10 @@
     }
 
     .intro-adult {
+        width: auto;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
     }
 
@@ -917,12 +921,18 @@
     }
 
     .intro-title+.intro-actions {
-        margin-top: 70px;
+        margin-top: 30px;
         gap: 14px;
     }
 
     .intro-actions button {
         width: 100%;
+        font-size: 16px;
+    }
+
+    .intro-adult button{
+        flex: 1;
+        font-size: 16px;
     }
 
     .privileges-items {
