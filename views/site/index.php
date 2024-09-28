@@ -242,17 +242,28 @@ $this->registerMetaTag([
         <div class="page-content">
             <div class="gallery-items">
                 <div class="column">
-                    <a href="/static/img/gallery/gallery_1.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_1.jpg" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_2.jpg" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_1.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_1.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_2.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_8.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_9.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_10.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_7.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_17.jpg" src="" alt="gallery"></a>
                 </div>
                 <div class="column">
-                    <a href="/static/img/gallery/gallery_3.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_3.jpg" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_4.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_4.jpg" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_3.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_3.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_4.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_4.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_4.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_11.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_4.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_12.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_4.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_13.jpg" src="" alt="gallery"></a>
+
                 </div>
                 <div class="column">
-                    <a href="/static/img/gallery/gallery_5.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_5.jpg" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_6.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_6.jpg" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_7.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_7.jpg" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_5.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_5.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_6.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_6.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_7.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_7.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_7.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_14.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_7.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_15.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_7.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_16.jpg" src="" alt="gallery"></a>
                 </div>
             </div>
         </div>
