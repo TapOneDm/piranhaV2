@@ -96,6 +96,7 @@ $this->registerMetaTag([
                             <div class="front-title">
                                 <div><?= $item['title'] ?></div>
                                 <div class="undo"><i class="icon-undo"></i></div>
+                                <!-- <img src="/static/img/wave_pink.svg" alt="wave"> -->
                             </div>
                             <img src="<?= $item['imageSrc'] ?>" alt="<?php $item['title'] ?>">
                         </div>
