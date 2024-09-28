@@ -308,6 +308,7 @@
     cursor: pointer;
     position: relative;
     max-width: 400px;
+    max-height: 480px;
     height: auto;
 }
 
@@ -355,17 +356,23 @@
     font-size: 28px;
 }
 
+.expanded-item .front .front-title {
+    padding: 10px;
+}
+
 .expanded-item .front {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    padding: 0;
+    gap: 20px;
     transform: perspective(900px) rotateY(0deg);
 }
 
 .expanded-item .front img {
-    max-width: 220px;
+    object-fit: cover;
+    object-position: top;
 }
 
 .expanded-item .back {
@@ -732,10 +739,6 @@ ul.coach-item-skills li::before {
 
     .expanded-item {
         max-width: unset;
-    }
-
-    .expanded-item .front img {
-        max-width: 340px;
     }
 }
 

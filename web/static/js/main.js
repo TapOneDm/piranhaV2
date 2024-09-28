@@ -54,6 +54,7 @@ let Piranha = (function () {
 
         initSliders() {
             $('.address-items').slick({
+                touchThreshold:100,
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 autoplay: true,
@@ -78,6 +79,7 @@ let Piranha = (function () {
             });
 
             $('.price-items').slick({
+                touchThreshold:100,
                 slidesToShow: 3,
                 infinite: false,
                 slidesToScroll: 1,
@@ -103,6 +105,7 @@ let Piranha = (function () {
             });
 
             $('.review-items').slick({
+                touchThreshold:100,
                 slidesToShow: 5,
                 slidesToScroll: 1,
                 autoplay: false,
@@ -110,6 +113,7 @@ let Piranha = (function () {
             });
 
             $('.coach-items').slick({
+                touchThreshold:100,
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 autoplay: false,
