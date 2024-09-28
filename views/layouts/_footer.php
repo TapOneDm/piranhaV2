@@ -19,12 +19,13 @@
                 <ul class="footer-nav-items">
                     <li><a href="#" data-anchor="about"><?= Yii::t('app', 'О нас') ?></a></li>
                     <li><a href="#" data-anchor="expanded"><?= Yii::t('app', 'Подход') ?></a></li>
-                    <li><a href="#" data-anchor="prices"><?= Yii::t('app', 'Услуги') ?></a></li>
+                    <li><a href="#" data-anchor="prices"><?= Yii::t('app', 'Тарифы') ?></a></li>
                     <li><a href="#" data-anchor="coach"><?= Yii::t('app', 'Команда') ?></a></li>
                     <li><a href="#" data-anchor="address"><?= Yii::t('app', 'Адреса') ?></a></li>
                     <li><a href="#" data-anchor="review"><?= Yii::t('app', 'Отзывы') ?></a></li>
                     <li><a href="<?= yii\helpers\Url::to(['/rules']) ?>"><?= Yii::t('app', 'Правила') ?></a></li>
                     <li><a href="<?= yii\helpers\Url::to(['/gallery']) ?>"><?= Yii::t('app', 'Галерея') ?></a></li>
+                    <li><a href="#" data-anchor="rules"><?= Yii::t('app', 'FAQ') ?></a></li>
                 </ul>
             </div>
             <div class="footer-contacts">

@@ -462,13 +462,11 @@
 }
 
 
-.coach-items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+.coach .slick-dots {
+    bottom: -56px;
 }
 
-.coach-item {
+.coach-item.slick-slide {
     display: flex;
     flex-direction: column;
     border-radius: var(--border-radius);
@@ -1158,5 +1156,5 @@ label {
 
 li a[data-anchor="prices"] {
     font-weight: 700 !important;
-    color: rgb(248, 244, 27) !important;
+    color: var(--orange-color) !important;
 }

@@ -15,7 +15,6 @@ let Piranha = (function () {
             this.openModal();
             this.closeModal();
             this.initSliders();
-            // this.initMasonry();
             this.toggleHeaderPosition();
         }
 
@@ -108,6 +107,30 @@ let Piranha = (function () {
                 slidesToScroll: 1,
                 autoplay: false,
                 dots: true,
+            });
+
+            $('.coach-items').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: false,
+                infinite: false,
+                dots: true,
+                responsive: [
+                    {
+                      breakpoint: 998,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                      }
+                    },
+                    {
+                      breakpoint: 576,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                      }
+                    }
+                ],
             });
         }
 
