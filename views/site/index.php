@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Html;
+
 $this->registerMetaTag([
     'name' => 'description',
     'content' => Yii::t('app', 'Добро пожаловать в школу плавания PIRANHA. Мы единственные в Тбилиси, кто успешно работает с тремя категориями пловцов: начальное обучение (дети), взрослые и спортсмены с разрядом.')
@@ -159,9 +161,14 @@ $this->registerMetaTag([
             <div class="coach-items">
                 <?php foreach (\app\models\Coach::getItems() as $item) { ?>
                     <div class="coach-item">
-                        <div class="coach-item-image"><img src="/static/img/coach/coach.jpg" alt="<?= $item['name'] ?>"></div>
+                        <a href="<?= $item['imageSrc'] ?>" data-fancybox="coach" class="coach-item-image"><img src="<?= $item['imageSrc'] ?>" alt="<?= $item['name'] ?>"></a>
                         <div class="coach-item-info">
                             <div class="coach-item-info-name"><?= $item['name'] ?></div>
+                            <ul class="coach-item-skills">
+                                <?php foreach ($item['skills'] as $skill) { ?>
+                                    <li><?= $skill ?></li>
+                                <?php } ?>
+                            </ul>
                             <div class="coach-item-info-caption"><?= $item['caption'] ?></div>
                         </div>
                     </div>

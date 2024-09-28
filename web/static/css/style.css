@@ -492,6 +492,24 @@
     font-weight: 600;
 }
 
+ul.coach-item-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+ul.coach-item-skills li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+ul.coach-item-skills li::before {
+    content: '*';
+    margin-right: 15px;
+}
+
 .coach-item-info-caption {
     color: var(--light-blue-color);
 }
