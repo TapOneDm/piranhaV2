@@ -25,7 +25,7 @@
                     <li><a href="#" data-anchor="review"><?= Yii::t('app', 'Отзывы') ?></a></li>
                     <li><a href="<?= yii\helpers\Url::to(['/rules']) ?>"><?= Yii::t('app', 'Правила') ?></a></li>
                     <li><a href="<?= yii\helpers\Url::to(['/gallery']) ?>"><?= Yii::t('app', 'Галерея') ?></a></li>
-                    <li><a href="#" data-anchor="rules"><?= Yii::t('app', 'FAQ') ?></a></li>
+                    <li><a href="#" data-anchor="questions"><?= Yii::t('app', 'FAQ') ?></a></li>
                 </ul>
             </div>
             <div class="footer-contacts">

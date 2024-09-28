@@ -755,7 +755,6 @@ ul.coach-item-skills li::before {
 
 .questions .collapse-items .collapse-item .collapse-content {
     padding: 10px 20px;
-    font-size: 18px;
 }
 
 
@@ -836,6 +835,7 @@ ul.coach-item-skills li::before {
         background-color: var(--pink-color);
         transform: translateX(100%);
         transition: transform 0.3s;
+        overflow-y: auto;
     }
 
     .header .menu.active {
@@ -917,6 +917,10 @@ ul.coach-item-skills li::before {
 @media (max-width: 767px) {
     .questions .collapse-items .collapse-item .collapse-caption {
         font-size: 20px;
+    }
+
+    .questions .collapse-items .collapse-item .collapse-content {
+        font-size: 18px;
     }
 
     .slick-slide {
