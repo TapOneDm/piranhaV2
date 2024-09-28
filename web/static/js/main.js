@@ -16,6 +16,16 @@ let Piranha = (function () {
             this.closeModal();
             this.initSliders();
             this.toggleHeaderPosition();
+            this.initCollapse();
+        }
+
+        initCollapse() {
+            $('.collapse-item .collapse-content').hide();
+
+            $('.collapse-caption').click(function() {
+                $(this).toggleClass('opened');
+                $(this).parent().find('.collapse-content').slideToggle();
+            });
         }
 
         initMasonry() {

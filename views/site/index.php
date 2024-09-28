@@ -236,7 +236,7 @@ $this->registerMetaTag([
 <div id="gallery" class="page gallery">
     <div class="container">
         <div class="page-caption">
-            <h1 class="caption-text"><?= Yii::t('app', 'Галерея') ?></h1>
+            <h2 class="caption-text"><?= Yii::t('app', 'Галерея') ?></h2>
             <button class="caption-button right"><?= Yii::t('app', 'Фото') ?></button>
         </div>
         <div class="page-content">
@@ -273,7 +273,7 @@ $this->registerMetaTag([
 <div id="rules" class="page rules">
     <div class="container">
         <div class="page-caption">
-            <h1 class="caption-text"><?= Yii::t('app', 'Правила посещения детского клуба плавания Piranha') ?></h1>
+            <h2 class="caption-text"><?= Yii::t('app', 'Правила посещения детского клуба плавания Piranha') ?></h2>
             <button class="caption-button right"><?= Yii::t('app', 'Правила') ?></button>
         </div>
         <div class="page-content">
@@ -298,6 +298,27 @@ $this->registerMetaTag([
             <br>
             <br>
             <span><?= Yii::t('app', 'Большая просьба посещать душ перед входом в воду для поддержания чистоты в бассейне.') ?></span>
+        </div>
+    </div>
+</div>
+
+<div id="questions" class="page questions">
+    <div class="container">
+        <div class="page-caption">
+            <h2 class="caption-text"><?= Yii::t('app', 'Всё, что вам нужно знать перед началом занятий') ?></h2>
+            <button class="caption-button right"><?= Yii::t('app', 'Вопросы') ?></button>
+        </div>
+        <div class="page-content">
+            <div class="collapse-items answer-items">
+                <?php foreach (\app\models\Question::getItems() as $item) { ?>
+                    <div class="collapse-item">
+                        <div class="collapse-caption"><?= $item['title'] ?> <i class="icon-times1"></i></div>
+                        <div class="collapse-content">
+                            <p><?= $item['text'] ?></p>
+                        </div>
+                    </div>
+                <?php }?>
+            </div>
         </div>
     </div>
 </div>

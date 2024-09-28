@@ -359,8 +359,6 @@
 .expanded-item .front .front-title {
     padding: 10px;
     position: relative;
-    /* display: flex;
-    flex-direction: column; */
 }
 
 
@@ -375,16 +373,6 @@
     background: url('/static/img/wave_blue.svg');
     background-repeat: no-repeat;
 }
-
-/* .expanded-item .front .front-title .front-title-info {
-    display: flex;
-} */
-/* .expanded-item .front .front-title img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-} */
 
 .expanded-item .front {
     position: relative;
@@ -726,6 +714,51 @@ ul.coach-item-skills li::before {
 }
 
 
+.questions .collapse-items {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.questions .collapse-items .collapse-item  {
+    background-color: var(--light-blue-color);
+    border-radius: var(--border-radius);
+}
+
+.questions .collapse-items .collapse-item + .collapse-item {
+    margin-top: 14px;
+}
+
+.questions .collapse-items .collapse-item .collapse-caption {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.questions .collapse-items .collapse-item .collapse-caption i {
+    margin-left: 20px;
+    font-size: 30px;
+    display: block;
+    width: fit-content;
+    transform: rotate(-45deg);
+    transition: transform 0.3s;
+}
+
+.questions .collapse-items .collapse-item .collapse-caption.opened i{
+    transform: rotate(0deg);
+
+}
+
+.questions .collapse-items .collapse-item .collapse-content {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+
 @media (max-width: 1440px) {
     .expanded-items {
         padding-left: 0;
@@ -881,8 +914,11 @@ ul.coach-item-skills li::before {
 }
 
 
-
 @media (max-width: 767px) {
+    .questions .collapse-items .collapse-item .collapse-caption {
+        font-size: 20px;
+    }
+
     .slick-slide {
         margin: 15px;
     }
