@@ -102,7 +102,7 @@ $this->registerMetaTag([
                         <div class="back">
                             <div class="back-title">
                             </div>
-                            <div><?= $item['text'] ?></div>
+                            <div class="back-text"><?= $item['text'] ?></div>
                         </div>
                     </div>
                 <?php } ?>

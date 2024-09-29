@@ -184,11 +184,19 @@ let Piranha = (function () {
                         $(`#sign-form input[value=${val}]`).prop("checked", true);
                     }
 
+                    $('#sign-train_type label').first().css('display', 'grid');
+
+                    if ($('.modal-adult').css('display') === 'block') {
+                        $('#sign-train_type label').first().css('display', 'none');
+                    }
+
                     if ($(this).data('benefit')) {
                         self.setCookie('benefit', 'true', 1);
                     }
 
-                    $('.modal').fadeOut();
+                    if (!$(this).hasClass('adult-sign')) {
+                        $('.modal').fadeOut();
+                    }
 
                     $(`.${$(el).attr('data-modal')}`).fadeIn()
                     $("body").addClass("disable-scroll");
@@ -204,7 +212,8 @@ let Piranha = (function () {
                 }
 
                 $('.send-success, .send-error').css('display', 'none');
-                $('.modal').fadeOut();
+                
+                $(`.${$(this).attr('data-modal-close')}`).fadeOut();
                 $("body").removeClass("disable-scroll");
             })
         }
@@ -254,17 +263,6 @@ let Piranha = (function () {
                 })
             }
         }
-
-        // indicateScroll() {
-        //     let indicator = $('.indicator');
-
-        //     if (indicator[0]) {
-        //         window.onscroll = function () {
-        //             let percentScroll = (scrollY / (this.documentHeight - this.viewportHeight)) * 100;
-        //             indicator[0].style.width = percentScroll + '%';
-        //         }
-        //     }
-        // }
 
         mobileMenuOpen() {
             $('.mobile-menu-button').on('click', function(e) {
@@ -368,7 +366,7 @@ $(window).on('load', function(){
         setTimeout(() => {
             $('.modal-benefit').fadeIn();
             $("body").addClass("disable-scroll");
-        }, 3000)
+        }, 30000)
     }
 });
 

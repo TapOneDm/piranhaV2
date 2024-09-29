@@ -393,14 +393,13 @@
     width: 4px;
 }
 
-.expanded-item:hover>.front {
+.expanded-item:hover > .front {
     transform: perspective(900px) rotateY(-180deg);
 }
 
-.expanded-item:hover>.back {
+.expanded-item:hover > .back {
     transform: perspective(900px) rotateY(0deg);
 }
-
 
 .price-item {
     display: flex;
@@ -477,10 +476,6 @@
 
 .coach .slick-dots {
     bottom: -56px;
-}
-
-.page-content:has(.slick-slider) {
-    padding-top: 0;
 }
 
 .coach-item.slick-slide {
@@ -946,7 +941,7 @@ ul.coach-item-skills li::before {
     }
 
     .slick-slide {
-        margin: 15px;
+        margin: 0 15px;
     }
 
     .slick-list {
@@ -989,7 +984,7 @@ ul.coach-item-skills li::before {
     }
 
     .privileges-item-caption span {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .privileges-item-caption i {
@@ -1057,12 +1052,8 @@ ul.coach-item-skills li::before {
     }
 
     #sign-train_type {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr) !important;
         gap: 20px;
-    }
-
-    #sign-train_type label {
-        text-align-last: left;
     }
 
     form .form-group+.form-group:not(.field-sign-train_type) {
@@ -1211,6 +1202,10 @@ form .form-group .help-block {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+}
+
+#sign-train_type label {
+    text-align: left;
 }
 
 @media (max-width: 480px) {

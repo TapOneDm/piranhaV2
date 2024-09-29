@@ -9,6 +9,10 @@
     padding: 20px;
 }
 
+.modal.modal-sign {
+    z-index: 9999999;
+}
+
 .modal .modal-content {
     position: relative;
     top: 50%;
@@ -20,11 +24,24 @@
     border-radius: var(--border-radius);
     max-height: 600px;
     height: 100%;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     animation: modalAppear 0.4s;
     color: white;
+}
+
+.modal-close {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: var(--pink-color);
 }
 
 .modal-adult .modal-content {
@@ -153,13 +170,11 @@
 
 .modal-adult-body-content .images {
     margin-top: 10px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 .modal-adult-body-content .images img {
     max-width: 400px;
+    margin-top: 10px;
     border-radius: var(--border-radius);
 }
 
@@ -170,5 +185,13 @@
 @media (max-width: 767px) {
     .modal-adult-body-intro h3 {
         font-size: 20px;
+    }
+
+    .modal-adult-body-content h4 {
+        font-size: 16px;
+    }
+
+    .modal-adult-body-content p {
+        font-size: 14px;
     }
 }
