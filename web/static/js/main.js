@@ -366,7 +366,7 @@ $(window).on('load', function(){
         setTimeout(() => {
             $('.modal-benefit').fadeIn();
             $("body").addClass("disable-scroll");
-        }, 3000)
+        }, 30000)
     }
 });
 
