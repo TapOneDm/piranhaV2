@@ -21,7 +21,7 @@ $this->registerMetaTag([
             <button type="button" data-anchor="prices" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
         </div>
         <div data-modal-open data-modal="modal-adult" class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Хочу на тренировки  для взрослых') ?></button></div>
-        <div class="intro-image"><img src="/static/img/main-logo.svg" alt="Piranha"></div>
+        <div class="intro-image"><img src="/static/img/main-logo.svg" loading="lazy" alt="Piranha"></div>
     </div>
 </div>
 <img class="wave" src="/static/img/wave_pink.svg" alt="wave">
@@ -62,9 +62,9 @@ $this->registerMetaTag([
         <div class="page-content">
             <div class="about-content">
                 <div class="about-images">
-                    <a href="/static/img/about/about_1.jpg" data-fancybox="about" class="about-image"><img src="/static/img/about/about_1.jpg" alt="about_1"></a>
-                    <a href="/static/img/about/about_2.jpg" data-fancybox="about" class="about-image"><img src="/static/img/about/about_2.jpg" alt="about_2"></a>
-                    <a href="/static/img/about/about_3.jpg" data-fancybox="about" class="about-image"><img src="/static/img/about/about_3.jpg" alt="about_3"></a>
+                    <a href="/static/img/about/about_1.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_1.jpg" alt="about_1"></a>
+                    <a href="/static/img/about/about_2.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_2.jpg" alt="about_2"></a>
+                    <a href="/static/img/about/about_3.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_3.jpg" alt="about_3"></a>
                 </div>
                 <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем детям и взрослым от 2,5 до 99 лет избавиться от страха воды, проплыть свои первые метры, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также улучшить осанку, вернуть крепкий сон и найти друзей в другой стране.') ?></div>
             </div>
@@ -96,9 +96,8 @@ $this->registerMetaTag([
                             <div class="front-title">
                                 <div><?= $item['title'] ?></div>
                                 <div class="undo"><i class="icon-undo"></i></div>
-                                <!-- <img src="/static/img/wave_pink.svg" alt="wave"> -->
                             </div>
-                            <img src="<?= $item['imageSrc'] ?>" alt="<?php $item['title'] ?>">
+                            <img src="<?= $item['imageSrc'] ?>" loading="lazy" alt="<?php $item['title'] ?>">
                         </div>
                         <div class="back">
                             <div class="back-title">
@@ -124,7 +123,7 @@ $this->registerMetaTag([
                 <?php foreach (\app\models\Price::getItems() as $item) { ?>
                     <div class="price-item">
                         <div class="price-item-top">
-                            <img src="<?= $item['imageSrc'] ?>" alt="<?= $item['title'] ?>">
+                            <img src="<?= $item['imageSrc'] ?>" loading="lazy" alt="<?= $item['title'] ?>">
                         </div>
                         <div class="price-item-mid">
                             <span><?= $item['title'] ?></span>
@@ -162,7 +161,7 @@ $this->registerMetaTag([
             <div class="coach-items">
                 <?php foreach (\app\models\Coach::getItems() as $item) { ?>
                     <div class="coach-item">
-                        <a href="<?= $item['imageSrc'] ?>" data-fancybox="coach" class="coach-item-image"><img src="<?= $item['imageSrc'] ?>" alt="<?= $item['name'] ?>"></a>
+                        <a href="<?= $item['imageSrc'] ?>" loading="lazy" data-fancybox="coach" class="coach-item-image"><img src="<?= $item['imageSrc'] ?>" alt="<?= $item['name'] ?>"></a>
                         <div class="coach-item-info">
                             <div class="coach-item-info-name"><?= $item['name'] ?></div>
                             <ul class="coach-item-skills">
@@ -191,7 +190,7 @@ $this->registerMetaTag([
                 <?php foreach(\app\models\Address::getItems() as $item) { ?>
                     <div class="address-item">
                         <div class="item-image">
-                            <img src="<?= $item['imageSrc'] ?>" alt="<?= $item['title'] ?>">
+                            <img src="<?= $item['imageSrc'] ?>" loading="lazy" alt="<?= $item['title'] ?>">
                         </div>
                         <div class="item-content">
                             <div class="item-content-title"><?= $item['title'] ?></div>
@@ -213,57 +212,20 @@ $this->registerMetaTag([
     <div class="container">
         <div class="page-caption">
             <h2 class="caption-text"><?= Yii::t('app', 'Ученики, которые пришли к желаемому результату') ?></h2>
-            <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'Отзывы') ?></button>
+            <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Отзывы') ?></button>
         </div>
         <div class="page-content">
             <div class="row">
                 <div class="column">
-                    <a href="/static/img/review/review_3.jpg" data-fancybox="reviews"><img src="/static/img/review/review_3.jpg" alt="review"></a>
-                    <a href="/static/img/review/review_1.jpg" data-fancybox="reviews"><img src="/static/img/review/review_1.jpg" alt="review"></a>
+                    <a href="/static/img/review/review_3.jpg" data-fancybox="reviews"><img src="/static/img/review/review_3.jpg" loading="lazy" alt="review"></a>
+                    <a href="/static/img/review/review_1.jpg" data-fancybox="reviews"><img src="/static/img/review/review_1.jpg" loading="lazy" alt="review"></a>
                 </div>
                 <div class="column">
-                    <a href="/static/img/review/review_4.jpg" data-fancybox="reviews"><img src="/static/img/review/review_4.jpg" alt="review"></a>
-                    <a href="/static/img/review/review_5.jpg" data-fancybox="reviews"><img src="/static/img/review/review_5.jpg" alt="review"></a>
+                    <a href="/static/img/review/review_4.jpg" data-fancybox="reviews"><img src="/static/img/review/review_4.jpg" loading="lazy" alt="review"></a>
+                    <a href="/static/img/review/review_5.jpg" data-fancybox="reviews"><img src="/static/img/review/review_5.jpg" loading="lazy" alt="review"></a>
                 </div>
                 <div class="column">
-                    <a href="/static/img/review/review_2.jpg" data-fancybox="reviews"><img src="/static/img/review/review_2.jpg" alt="review"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="gallery" class="page gallery">
-    <div class="container">
-        <div class="page-caption">
-            <h2 class="caption-text"><?= Yii::t('app', 'Галерея') ?></h2>
-            <button class="caption-button right"><?= Yii::t('app', 'Фото') ?></button>
-        </div>
-        <div class="page-content">
-            <div class="gallery-items">
-                <div class="column">
-                    <a href="/static/img/gallery/gallery_1.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_1.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_2.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_8.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_9.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_10.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_7.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_17.jpg" src="" alt="gallery"></a>
-                </div>
-                <div class="column">
-                    <a href="/static/img/gallery/gallery_3.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_3.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_4.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_4.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_4.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_11.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_4.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_12.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_4.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_13.jpg" src="" alt="gallery"></a>
-
-                </div>
-                <div class="column">
-                    <a href="/static/img/gallery/gallery_5.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_5.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_6.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_6.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_7.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_7.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_7.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_14.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_7.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_15.jpg" src="" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_7.jpg" data-fancybox="gallery"><img data-lazysrc="/static/img/gallery/gallery_16.jpg" src="" alt="gallery"></a>
+                    <a href="/static/img/review/review_2.jpg" data-fancybox="reviews"><img src="/static/img/review/review_2.jpg" loading="lazy" alt="review"></a>
                 </div>
             </div>
         </div>
@@ -306,7 +268,7 @@ $this->registerMetaTag([
     <div class="container">
         <div class="page-caption">
             <h2 class="caption-text"><?= Yii::t('app', 'Всё, что вам нужно знать перед началом занятий') ?></h2>
-            <button class="caption-button right"><?= Yii::t('app', 'Вопросы') ?></button>
+            <button class="caption-button"><?= Yii::t('app', 'Вопросы') ?></button>
         </div>
         <div class="page-content">
             <div class="collapse-items answer-items">
@@ -319,6 +281,32 @@ $this->registerMetaTag([
                     </div>
                 <?php }?>
             </div>
+        </div>
+    </div>
+</div>
+
+<div id="gallery" class="page gallery">
+    <div class="container">
+        <div class="page-caption">
+            <h2 class="caption-text"><?= Yii::t('app', 'Галерея') ?></h2>
+            <button class="caption-button right"><?= Yii::t('app', 'Фото') ?></button>
+        </div>
+        <div class="page-content">
+            <div class="gallery-items">
+                <div class="column">
+                    <a href="/static/img/gallery/gallery_1.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_1.jpg" loading="lazy" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_2.jpg" loading="lazy" alt="gallery"></a>
+                </div>
+                <div class="column">
+                    <a href="/static/img/gallery/gallery_3.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_3.jpg" loading="lazy" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_4.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_4.jpg" loading="lazy" alt="gallery"></a>
+                </div>
+                <div class="column">
+                    <a href="/static/img/gallery/gallery_5.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_5.jpg" loading="lazy" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_6.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_6.jpg" loading="lazy" alt="gallery"></a>
+                </div>
+            </div>
+            <button type="button" class="gallery-load-more btn pink"><?= Yii::t('app', 'Смотреть все фото') ?></button>
         </div>
     </div>
 </div>

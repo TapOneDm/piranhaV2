@@ -6,6 +6,8 @@ use Yii;
 use yii\web\Controller;
 
 class BaseController extends Controller {
+    CONST GALLERY_LIST_AJAX_URL = '/site/gallery-list';
+
     public function __construct($id, $module=null){
         parent::__construct($id, $module);
 
@@ -47,7 +49,9 @@ class BaseController extends Controller {
             }
         }
 
-        $this->redirect('/'.$redirectToLanguage.$_SERVER['REQUEST_URI'], 301);
+        if (!str_starts_with($_SERVER['REQUEST_URI'], static::GALLERY_LIST_AJAX_URL)) {
+            $this->redirect('/'.$redirectToLanguage.$_SERVER['REQUEST_URI'], 301);
+        }
     }
 
     public function beforeAction($action)

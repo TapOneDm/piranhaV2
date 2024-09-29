@@ -595,13 +595,13 @@ ul.coach-item-skills li::before {
 }
 
 .footer-nav ul {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
 .footer-nav ul li a {
-    color: var(--orange-color);
+    color: white;
     font-weight: 600;
 }
 
@@ -750,7 +750,6 @@ ul.coach-item-skills li::before {
 
 .questions .collapse-items .collapse-item .collapse-caption.opened i{
     transform: rotate(0deg);
-
 }
 
 .questions .collapse-items .collapse-item .collapse-content {
@@ -1191,6 +1190,25 @@ label {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+}
+
+.gallery-load-more {
+    width: max-content;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin: 30px auto 0 auto;
+}
+
+.gallery-load-more:hover {
+    background-color: var(--light-blue-color);
+    color: white;
+}
+
+.gallery-load-more.hidden {
+    display: none;
 }
 
 @media (max-width: 600px) {

@@ -151,6 +151,18 @@
     font-weight: 700;
 }
 
+.modal-adult-body-content .images {
+    margin-top: 10px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.modal-adult-body-content .images img {
+    max-width: 400px;
+    border-radius: var(--border-radius);
+}
+
 .modal-adult-body-content h4+p {
     padding-top: 10px;
 }

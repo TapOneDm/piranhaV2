@@ -15,7 +15,6 @@
                 </div>
             </div>
             <div class="footer-nav">
-                <p><?= Yii::t('app', 'Меню') ?></p>
                 <ul class="footer-nav-items">
                     <li><a href="#" data-anchor="about"><?= Yii::t('app', 'О нас') ?></a></li>
                     <li><a href="#" data-anchor="expanded"><?= Yii::t('app', 'Подход') ?></a></li>

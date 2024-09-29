@@ -17,6 +17,7 @@ let Piranha = (function () {
             this.initSliders();
             this.toggleHeaderPosition();
             this.initCollapse();
+            this.loadMoreGallery();
         }
 
         initCollapse() {
@@ -60,6 +61,32 @@ let Piranha = (function () {
             
                 prevScrollpos = currentScrollPos;
             }
+        }
+
+        loadMoreGallery() {
+            $('.gallery-load-more').on('click', function() {
+                $(this).html('<span class="loader"></span>');
+                let $galleryItems = $('.gallery-items');
+
+                $.ajax({
+                    url: 'site/gallery-list',
+                    method: 'post',
+                    success: (response) => {
+                        $galleryItems.html(response.html);
+                        $(document).scrollTop($(this).offset().top);
+                        
+                        $(this).addClass('hidden');
+                        return;
+                    },
+                    error: (error) => {
+                        $('.modal-ajax-error').fadeIn();
+                        $(this).addClass('hidden');
+                        return;
+                    },
+                });
+
+                return;
+            });
         }
 
         initSliders() {

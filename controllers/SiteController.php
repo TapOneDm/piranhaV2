@@ -81,4 +81,12 @@ class SiteController extends BaseController
         }
         return $this->renderPartial('_sign-form');
     }
+
+    public function actionGalleryList()
+    {
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        if (Yii::$app->request->isAjax && Yii::$app->request->isPost) {
+            return ['html' => $this->renderPartial('_gallery')];
+        }
+    }
 }
