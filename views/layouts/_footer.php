@@ -3,7 +3,7 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-info">
-                <div class="footer-info-logo"><img src="/static/img/main-logo.svg" alt="piranha"></div>
+                <a href="<?= $this->getWebsiteHomeUrl() ?>" class="footer-info-logo"><img src="/static/img/main-logo.svg" alt="piranha"></a>
                 <div class="footer-info-location"><?= Yii::t('app', 'Tbilisi, GEORGIA') ?></div>
             </div>
             <div class="footer-links">
@@ -23,8 +23,8 @@
                     <li><a href="#" data-anchor="address"><?= Yii::t('app', 'Адреса') ?></a></li>
                     <li><a href="#" data-anchor="review"><?= Yii::t('app', 'Отзывы') ?></a></li>
                     <li><a href="<?= yii\helpers\Url::to(['/rules']) ?>"><?= Yii::t('app', 'Правила') ?></a></li>
-                    <li><a href="<?= yii\helpers\Url::to(['/gallery']) ?>"><?= Yii::t('app', 'Галерея') ?></a></li>
                     <li><a href="#" data-anchor="questions"><?= Yii::t('app', 'FAQ') ?></a></li>
+                    <li><a href="<?= yii\helpers\Url::to(['/gallery']) ?>"><?= Yii::t('app', 'Галерея') ?></a></li>
                 </ul>
             </div>
             <div class="footer-contacts">

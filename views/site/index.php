@@ -236,7 +236,7 @@ $this->registerMetaTag([
     <div class="container">
         <div class="page-caption">
             <h2 class="caption-text"><?= Yii::t('app', 'Всё, что вам нужно знать перед началом занятий') ?></h2>
-            <button class="caption-button"><?= Yii::t('app', 'Вопросы') ?></button>
+            <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'Вопросы') ?></button>
         </div>
         <div class="page-content">
             <div class="collapse-items answer-items">
@@ -257,7 +257,7 @@ $this->registerMetaTag([
     <div class="container">
         <div class="page-caption">
             <h2 class="caption-text"><?= Yii::t('app', 'Галерея') ?></h2>
-            <button class="caption-button right"><?= Yii::t('app', 'Фото') ?></button>
+            <button class="caption-button"><?= Yii::t('app', 'Фото') ?></button>
         </div>
         <div class="page-content">
             <div class="gallery-items">
