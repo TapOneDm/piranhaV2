@@ -16,7 +16,7 @@
                 <li><a href="#" data-anchor="questions"><?= Yii::t('app', 'FAQ') ?></a></li>
             </ul>
             <?= $this->render('_lang') ?>
-            <button data-modal-open data-modal="modal-sign" class="btn"><?= Yii::t('app', 'Записаться') ?></button>
+            <button data-modal-open data-modal="modal-sign" class="header-sign-button btn"><?= Yii::t('app', 'Записаться') ?></button>
         </div>   
         <div class="mobile-menu-button">
             <span></span>

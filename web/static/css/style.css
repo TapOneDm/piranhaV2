@@ -27,6 +27,9 @@
     gap: 20px;
 }
 
+.intro-actions button:first-child {
+    font-size: 20px;
+}
 
 .intro-actions button {
     padding: 20px 34px;
@@ -111,6 +114,10 @@
 
 .mobile-menu-button {
     display: none;
+}
+
+.header-sign-button {
+    text-transform: uppercase;
 }
 
 .mobile-menu-button span {
@@ -228,21 +235,6 @@
 .review .column a:not(:first-child) {
     display: block;
     margin-top: 14px;
-}
-
-@media (max-width: 767px) {
-    .review .row {
-        display: inline-grid;
-        grid-template-columns: 1fr;
-    }
-
-    .review .column {
-        max-width: fit-content;
-    }
-
-    .review .column a {
-        height: fit-content;
-    }
 }
 
 @media (max-width: 998px) {
@@ -487,6 +479,10 @@
     bottom: -56px;
 }
 
+.page-content:has(.slick-slider) {
+    padding-top: 0;
+}
+
 .coach-item.slick-slide {
     display: flex;
     flex-direction: column;
@@ -507,7 +503,7 @@
 
 .coach-item-info-name {
     color: var(--pink-color);
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -521,7 +517,7 @@ ul.coach-item-skills {
 ul.coach-item-skills li {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 ul.coach-item-skills li::before {
@@ -914,12 +910,39 @@ ul.coach-item-skills li::before {
 
 
 @media (max-width: 767px) {
-    .questions .collapse-items .collapse-item .collapse-caption {
+    .menu .items a {
+        font-size: 16px;
+    }
+
+    .page-caption .caption-button {
+        font-size: 14px;
+        padding: 8px 12px;
+        top: -36px;
+    }
+
+    .page-caption .caption-text {
         font-size: 20px;
     }
 
+    .review .row {
+        display: inline-grid;
+        grid-template-columns: 1fr;
+    }
+
+    .review .column {
+        max-width: fit-content;
+    }
+
+    .review .column a {
+        height: fit-content;
+    }
+
+    .questions .collapse-items .collapse-item .collapse-caption {
+        font-size: 16px;
+    }
+
     .questions .collapse-items .collapse-item .collapse-content {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .slick-slide {
@@ -931,7 +954,7 @@ ul.coach-item-skills li::before {
     }
 
     .page {
-        padding: 70px 0;
+        padding: 50px 0;
     }
 
     .intro-title {
@@ -951,11 +974,46 @@ ul.coach-item-skills li::before {
     }
 
     .privileges-items {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .privileges-item {
+        gap: 10px;
+        align-self: start;
+    }
+
+    .privileges-item-caption {
+        gap: 10px;
+        text-align: start;
+    }
+
+    .privileges-item-caption span {
+        font-size: 16px;
+    }
+
+    .privileges-item-caption i {
+        font-size: 26px !important;
+    }
+
+    .privileges-item-text {
+        font-size: 14px;
     }
 
     .about-indicators {
-        grid-template-columns: repeat(1, 1fr);
+        padding-top: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 10px;
+    }
+
+    .about-indicator {
+        gap: 10px;
+    }
+
+    .about-indicator span {
+        text-align: center;
+        font-size: 20px;
     }
 
     .about-content {
@@ -978,8 +1036,77 @@ ul.coach-item-skills li::before {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .coach-item.slick-slide {
+        gap: 20px;
+    }
+
+    .coach-item-info {
+        gap: 8px;
+    }
+
     .coach-item {
         gap: 20px;
+    }
+
+    .coach-item-info-name {
+        font-size: 18px;
+    }
+
+    ul.coach-item-skills li {
+        font-size: 14px;
+    }
+
+    #sign-train_type {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    #sign-train_type label {
+        text-align-last: left;
+    }
+
+    form .form-group+.form-group:not(.field-sign-train_type) {
+        margin-top: 36px;
+    }
+
+    .field-sign-train_type {
+        margin-top: 20px;
+    }
+
+    .price-item-mid ul {
+        gap: 10px;
+    }
+
+    .price-item-mid span {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .price-item-mid ul {
+        font-size: 14px;
+    }
+    
+    .expanded-item .front .front-title .undo,
+    .expanded-item .back .back-title .undo {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        background-color: var(--pink-color);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+    }
+
+    .expanded-item .undo i {
+        font-size: 14px;
+    }
+
+    .questions .collapse-items .collapse-item+.collapse-item {
+     margin-top: 10px;   
     }
 }
 
@@ -1017,20 +1144,6 @@ ul.coach-item-skills li::before {
     .intro-adult button{
         flex: 1;
         font-size: 16px;
-    }
-
-    .privileges-items {
-        gap: 40px;
-    }
-
-    .privileges-item {
-        align-items: center;
-        justify-content: center;
-        gap: 14px;
-    }
-
-    .privileges-item-text {
-        text-align: center;
     }
 
     .footer-content {
@@ -1100,25 +1213,6 @@ form .form-group .help-block {
     gap: 30px;
 }
 
-@media (max-width: 767px) {
-    #sign-train_type {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-    }
-
-    #sign-train_type label {
-        text-align-last: left;
-    }
-
-    form .form-group+.form-group:not(.field-sign-train_type) {
-        margin-top: 36px;
-    }
-
-    .field-sign-train_type {
-        margin-top: 20px;
-    }
-}
-
 @media (max-width: 480px) {
     .field-sign-train_type {
         margin-top: 0;
@@ -1177,17 +1271,25 @@ label {
 .gallery-items {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
 }
 
 .gallery-items .column {
     flex: 33.33333%;
     max-width: 33.33333%;
-    padding: 0 4px;
+}
+
+.gallery-items .column  + .column {
+    margin-top: 8px;
+    padding-left: 8px;
+}
+
+.gallery-items .column a + a {
+    display: block;
+    margin-top: 8px;
 }
 
 .gallery-items img {
-    margin-top: 8px;
+    border-radius: var(--border-radius);
     vertical-align: middle;
     width: 100%;
 }
@@ -1215,6 +1317,10 @@ label {
     .gallery-items .column {
         flex: 100%;
         max-width: 100%;
+    }
+
+    .gallery-items .column  + .column {
+        padding-left: 0;
     }
 }
 

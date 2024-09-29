@@ -232,38 +232,6 @@ $this->registerMetaTag([
     </div>
 </div>
 
-<div id="rules" class="page rules">
-    <div class="container">
-        <div class="page-caption">
-            <h2 class="caption-text"><?= Yii::t('app', 'Правила посещения детского клуба плавания Piranha') ?></h2>
-            <button class="caption-button right"><?= Yii::t('app', 'Правила') ?></button>
-        </div>
-        <div class="page-content">
-            <ul>
-                <li><?= Yii::t('app', 'Согласуйте время посещения заранее с нашим администратором.') ?></li>
-                <li><?= Yii::t('app', 'Заранее обговорите с нашим администратором формат занятий, на который вы хотели бы записаться : индивидуальная тренировка, сплит занятие ( два человека в одно время у одного тренера), группа.') ?></li>
-                <li><?= Yii::t('app', 'Рекомендуем приходить в бассейн за 10 - 15 минут до начала занятия, чтобы иметь возможность подготовиться.') ?></li>
-                <li><?= Yii::t('app', 'В бассейне необходимо надеть сменную обувь (тапочки для бассейна).') ?></li>
-                <li><?= Yii::t('app', 'Вход в зону бассейна осуществляется за 1-2 минуты до начала занятия.') ?></li>
-                <li><?= Yii::t('app', 'Занятие длится 45 минут.') ?></li>
-                <li><?= Yii::t('app', 'Срок действия абонементов - 1 месяц.') ?></li>
-                <li><?= Yii::t('app', 'Отработать пропущенные тренировки в следующем месяце возможно только с наличием справки от врача. Если возникла необходимость перенести занятия, позаботьтесь об этом своевременно, т.к. в конце месяца может быть мало свободных мест.') ?></li>
-                <li><?= Yii::t('app', 'Записать в группу можем, когда ребенок умеет нырять и держаться на воде самостоятельно (маленький бассейн), когда ребенок может самостоятельно проплыть 25-50 метров без остановки (большой бассейн).') ?></li>
-            </ul>
-            <br>
-            <br>
-            <span><?= Yii::t('app', 'Для занятий необходимо') ?>:</span>
-            <ul>
-                <li><?= Yii::t('app', 'сменная обувь, полотенце, купальный костюм, шапочка для плаванья и очки;') ?></li>
-                <li><?= Yii::t('app', 'для детей до трех лет: на первое занятие - плавательный одноразовый подгузник или специальные трусики для бассейна.') ?></li>
-            </ul>
-            <br>
-            <br>
-            <span><?= Yii::t('app', 'Большая просьба посещать душ перед входом в воду для поддержания чистоты в бассейне.') ?></span>
-        </div>
-    </div>
-</div>
-
 <div id="questions" class="page questions">
     <div class="container">
         <div class="page-caption">
@@ -298,11 +266,11 @@ $this->registerMetaTag([
                     <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_2.jpg" loading="lazy" alt="gallery"></a>
                 </div>
                 <div class="column">
-                    <a href="/static/img/gallery/gallery_3.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_3.jpg" loading="lazy" alt="gallery"></a>
-                    <a href="/static/img/gallery/gallery_4.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_4.jpg" loading="lazy" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_15.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_15.jpg" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_5.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_5.jpg" loading="lazy" alt="gallery"></a>
                 </div>
                 <div class="column">
-                    <a href="/static/img/gallery/gallery_5.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_5.jpg" loading="lazy" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_16.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_16.jpg" alt="gallery"></a>
                     <a href="/static/img/gallery/gallery_6.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_6.jpg" loading="lazy" alt="gallery"></a>
                 </div>
             </div>
