@@ -121,4 +121,13 @@ return array (
       '@skeeks/yii2/assetsAuto' => $vendorDir . '/skeeks/yii2-assets-auto-compress/src',
     ),
   ),
+  'nizsheanez/yii2-asset-converter' => 
+  array (
+    'name' => 'nizsheanez/yii2-asset-converter',
+    'version' => '1.5.0.0',
+    'alias' => 
+    array (
+      '@nizsheanez/assetConverter' => $vendorDir . '/nizsheanez/yii2-asset-converter/nizsheanez/assetConverter',
+    ),
+  ),
 );

@@ -8,7 +8,7 @@ $config = [
     'language' => 'ru',
     'sourceLanguage' => 'ru-Ru',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log', 'assetsAutoCompress'],
+    'bootstrap' => ['assetsAutoCompress'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -56,6 +56,25 @@ $config = [
         ],
         'view' => [
             'class' => '\app\components\View'
+        ],
+        'assetManager'=> [
+            'class'=>'app\components\AssetManager',
+            'appendTimestamp' => true,
+            'converter'=>[
+                'class'=> 'nizsheanez\assetConverter\Converter',
+                'force'=> false,
+                'destinationDir' => '../assets/compiled',
+                'parsers' => [
+                    'scss' => [
+                        'class' => 'nizsheanez\assetConverter\Scss',
+                        'options' => [
+                            'enableCompass' => true,
+                            'lineComments' => false,
+                            'outputStyle' => 'compressed'
+                        ],
+                    ],
+                ]
+            ]
         ],
         'assetsAutoCompress' => [
             'class' => '\skeeks\yii2\assetsAuto\AssetsAutoCompressComponent',

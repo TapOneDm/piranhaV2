@@ -13,8 +13,8 @@ class ComposerStaticInitb1ef128a51caab1a921457fc96836f03
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
-        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
+        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
@@ -107,6 +107,10 @@ class ComposerStaticInitb1ef128a51caab1a921457fc96836f03
         array (
             'Monolog\\' => 8,
             'Masterminds\\' => 12,
+        ),
+        'L' => 
+        array (
+            'Leafo\\ScssPhp\\' => 14,
         ),
         'I' => 
         array (
@@ -332,6 +336,10 @@ class ComposerStaticInitb1ef128a51caab1a921457fc96836f03
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
+        'Leafo\\ScssPhp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/leafo/scssphp/src',
+        ),
         'Intervention\\HttpAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/httpauth/src',
@@ -400,6 +408,13 @@ class ComposerStaticInitb1ef128a51caab1a921457fc96836f03
                 0 => __DIR__ . '/..' . '/udokmeci/yii2-phone-validator/src',
             ),
         ),
+        'n' => 
+        array (
+            'nizsheanez\\assetConverter\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/nizsheanez/yii2-asset-converter',
+            ),
+        ),
         'P' => 
         array (
             'Props\\' => 
@@ -409,6 +424,13 @@ class ComposerStaticInitb1ef128a51caab1a921457fc96836f03
             'Pimple' => 
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
+        ),
+        'L' => 
+        array (
+            'Less' => 
+            array (
+                0 => __DIR__ . '/..' . '/oyejorge/less.php/lib',
             ),
         ),
         'J' => 
@@ -1010,6 +1032,77 @@ class ComposerStaticInitb1ef128a51caab1a921457fc96836f03
         'PharIo\\Version\\VersionConstraintValue' => __DIR__ . '/..' . '/phar-io/version/src/VersionConstraintValue.php',
         'PharIo\\Version\\VersionNumber' => __DIR__ . '/..' . '/phar-io/version/src/VersionNumber.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
+        'SassBoolean' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassBoolean.php',
+        'SassBooleanException' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassLiteralExceptions.php',
+        'SassColour' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassColour.php',
+        'SassColourException' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassLiteralExceptions.php',
+        'SassCommentNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassCommentNode.php',
+        'SassCommentNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassCompactRenderer' => __DIR__ . '/..' . '/richthegeek/phpsass/renderers/SassCompactRenderer.php',
+        'SassCompressedRenderer' => __DIR__ . '/..' . '/richthegeek/phpsass/renderers/SassCompressedRenderer.php',
+        'SassContentNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassContentNode.php',
+        'SassContext' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassContext.php',
+        'SassContextException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassDebugNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassDebugNode.php',
+        'SassDebugNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassDirectiveNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassDirectiveNode.php',
+        'SassDirectiveNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassEachNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassEachNode.php',
+        'SassEachNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassElseNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassElseNode.php',
+        'SassException' => __DIR__ . '/..' . '/richthegeek/phpsass/SassException.php',
+        'SassExpandedRenderer' => __DIR__ . '/..' . '/richthegeek/phpsass/renderers/SassExpandedRenderer.php',
+        'SassExtendNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassExtendNode.php',
+        'SassExtendNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassFile' => __DIR__ . '/..' . '/richthegeek/phpsass/SassFile.php',
+        'SassForNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassForNode.php',
+        'SassForNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassFunctionDefinitionNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassFunctionDefinitionNode.php',
+        'SassFunctionDefinitionNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassIfNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassIfNode.php',
+        'SassIfNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassImportNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassImportNode.php',
+        'SassImportNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassList' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassList.php',
+        'SassListException' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassLiteralExceptions.php',
+        'SassLiteral' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassLiteral.php',
+        'SassLiteralException' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassLiteralExceptions.php',
+        'SassMediaNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassMediaNode.php',
+        'SassMixinDefinitionNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassMixinDefinitionNode.php',
+        'SassMixinDefinitionNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassMixinNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassMixinNode.php',
+        'SassMixinNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassNestedRenderer' => __DIR__ . '/..' . '/richthegeek/phpsass/renderers/SassNestedRenderer.php',
+        'SassNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNode.php',
+        'SassNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassNumber' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassNumber.php',
+        'SassNumberException' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassLiteralExceptions.php',
+        'SassParser' => __DIR__ . '/..' . '/richthegeek/phpsass/SassParser.php',
+        'SassPropertyNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassPropertyNode.php',
+        'SassPropertyNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassRenderer' => __DIR__ . '/..' . '/richthegeek/phpsass/renderers/SassRenderer.php',
+        'SassReturn' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassReturnNode.php',
+        'SassReturnNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassReturnNode.php',
+        'SassRootNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassRootNode.php',
+        'SassRuleNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassRuleNode.php',
+        'SassRuleNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassScriptFunction' => __DIR__ . '/..' . '/richthegeek/phpsass/script/SassScriptFunction.php',
+        'SassScriptFunctionException' => __DIR__ . '/..' . '/richthegeek/phpsass/script/SassScriptParserExceptions.php',
+        'SassScriptFunctions' => __DIR__ . '/..' . '/richthegeek/phpsass/script/SassScriptFunctions.php',
+        'SassScriptLexer' => __DIR__ . '/..' . '/richthegeek/phpsass/script/SassScriptLexer.php',
+        'SassScriptLexerException' => __DIR__ . '/..' . '/richthegeek/phpsass/script/SassScriptParserExceptions.php',
+        'SassScriptOperation' => __DIR__ . '/..' . '/richthegeek/phpsass/script/SassScriptOperation.php',
+        'SassScriptOperationException' => __DIR__ . '/..' . '/richthegeek/phpsass/script/SassScriptParserExceptions.php',
+        'SassScriptParser' => __DIR__ . '/..' . '/richthegeek/phpsass/script/SassScriptParser.php',
+        'SassScriptParserException' => __DIR__ . '/..' . '/richthegeek/phpsass/script/SassScriptParserExceptions.php',
+        'SassScriptVariable' => __DIR__ . '/..' . '/richthegeek/phpsass/script/SassScriptVariable.php',
+        'SassString' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassString.php',
+        'SassStringException' => __DIR__ . '/..' . '/richthegeek/phpsass/script/literals/SassLiteralExceptions.php',
+        'SassVariableNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassVariableNode.php',
+        'SassVariableNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
+        'SassWarnNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassWarnNode.php',
+        'SassWhileNode' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassWhileNode.php',
+        'SassWhileNodeException' => __DIR__ . '/..' . '/richthegeek/phpsass/tree/SassNodeExceptions.php',
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
         'SebastianBergmann\\CliParser\\OptionDoesNotAllowArgumentException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/OptionDoesNotAllowArgumentException.php',
@@ -1231,11 +1324,12 @@ class ComposerStaticInitb1ef128a51caab1a921457fc96836f03
         'aCssRulesetEndToken' => __DIR__ . '/..' . '/skeeks/cssmin/src/CssMin.php',
         'aCssRulesetStartToken' => __DIR__ . '/..' . '/skeeks/cssmin/src/CssMin.php',
         'aCssToken' => __DIR__ . '/..' . '/skeeks/cssmin/src/CssMin.php',
-        'lessc' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
+        'lessc' => __DIR__ . '/..' . '/oyejorge/less.php/lessc.inc.php',
         'lessc_formatter_classic' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
         'lessc_formatter_compressed' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
         'lessc_formatter_lessjs' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
         'lessc_parser' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
+        'scss_compass' => __DIR__ . '/..' . '/yourilima/scssphp-compass/compass.inc.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
