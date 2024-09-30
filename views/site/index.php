@@ -10,7 +10,7 @@ $this->registerMetaTag([
 ?>
 
 <div class="sign-up-button">
-    <button data-modal-open data-modal="modal-sign" type="button"><i class="icon-pencil-alt"></i><span><?= Yii::t('app', 'Записаться на превое занятие') ?></span></button>
+    <button data-modal-open data-modal="modal-sign" type="button"><i class="icon-pencil-alt"></i><span><?= Yii::t('app', 'Записаться на первое занятие') ?></span></button>
 </div>
 
 <div id="intro" class="page intro">
