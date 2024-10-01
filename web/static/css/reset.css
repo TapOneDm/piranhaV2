@@ -136,14 +136,14 @@ img {
     display: flex;
     justify-content: center;
     padding: 80px 0;
-    transition: all 0.7s;
-    transform: translateY(100px);
+    /* transition: all 0.7s;
+    transform: translateY(100px); */
 }
 
 .page-visible {
-    transform: none;
+    /* transform: none;
     opacity: 1;
-    visibility: visible;
+    visibility: visible; */
 }
 
 .page.intro {

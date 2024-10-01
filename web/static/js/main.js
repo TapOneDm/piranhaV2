@@ -10,7 +10,7 @@ let Piranha = (function () {
             this.mobileMenuOpen();
             this.mobileMenuClose();
             this.initLazyLoadImages();
-            this.dynamicAppear();
+            // this.dynamicAppear();
             this.smoothScroll();
             this.openModal();
             this.closeModal();
@@ -373,7 +373,7 @@ $(window).on('load', function(){
         setTimeout(() => {
             $('.modal-benefit').fadeIn();
             $("body").addClass("disable-scroll");
-        }, 30000)
+        }, 60000)
     }
 });
 

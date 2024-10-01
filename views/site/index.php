@@ -97,7 +97,9 @@ $this->registerMetaTag([
                                 <div><?= $item['title'] ?></div>
                                 <div class="undo"><i class="icon-undo"></i></div>
                             </div>
-                            <img src="<?= $item['imageSrc'] ?>" loading="lazy" alt="<?php $item['title'] ?>">
+                            <div class="front-image">
+                                <img src="<?= $item['imageSrc'] ?>" loading="lazy" alt="<?php $item['title'] ?>">
+                            </div>
                         </div>
                         <div class="back">
                             <div class="back-title">
