@@ -186,7 +186,6 @@
 
 .modal-adult-body-content .row {
     display: flex;
-    /* justify-content: center; */
     flex-direction: row;
     align-items: center;
     gap: 40px;
@@ -196,14 +195,6 @@
 .modal-adult-body-content .row.reverse {
     flex-direction: row-reverse;
 }
-
-.modal-adult-body-content .row p {
-    /* max-width: 600px; */
-}
-
-/* .modal-adult-body-content .row.reverse p {
-    align-self: flex-end;
-} */
 
 .modal-adult-body-content .row .images {
     flex-shrink: 0;
@@ -216,6 +207,12 @@
 
     .modal-adult-body-content h4 {
         font-size: 16px;
+    }
+
+    .modal-adult-body-content .row,
+    .modal-adult-body-content .row.reverse {
+        flex-direction: column;
+        gap: 0px;
     }
 
     .modal-adult-body-content p {
