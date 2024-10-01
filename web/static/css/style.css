@@ -205,11 +205,16 @@
 
 .about-content .about-image img {
     max-width: 600px;
-    max-height: 400px;
+    max-height: 500px;
     height: 100%;
     object-fit: cover;
+    object-position: top;
     overflow: hidden;
     border-radius: var(--border-radius);
+}
+
+.about-content .about-image:nth-child(3) img {
+    object-position: center;
 }
 
 .review-items .slick-track {

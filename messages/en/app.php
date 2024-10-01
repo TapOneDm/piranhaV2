@@ -71,7 +71,7 @@ return [
     'Команда' => 'Team',
     'Команда профессионалов своего дела' => 'A team of professionals in their field',
     'Контакты' => 'Contacts',
-    'Контент-менеджер' => 'Content Manager',
+    'Контент-менеджер' => 'Content manager',
     'Концентрация' => 'Concentration',
     'Люблю фотографировать искренние улыбки детей и их достижения' => 'I love capturing the genuine smiles of children and their achievements',
     'Максимальная концентрация на результат без отвлекающих факторов' => 'Maximum focus on the result without distractions',
