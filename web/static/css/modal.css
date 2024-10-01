@@ -215,6 +215,10 @@
         gap: 0px;
     }
 
+    .modal-adult-body-content h4+.row {
+        padding-top: 10px;
+    }
+
     .modal-adult-body-content p {
         font-size: 14px;
     }
