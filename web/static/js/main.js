@@ -151,12 +151,19 @@ let Piranha = (function () {
 
             $('.coach-items').slick({
                 touchThreshold:100,
-                slidesToShow: 3,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 autoplay: false,
                 infinite: false,
                 dots: true,
                 responsive: [
+                    {
+                        breakpoint: 1240,
+                        settings: {
+                          slidesToShow: 3,
+                          slidesToScroll: 1,
+                        }
+                      },
                     {
                       breakpoint: 998,
                       settings: {

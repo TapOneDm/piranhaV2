@@ -205,7 +205,7 @@
 
 .about-content .about-image img {
     max-width: 600px;
-    max-height: 600px;
+    max-height: 400px;
     height: 100%;
     object-fit: cover;
     overflow: hidden;
@@ -488,12 +488,21 @@
 .coach-item-image {
     border-radius: var(--border-radius);
     overflow: hidden;
+    max-height: 460px;
+}
+.coach-item-image img {
+    object-fit: cover;
 }
 
 .coach-item-info {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.coach-item-info-status {
+    font-size: 16px;
+    color: var(--light-blue-color);
 }
 
 .coach-item-info-name {

@@ -163,6 +163,7 @@ $this->registerMetaTag([
                     <div class="coach-item">
                         <a href="<?= $item['imageSrc'] ?>" loading="lazy" data-fancybox="coach" class="coach-item-image"><img src="<?= $item['imageSrc'] ?>" alt="<?= $item['name'] ?>"></a>
                         <div class="coach-item-info">
+                            <div class="coach-item-info-status"><?= $item['status'] ?></div>
                             <div class="coach-item-info-name"><?= $item['name'] ?></div>
                             <ul class="coach-item-skills">
                                 <?php foreach ($item['skills'] as $skill) { ?>

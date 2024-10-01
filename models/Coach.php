@@ -12,6 +12,7 @@ class Coach extends Model {
         return [
             [
                 'name' => Yii::t('app', 'Нино Салакая'),
+                'status' => Yii::t('app', 'Тренер по плаванию'),
                 'imageSrc' => '/static/img/coach/nino_salakaya.jpg',
                 'skills' => [
                     Yii::t('app', 'Образование: спортивный колледж, специальность — плавание'),
@@ -22,7 +23,8 @@ class Coach extends Model {
                 'caption' => Yii::t('app', 'Умею находить язык с любым ребёнком, даже с самым замкнутым.')
             ],
             [
-                'name' => Yii::t('app', 'Пономарев Евгений'),
+                'name' => Yii::t('app', 'Евгений Пономарев'),
+                'status' => Yii::t('app', 'Тренер по плаванию'),
                 'imageSrc' => '/static/img/coach/evgeniy_ponomarev.jpg',
                 'skills' => [
                     Yii::t('app', 'Образование: Белорусский государственный университет физической культуры'),
@@ -35,6 +37,7 @@ class Coach extends Model {
             ],
             [
                 'name' => Yii::t('app', 'Александр Колотыгин'),
+                'status' => Yii::t('app', 'Старший тренер'),
                 'imageSrc' => '/static/img/coach/alexander_colotygin.jpg',
                 'skills' => [
                     Yii::t('app', 'Образование: Белорусский государственный университет физической культуры, магистр педагогических наук'),
@@ -46,7 +49,8 @@ class Coach extends Model {
                 'caption' => Yii::t('app', 'Тренирую будущих чемпионов — мои ученики регулярно побеждают в соревнованиях')
             ],
             [
-                'name' => Yii::t('app', 'Имнадзе Мариам'),
+                'name' => Yii::t('app', 'Мариам Имнадзе'),
+                'status' => Yii::t('app', 'Администратор'),
                 'imageSrc' => '/static/img/coach/imnadze_mariam.jpg',
                 'skills' => [
                     Yii::t('app', 'Образование: Грузинский технический университет, специальность «Международные отношения и право»'),
@@ -57,7 +61,8 @@ class Coach extends Model {
                 'caption' => Yii::t('app', 'С нетерпением жду вас для записи на тренировки!')
             ],
             [
-                'name' => Yii::t('app', 'Эзугбая Нана'),
+                'name' => Yii::t('app', 'Нана Эзугбая'),
+                'status' => Yii::t('app', 'Контент-менеджер'),
                 'imageSrc' => '/static/img/coach/ezukbaya_nana.jpg',
                 'skills' => [
                     Yii::t('app', 'Образование: стратегические коммуникации, Университет Грузии'),
