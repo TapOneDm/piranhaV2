@@ -73,7 +73,7 @@ class SiteController extends BaseController
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
             if ($model->validate() && $model->save()) {
-                // $model->sendTelegramMessage();
+                $model->sendTelegramMessage();
                 $model = new Sign();
                 $this->renderPartial('_sign-form'); 
             }
