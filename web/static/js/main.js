@@ -10,7 +10,7 @@ let Piranha = (function () {
             this.mobileMenuOpen();
             this.mobileMenuClose();
             this.initLazyLoadImages();
-            // this.dynamicAppear();
+            this.dynamicAppear();
             this.smoothScroll();
             this.openModal();
             this.closeModal();
