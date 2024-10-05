@@ -1,6 +1,6 @@
 <div class="modal modal-sign">
     <div class="modal-content">
-        <i data-modal-close="modal-sign" class="icon-times modal-close"></i>
+        <i data-modal-close="modal-sign" data-sign="true" class="icon-times modal-close"></i>
         <div class="modal-title"><?= Yii::t('app', 'Записаться') ?></div>
         <div class="modal-body">
             <?= $this->render('_sign-form') ?>

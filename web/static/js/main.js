@@ -218,6 +218,10 @@ let Piranha = (function () {
                     self.setCookie('benefit', 'true', 1);
                 }
 
+                if ($(this).data('sign')) {
+                    $('form').trigger("reset");
+                }
+
                 $('.send-success, .send-error').css('display', 'none');
                 
                 $(`.${$(this).attr('data-modal-close')}`).fadeOut();

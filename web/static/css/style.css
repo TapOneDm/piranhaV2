@@ -1222,7 +1222,8 @@ form .form-group input[type="text"]::placeholder {
 }
 
 form .form-group .help-block {
-    font-size: 16px;
+    margin-top: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: rgb(248, 244, 27);
 }
