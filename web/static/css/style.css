@@ -55,6 +55,7 @@
     right: 10%;
     top: 50%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     max-width: 600px;
     width: 100%;
     opacity: 0.3;
@@ -390,6 +391,7 @@
     padding: 0;
     gap: 20px;
     transform: perspective(900px) rotateY(0deg);
+    -webkit-transform: perspective(900px) rotateY(0deg);
 }
 
 .expanded-item .front img:first-child {
@@ -402,6 +404,7 @@
     position: absolute;
     overflow-y: auto;
     transform: perspective(900px) rotateY(180deg);
+    -webkit-transform: perspective(900px) rotateY(180deg);
     line-height: 1.7;
 }
 
@@ -412,20 +415,24 @@
 @media (hover: hover) {
     .expanded-item:hover > .front {
         transform: perspective(900px) rotateY(-180deg);
+        -webkit-transform: perspective(900px) rotateY(-180deg);
     }
     
     .expanded-item:hover > .back {
         transform: perspective(900px) rotateY(0deg);
+        -webkit-transform: perspective(900px) rotateY(0deg);
     }
 }
 
 @media (hover: none) {
     .expanded-item.touched > .front {
         transform: perspective(900px) rotateY(-180deg);
+        -webkit-transform: perspective(900px) rotateY(-180deg);
     }
     
     .expanded-item.touched > .back {
         transform: perspective(900px) rotateY(0deg);
+        -webkit-transform: perspective(900px) rotateY(0deg);
     }
 }
 
@@ -775,11 +782,13 @@ ul.coach-item-skills li::before {
     display: block;
     width: fit-content;
     transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
     transition: transform 0.3s;
 }
 
 .questions .collapse-items .collapse-item .collapse-caption.opened i{
     transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
 }
 
 .questions .collapse-items .collapse-item .collapse-content {
@@ -863,12 +872,14 @@ ul.coach-item-skills li::before {
         inset: 0;
         background-color: var(--pink-color);
         transform: translateX(100%);
+        -webkit-transform: translateX(100%);
         transition: transform 0.3s;
         overflow-y: auto;
     }
 
     .header .menu.active {
         transform: translateX(30%);
+        -webkit-transform: translateX(30%);
     }
 
     .header .menu .mobile-close {
@@ -1170,6 +1181,7 @@ ul.coach-item-skills li::before {
 
     .header .menu.active {
         transform: translateX(15%);
+        -webkit-transform: translateX(15%);
     }
 
     .container {
@@ -1291,12 +1303,15 @@ input[type="radio"]::before {
     height: 0.65em;
     border-radius: 50%;
     transform: scale(0);
+    -webkit-transform: scale(0);
     transition: 120ms transform ease-in-out;
     box-shadow: inset 1em 1em var(--orange-color);
 }
 
 input[type="radio"]:checked::before {
     transform: scale(1);
+    -webkit-transform: scale(1);
+
 }
 
 label {
