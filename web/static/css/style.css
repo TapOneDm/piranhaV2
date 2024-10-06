@@ -1106,7 +1106,12 @@ ul.coach-item-skills li::before {
 
     #sign-train_type {
         grid-template-columns: repeat(1, 1fr) !important;
-        gap: 20px;
+        gap: 16px !important;
+        margin-top: 20px !important;
+    }
+
+    #sign-train_type label {
+        font-size: 16px;
     }
 
     form .form-group+.form-group:not(.field-sign-train_type) {
@@ -1425,4 +1430,16 @@ li a[data-anchor="prices"] {
 
 .sign-description ul li::marker {
     color: var(--orange-color);
+}
+
+@media (max-width: 767px) {
+    .sign-description ul.active {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 676px) {
+    .sign-description ul.active {
+        font-size: 14px;
+    }
 }
