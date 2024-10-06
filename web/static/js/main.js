@@ -391,10 +391,18 @@ let Piranha = (function () {
         toggleExpandedMobile() {
             if (this.mobileAndTabletCheck()) {
                 $('.expanded-item').each((i, el) => {
-                    $(el).on('touchstart', function() {
-                        $(this).toggleClass('touched');
-                        console.log('boba');
+                    $(el)
+                    .on('touchstart', function () {
+                        $(this).data('moved', '0');
                     })
+                    .on('touchmove', function () {
+                        $(this).data('moved', '1');
+                    })
+                    .on('touchend', function () {
+                        if($(this).data('moved') == 0){
+                            $(this).toggleClass('touched');
+                        }
+                    });
                 })
             }
         }
@@ -408,7 +416,7 @@ let Piranha = (function () {
     
     return Piranha;        
 })();
-    
+
 let piranha = new Piranha();
 
 
