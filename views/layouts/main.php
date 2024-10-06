@@ -35,7 +35,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
             <?= $this->render('_footer') ?>
             <?= $this->render('../site/_modals') ?>
         </div>
-            <?php if (1 > 2) { ?>
+            <?php if ((getenv('ENV') !== 'DEV')) { ?>
                 <!-- Google tag (gtag.js) -->
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG2R4RJ3X5"></script>
                 <script>
