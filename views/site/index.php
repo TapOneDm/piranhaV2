@@ -66,7 +66,7 @@ $this->registerMetaTag([
                     <a href="/static/img/about/about_2.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_2.jpg" alt="about_2"></a>
                     <a href="/static/img/about/about_3.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_3.jpg" alt="about_3"></a>
                 </div>
-                <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем детям и взрослым от 2,5 до 99 лет избавиться от страха воды, проплыть свои первые метры, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также улучшить осанку, вернуть крепкий сон и найти друзей в другой стране.') ?></div>
+                <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем детям и взрослым от 2,5 до 99 лет <mark>избавиться от страха воды, проплыть свои первые метры</mark>, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также <mark>улучшить осанку</mark>, <mark>вернуть крепкий сон</mark> и найти друзей в другой стране.') ?></div>
             </div>
 
             <div class="about-indicators">
@@ -131,7 +131,7 @@ $this->registerMetaTag([
                             <span><?= $item['title'] ?></span>
                             <ul>
                                 <?php foreach($item['points'] as $point) { ?>
-                                    <li><?= $point ?></li>
+                                    <li><?= Html::encode($point) ?></li>
                                 <?php } ?>
                             </ul>
                         </div>

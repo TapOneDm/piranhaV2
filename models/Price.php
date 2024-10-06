@@ -6,6 +6,10 @@ use Yii;
 use yii\base\Model;
 
 class Price extends Model {
+    const KIDS_VALUE = 'kids';
+    const SPLIT_VALUE = 'split';
+    const ONE_VALUE = 'one';
+    const ADULT_VALUE = 'adult';
 
     public static function getItems()
     {

@@ -382,3 +382,7 @@ img {
         transform: rotate(360deg);
     }
 }
+
+mark {
+    background-color: #f3f698;
+}

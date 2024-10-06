@@ -1,5 +1,6 @@
 <?php
 
+use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\widgets\Pjax;
 
@@ -8,6 +9,8 @@ use yii\widgets\Pjax;
 */
 
 $model = new app\models\Sign();
+$priceItems = \app\models\Price::getItems();
+
 ?>
 
 <?php Pjax::begin(['id' => 'pjax-sign-form', 'enablePushState' => false]); ?>
@@ -23,5 +26,15 @@ $model = new app\models\Sign();
     <?= $form->field($model, 'train_type')->radioList($model->getTrainTypeList())->label(false) ?>
 
     <?php ActiveForm::end() ?>
+
+    <div class="sign-description">
+        <?php foreach($priceItems as $priceItem) { ?>
+            <ul class="<?= $priceItem['check'] ?>">
+                <?php foreach ($priceItem['points'] as $point) { ?>
+                    <li><?= Html::encode($point) ?></li>
+                <?php } ?>
+            </ul>
+        <?php } ?>
+    </div>
 
 <?php Pjax::end(); ?>

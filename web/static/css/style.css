@@ -28,7 +28,7 @@
 }
 
 .intro-actions button:first-child {
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 .intro-actions button {
@@ -409,13 +409,27 @@
     width: 4px;
 }
 
-.expanded-item:hover > .front {
-    transform: perspective(900px) rotateY(-180deg);
+@media (hover: hover) {
+    .expanded-item:hover > .front {
+        transform: perspective(900px) rotateY(-180deg);
+    }
+    
+    .expanded-item:hover > .back {
+        transform: perspective(900px) rotateY(0deg);
+    }
 }
 
-.expanded-item:hover > .back {
-    transform: perspective(900px) rotateY(0deg);
+@media (hover: none) {
+    .expanded-item.touched > .front {
+        transform: perspective(900px) rotateY(-180deg);
+    }
+    
+    .expanded-item.touched > .back {
+        transform: perspective(900px) rotateY(0deg);
+    }
 }
+
+
 
 .price-item {
     display: flex;
@@ -993,9 +1007,18 @@ ul.coach-item-skills li::before {
         width: 100%;
     }
 
+    .intro-actions button {
+        width: 100%;
+        font-size: 14px;
+    }
+
     .intro-actions button:nth-child(2),
     .intro-adult button {
         padding: 10px 34px;
+    }
+
+    .intro-adult button{
+        flex: 1;
     }
 
     .privileges-items {
@@ -1155,16 +1178,6 @@ ul.coach-item-skills li::before {
     .intro-title+.intro-actions {
         margin-top: 30px;
         gap: 14px;
-    }
-
-    .intro-actions button {
-        width: 100%;
-        font-size: 16px;
-    }
-
-    .intro-adult button{
-        flex: 1;
-        font-size: 16px;
     }
 
     .footer-content {
@@ -1376,4 +1389,34 @@ label {
 li a[data-anchor="prices"] {
     font-weight: 700 !important;
     color: var(--orange-color) !important;
+}
+
+
+
+.sign-description {
+    margin-top: 16px;
+}
+
+.sign-description ul {
+    display: none;
+}
+
+.sign-description ul.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 18px;
+    list-style-type: disc;
+    text-transform: lowercase;
+    padding-left: 20px;
+}
+
+.sign-description ul li {
+    list-style: disc;
+    text-align: left;
+}
+
+.sign-description ul li::marker {
+    color: var(--orange-color);
 }
