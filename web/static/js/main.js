@@ -391,7 +391,7 @@ let Piranha = (function () {
         toggleExpandedMobile() {
             if (this.mobileAndTabletCheck()) {
                 $('.expanded-item').each((i, el) => {
-                    $(el).on('click', function() {
+                    $(el).on('touchstart', function() {
                         $(this).toggleClass('touched');
                         console.log('boba');
                     })
