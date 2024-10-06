@@ -2,5 +2,6 @@
     "restructuredtext.pythonRecommendation.disabled": true,
     "cSpell.words": [
         "Privelege"
-    ]
+    ],
+    "php.version": "8.2"
 }
