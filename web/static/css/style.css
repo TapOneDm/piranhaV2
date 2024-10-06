@@ -1397,6 +1397,12 @@ li a[data-anchor="prices"] {
     margin-top: 16px;
 }
 
+@media (max-width: 576px) {
+    .sign-description {
+        margin-top: 0;
+    }   
+}
+
 .sign-description ul {
     display: none;
 }
