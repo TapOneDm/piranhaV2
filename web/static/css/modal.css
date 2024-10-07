@@ -1,0 +1,225 @@
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.modal.modal-sign {
+    z-index: 9999999;
+}
+
+.modal .modal-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    padding: 40px;
+    background-color: var(--pink-color);
+    border-radius: var(--border-radius);
+    max-height: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    animation: modalAppear 0.4s;
+    color: white;
+}
+
+.modal-close {
+    cursor: pointer;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: var(--pink-color);
+}
+
+.modal-adult .modal-content {
+    max-width: unset;
+    max-height: unset;
+}
+
+.modal-content .modal-title {
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.modal-content .modal-body {
+    flex: 1;
+    overflow: auto;
+    padding: 20px 0;
+}
+
+.modal-content .modal-actions {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal-content .modal-actions button {
+    color: white;
+    border: 2px solid white;
+    border-radius: var(--border-radius);
+    padding: 6px 10px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content .modal-actions button.primary {
+    background-color: white;
+    color: var(--pink-color);
+}
+
+.modal-adult,
+.modal-sign,
+.modal-benefit,
+.modal-ajax-error,
+.modal-ajax-success {
+    display: none;
+}
+
+.modal-ajax-success .modal-content,
+.modal-ajax-error .modal-content,
+.modal-benefit .modal-content {
+    height: fit-content;
+}
+
+.modal-ajax-success .modal-content, .modal-body,
+.modal-ajax-error .modal-content, .modal-body,
+.modal-benefit .modal-content .modal-body {
+    text-align: center;
+}
+
+@keyframes modalAppear {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+.modal-content .modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+.modal-content .modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.modal-content .modal-body::-webkit-scrollbar-thumb {
+    background: var(--orange-color);
+}
+
+/* Handle on hover */
+.modal-content .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width: 767px) {
+    .modal .modal-content {
+        padding: 20px;
+    }
+
+    .modal-content {
+        font-size: 16px;
+    }
+
+    .modal-content .modal-title {
+        padding-bottom: 10px;
+    }
+}
+
+.modal-adult-body-content,
+.modal-adult-body-intro {
+    text-align: left;
+}
+
+.modal-adult-body-intro h3 {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.modal-adult-body-intro h3+p {
+    margin-top: 10px;
+}
+
+.modal-adult-body-content h4 {
+    font-weight: 700;
+    max-width: 1100px;
+}
+
+.modal-adult-body-content .images {
+    margin-top: 10px;
+}
+
+.modal-adult-body-content .images img {
+    max-width: 400px;
+    margin-top: 10px;
+    border-radius: var(--border-radius);
+}
+
+.modal-adult-body-content h4+.row {
+    padding-top: 20px;
+}
+
+.modal-adult-body-content .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+}
+
+.modal-adult-body-content .row.reverse {
+    flex-direction: row-reverse;
+}
+
+.modal-adult-body-content .row .images {
+    flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+    .modal-adult-body-intro h3 {
+        font-size: 20px;
+    }
+
+    .modal-adult-body-content h4 {
+        font-size: 16px;
+    }
+
+    .modal-adult-body-content .row,
+    .modal-adult-body-content .row.reverse {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .modal-adult-body-content h4+.row {
+        padding-top: 10px;
+    }
+
+    .modal-adult-body-content p {
+        font-size: 14px;
+    }
+}
