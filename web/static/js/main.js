@@ -53,11 +53,11 @@ let Piranha = (function () {
                 /* if we're scrolling up, or we haven't passed the header,  show the header at the top */
                 if (prevScrollpos > currentScrollPos  || currentScrollPos < headerBottom){  
                     headerDiv.style.top = "0";
-                    firstPageDiv.style.paddingTop = "8.2rem";
+                    firstPageDiv.style.paddingTop = "5.2rem";
                 } else{
                     /* otherwise we're scrolling down & have passed the header so hide it */
                     headerDiv.style.top = `-${(headerDiv.offsetHeight - 6)}px`;
-                    firstPageDiv.style.paddingTop = "8.2rem";
+                    firstPageDiv.style.paddingTop = "5.2rem";
                 } 
             
                 prevScrollpos = currentScrollPos;
@@ -224,7 +224,6 @@ let Piranha = (function () {
                 let val = $('input[name="Sign[train_type]"]:checked').val();
                 self.resetFormTrainTypeVal();
                 $(`.sign-description .${val}`).addClass('active');
-                console.log(val);
             });
         }
 
@@ -421,15 +420,17 @@ let piranha = new Piranha();
 
 
 $(window).on('load', function(){
-    $('#overlay').addClass('hidden');
-    $('.page.intro').addClass('page-visible')
+    let $overlay = $('#overlay');
+
+    $overlay.addClass('hidden');
+    setTimeout(() => $overlay.remove(), 300);
 
     let benefitCookie = piranha.getCookie('benefit');
     if (!benefitCookie) {
         setTimeout(() => {
             $('.modal-benefit').fadeIn();
             $("body").addClass("disable-scroll");
-        }, 60000)
+        }, 90000)
     }
 });
 

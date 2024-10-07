@@ -47,7 +47,10 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
                 </script>
             <?php } ?>
 
-        <div id="overlay"></div>
+        <div id="overlay">
+            <img src="/static/img/logo.svg" alt="logo">
+            <span class="loader"></span>
+        </div>
         <?php $this->endBody() ?>
     </div>
 </body>
