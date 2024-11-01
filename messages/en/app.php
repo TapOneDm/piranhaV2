@@ -43,7 +43,7 @@ return [
     'В группы мы рекомендуем записываться, когда ребенок умеет нырять, держаться на воде самостоятельно, умеют работать ногами кролем и на спине.' => 'We recommend signing up for group lessons when the child can dive, float independently, and knows how to kick using freestyle and backstroke techniques.',
     'В нашей школе плавания мы не отсеиваем детей с особенностями здоровья' => 'In our swimming school, we do not exclude children with health conditions',
     'Взаимная мотивация и поддержка в группе' => 'Mutual motivation and support in the group',
-    'Визит из:' => 'Came from {source}',
+    'Визит из:' => 'Came from: <b>{source}</b>',
     'Вода расслабляет и помогает справиться с тревогой, делая вас более эмоционально устойчивыми' => 'Water relaxes and helps manage anxiety, making you more emotionally resilient',
     'Возможность соревноваться и повышать уровень' => 'Opportunity to compete and improve your skill level',
     'Вопросы' => 'Questions',

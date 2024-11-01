@@ -62,7 +62,7 @@ class Sign extends \yii\db\ActiveRecord
             "🤿 " . $this->getTrainTypeList()[$this->train_type] . "\n";
 
             if (!empty($this->source)) {
-                $message .= "💒 " . Yii::t('app', 'Визит из:', ['source' => $this->source])  . "\n";
+                $message .= "💒 " . Yii::t('app', 'Визит из:', ['source' => $this->source]) . "\n";
             }
 
 
