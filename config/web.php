@@ -44,6 +44,7 @@ $config = [
                 [
                     'class' => 'airani\log\TelegramTarget',
                     'levels' => ['error'],
+                    'except' => ['yii\web\HttpException:404'],
                     'botToken' => '7743390683:AAEFFIvtWqsjQm7kyMdrGG7xs92GGryNXyY', // bot token secret key
                     'chatId' => '-4572433034', // chat id or channel username with @ like 12345 or @channel
                 ],
