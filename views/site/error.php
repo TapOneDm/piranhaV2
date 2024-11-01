@@ -8,15 +8,17 @@
 use yii\helpers\Html;
 
 $this->title = $name;
-?>
-<div class="site-error">
+$isNotFound = $exception->statusCode == 404;
+$text = $isNotFound ? Yii::t('app', 'Такая страница не найдена') : Yii::$app->response->statusText;
 
-    <div class="page-error">
-        <div class="container">
-            <div class="page-error-content">
-                <div><?= Yii::$app->language === 'ru' ? 'Похоже, произошла ошибка' : 'Looks like there was an error' ?></div>
-                <div><a href="/"><?= Yii::$app->language === 'ru' ? 'На главную' : 'Go back' ?></a></div>
-            </div>
+?>
+<div class="page">
+    <div class="container">
+        <div class="page-error-content">
+            <h1><?= $text?></h1>
+            <?php if ($exception->statusCode == 404) { ?>
+                <div><a href="<?= $this->getWebsiteHomeUrl() ?>"><?= Yii::t('app', 'На главную') ?></a></div>
+            <?php } ?>
         </div>
     </div>
 </div>

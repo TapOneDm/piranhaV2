@@ -1454,3 +1454,40 @@ li a[data-anchor="prices"] {
         font-size: 14px;
     }
 }
+
+.page:has(.page-error-content) {
+    padding-bottom: 0;
+}
+.page-error-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 160px 0;    
+}
+
+.page-error-content h1 {
+    font-size: 36px;
+    text-align: center;
+    color: var(--pink-color);
+}
+
+.page-error-content a {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .page-error-content {
+        margin: 100px 0;   
+    }        
+    .page-error-content h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-error-content h1 {
+        font-size: 20px;
+    }
+}

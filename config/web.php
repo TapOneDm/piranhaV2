@@ -40,11 +40,12 @@ $config = [
             'useFileTransport' => true,
         ],
         'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
                 [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
+                    'class' => 'airani\log\TelegramTarget',
+                    'levels' => ['error'],
+                    'botToken' => '7743390683:AAEFFIvtWqsjQm7kyMdrGG7xs92GGryNXyY', // bot token secret key
+                    'chatId' => '-4572433034', // chat id or channel username with @ like 12345 or @channel
                 ],
             ],
         ],
@@ -97,7 +98,7 @@ $config = [
     'params' => $params,
 ];
 
-if (YII_ENV_DEV) {
+// if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
@@ -112,6 +113,6 @@ if (YII_ENV_DEV) {
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
-}
+// }
 
 return $config;

@@ -3,13 +3,22 @@
         'name' => 'yiisoft/yii2-app-basic',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'fb4f7056dd2e69b9f3d23c2ce43b8f0ff88ddc32',
+        'reference' => '9c7bb58c8eddb877c940c1159f496199a5880952',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'airani/yii2-telegram-log' => array(
+            'pretty_version' => '1.0',
+            'version' => '1.0.0.0',
+            'reference' => '17fd9075a1647c48f25e920f517e6ff61cd8b5ca',
+            'type' => 'yii2-extension',
+            'install_path' => __DIR__ . '/../airani/yii2-telegram-log',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'aki/yii2-bot-telegram' => array(
             'pretty_version' => '3.1.10',
             'version' => '3.1.10.0',
@@ -1045,7 +1054,7 @@
         'yiisoft/yii2-app-basic' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'fb4f7056dd2e69b9f3d23c2ce43b8f0ff88ddc32',
+            'reference' => '9c7bb58c8eddb877c940c1159f496199a5880952',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

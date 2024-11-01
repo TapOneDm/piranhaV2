@@ -4,8 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c240fadd8f4c9f7567723ff65b1f27f4",
+    "content-hash": "57be5761db09b73421aafb7d30db1481",
     "packages": [
+        {
+            "name": "airani/yii2-telegram-log",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/airani/yii2-telegram-log.git",
+                "reference": "17fd9075a1647c48f25e920f517e6ff61cd8b5ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/airani/yii2-telegram-log/zipball/17fd9075a1647c48f25e920f517e6ff61cd8b5ca",
+                "reference": "17fd9075a1647c48f25e920f517e6ff61cd8b5ca",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0",
+                "yiisoft/yii2-httpclient": "~2.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "airani\\log\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ali Irani",
+                    "email": "ali@irani.im"
+                }
+            ],
+            "description": "Yii 2.0 telegram log target, send logs to the telegram chats or channels",
+            "keywords": [
+                "bot",
+                "log",
+                "telegram",
+                "yii2"
+            ],
+            "support": {
+                "irc": "irc://irc.freenode.net/yii",
+                "issues": "https://github.com/airani/yii2-telegram-log/issues",
+                "source": "https://github.com/airani/yii2-telegram-log"
+            },
+            "time": "2016-07-14T07:35:57+00:00"
+        },
         {
             "name": "aki/yii2-bot-telegram",
             "version": "3.1.10",

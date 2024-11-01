@@ -10,6 +10,8 @@ use yii\filters\VerbFilter;
 
 class SiteController extends BaseController
 {
+    const GUEST_PLACE_CLUB = 'club';
+
     /**
      * {@inheritdoc}
      */
@@ -54,6 +56,16 @@ class SiteController extends BaseController
 
     public function actionIndex()
     {
+        $cookies = Yii::$app->response->cookies;
+        $queryParams = Yii::$app->request->getQueryParams();
+
+        if (!empty($queryParams['utm_source'])) {
+            $cookies->add(new \yii\web\Cookie([
+                'name' => 'utm_source',
+                'value' => $queryParams['utm_source'],
+                'expire' => time() + 60 * 60 * 24 * 1,
+            ]));
+        }
         return $this->render('index');
     }
 
@@ -66,12 +78,22 @@ class SiteController extends BaseController
     {
         return $this->render('gallery');
     }
-    
+
     public function actionSign()
     {
+        $queryParams = Yii::$app->request->getQueryParams();
+        $source = $queryParams['utm_source'] ?? null;
+
+        if (empty($source)) {
+            $cookies = Yii::$app->request->cookies;
+            $source = $cookies->getValue('utm_source', null);
+        }
+
         $model = new Sign();
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
+            $model->source = $source;
+
             if ($model->validate() && $model->save()) {
                 $model->sendTelegramMessage();
                 $model = new Sign();
@@ -89,4 +111,10 @@ class SiteController extends BaseController
             return ['html' => $this->renderPartial('_gallery')];
         }
     }
+
+    public function actionError()
+    {
+        return $this->render('error');
+    }
+
 }

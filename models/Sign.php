@@ -13,6 +13,7 @@ use DateTimeZone;
  * @property string $name
  * @property string $phone
  * @property string $train_type
+ * @property string $source
  */
 class Sign extends \yii\db\ActiveRecord
 {
@@ -32,7 +33,7 @@ class Sign extends \yii\db\ActiveRecord
         return [
             [['dt'], 'safe'],
             [['name', 'phone', 'train_type'], 'required'],
-            [['train_type'], 'string'],
+            [['train_type', 'source'], 'string'],
             [['name'], 'string', 'max' => 255],
         ];
     }
@@ -45,6 +46,7 @@ class Sign extends \yii\db\ActiveRecord
             'name' => Yii::t('app', 'Как вас зовут'),
             'phone' => Yii::t('app', 'Номер телефона или ник в телеграмме'),
             'train_type' => Yii::t('app', 'Тип тренировки'),
+            'source' => 'Visitor',
         ];
     }
 
@@ -58,6 +60,11 @@ class Sign extends \yii\db\ActiveRecord
             "👤 " . $this->name . "\n" .
             "📱 " . $this->phone . "\n" .
             "🤿 " . $this->getTrainTypeList()[$this->train_type] . "\n";
+
+            if (!empty($this->source)) {
+                $message .= "💒 " . Yii::t('app', 'Визит из:', ['source' => $this->source])  . "\n";
+            }
+
 
         Yii::$app->telegram->sendMessage([
             'chat_id' => Yii::$app->params['requestTelegramChatId'],

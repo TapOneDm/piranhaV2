@@ -69,6 +69,7 @@ class ComposerStaticInitb1ef128a51caab1a921457fc96836f03
         'a' => 
         array (
             'aki\\telegram\\' => 13,
+            'airani\\log\\' => 11,
         ),
         'S' => 
         array (
@@ -218,6 +219,10 @@ class ComposerStaticInitb1ef128a51caab1a921457fc96836f03
         'aki\\telegram\\' => 
         array (
             0 => __DIR__ . '/..' . '/aki/yii2-bot-telegram',
+        ),
+        'airani\\log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/airani/yii2-telegram-log',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (

@@ -24,6 +24,7 @@ return array(
     'cetver\\LanguageSelector\\' => array($vendorDir . '/cetver/yii2-language-selector'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'aki\\telegram\\' => array($vendorDir . '/aki/yii2-bot-telegram'),
+    'airani\\log\\' => array($vendorDir . '/airani/yii2-telegram-log'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Intl\\Normalizer\\' => array($vendorDir . '/symfony/polyfill-intl-normalizer'),

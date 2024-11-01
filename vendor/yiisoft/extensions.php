@@ -130,4 +130,13 @@ return array (
       '@nizsheanez/assetConverter' => $vendorDir . '/nizsheanez/yii2-asset-converter/nizsheanez/assetConverter',
     ),
   ),
+  'airani/yii2-telegram-log' => 
+  array (
+    'name' => 'airani/yii2-telegram-log',
+    'version' => '1.0.0.0',
+    'alias' => 
+    array (
+      '@airani/log' => $vendorDir . '/airani/yii2-telegram-log',
+    ),
+  ),
 );
