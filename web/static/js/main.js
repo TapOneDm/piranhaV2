@@ -425,13 +425,13 @@ $(window).on('load', function(){
     $overlay.addClass('hidden');
     setTimeout(() => $overlay.remove(), 300);
 
-    let benefitCookie = piranha.getCookie('benefit');
-    if (!benefitCookie) {
-        setTimeout(() => {
-            $('.modal-benefit').fadeIn();
-            $("body").addClass("disable-scroll");
-        }, 90000)
-    }
+    // let benefitCookie = piranha.getCookie('benefit');
+    // if (!benefitCookie) {
+    //     setTimeout(() => {
+    //         $('.modal-benefit').fadeIn();
+    //         $("body").addClass("disable-scroll");
+    //     }, 90000)
+    // }
 });
 
 $(document).on("pjax:start", function() {
