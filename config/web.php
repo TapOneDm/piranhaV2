@@ -89,6 +89,7 @@ $config = [
             'rules' => [
                 '/' => 'site/index',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+                '/bot' => 'site/bot',
             ],
         ],
         'telegram' => [

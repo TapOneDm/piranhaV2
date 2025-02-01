@@ -50,9 +50,9 @@ class Sign extends \yii\db\ActiveRecord
         ];
     }
 
-    public function sendTelegramMessage() {
-        $message =
-            "Заявка с сайта\n" .
+    private function getSocialMediaMessage()
+    {
+        $message = "Заявка с сайта\n" .
             "\n" .
             "🗓️ " . date('d.m.Y') . "\n" .
             "🕒 " . date('H:i:s') . "\n" .
@@ -61,16 +61,47 @@ class Sign extends \yii\db\ActiveRecord
             "📱 " . $this->phone . "\n" .
             "🤿 " . $this->getTrainTypeList()[$this->train_type] . "\n";
 
-            if (!empty($this->source)) {
-                $message .= "💒 " . Yii::t('app', 'Визит из:', ['source' => $this->source])  . "\n";
-            }
+        if (!empty($this->source)) {
+            $message .= "💒 " . Yii::t('app', 'Визит из:', ['source' => $this->source])  . "\n";
+        }
 
+        return $message;
+    }
+
+    public function sendTelegramMessage() {
+        $message = $this->getSocialMediaMessage();
 
         Yii::$app->telegram->sendMessage([
             'chat_id' => Yii::$app->params['requestTelegramChatId'],
             'text' => $message,
             'parse_mode' => 'HTML'
         ]);
+    }
+
+    public function sendWhatsAppMessage()
+    {
+        try {
+            $message = $this->getSocialMediaMessage();
+            $client = new \GuzzleHttp\Client();
+            $response = $client->request('POST', 'https://gate.whapi.cloud/messages/text', [
+                'body' => json_encode([
+                    'to' => Yii::$app->params['whatsAppGroupId'], // The recipient's WhatsApp number in international format
+                    'body' => $message // The text message to send
+                ]),
+                'headers' => [
+                    'accept' => 'application/json', // Specify that we expect a JSON response
+                    'authorization' => 'Bearer ' . Yii::$app->params['whatsAppApiToken'], // Replace YOUR_TOKEN_HERE with your API tkn
+                    'content-type' => 'application/json', // Send data in JSON format
+                ],
+            ]);
+
+            echo "Message sent successfully: " . $response->getBody();
+
+        } catch (Exception $e) {
+            // Handle any errors during the request
+            // echo 'Error: ' . $e->getMessage();
+            
+        }
     }
 
     public function getTrainTypeList()

@@ -96,6 +96,7 @@ class SiteController extends BaseController
 
             if ($model->validate() && $model->save()) {
                 $model->sendTelegramMessage();
+                $model->sendWhatsAppMessage();
                 $model = new Sign();
                 $this->renderPartial('_sign-form'); 
             }
@@ -115,6 +116,30 @@ class SiteController extends BaseController
     public function actionError()
     {
         return $this->render('error');
+    }
+
+    public function actionBot()
+    {
+        try {
+            $client = new \GuzzleHttp\Client();
+            $response = $client->request('POST', 'https://gate.whapi.cloud/messages/text', [
+                'body' => json_encode([
+                    'to' => '375299063859', // The recipient's WhatsApp number in international format
+                    'body' => 'Hello world from NEGR!' // The text message to send
+                ]),
+                'headers' => [
+                    'accept' => 'application/json', // Specify that we expect a JSON response
+                    'authorization' => 'Bearer zC9GfGFyxh1Af6BrT0YEaV4AGQiCgrkR', // Replace YOUR_TOKEN_HERE with your API token
+                    'content-type' => 'application/json', // Send data in JSON format
+                ],
+            ]);
+
+            echo "Message sent successfully: " . $response->getBody();
+
+        } catch (\GuzzleHttp\Exception\RequestException $e) {
+            // Handle any errors during the request
+            echo 'Error: ' . $e->getMessage();
+        }
     }
 
 }
