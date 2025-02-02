@@ -9,9 +9,9 @@
             <div class="footer-links">
                 <p><?= Yii::t('app', 'Наши соц. сети') ?></p>
                 <div class="footer-links-icons">
-                    <a href="https://www.instagram.com/piranha.ge/" class="icon-link"><i class="icon-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100084172242937" class="icon-link"><i class="icon-facebook"></i></a>
-                    <a href="https://www.youtube.com/@kolotyginswim" class="icon-link"><i class="icon-youtube"></i></a>
+                    <a href="https://www.instagram.com/piranhageo?igsh=OXFzdXR1NnJsZzU3" class="icon-link"><i class="icon-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/15jPqV2rik/?mibextid=wwXIfr" class="icon-link"><i class="icon-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@piranha.geo?_t=ZS-8tZwEFrX8Ko&_r=1" class="icon-link"><i class="icon-tiktok"></i></a>
                 </div>
             </div>
             <div class="footer-nav">

@@ -84,8 +84,10 @@ class Sign extends \yii\db\ActiveRecord
             $message = $this->getSocialMediaMessage();
             $client = new \GuzzleHttp\Client();
             $response = $client->request('POST', 'https://gate.whapi.cloud/messages/text', [
+                'timeout' => 5,
+                'connect_timeout' => 5,
                 'body' => json_encode([
-                    'to' => Yii::$app->params['whatsAppGroupId'], // The recipient's WhatsApp number in international format
+                    'to' => Yii::$app->params['whatsAppPhoneSender'], // The recipient's WhatsApp number in international format
                     'body' => $message // The text message to send
                 ]),
                 'headers' => [
@@ -94,19 +96,26 @@ class Sign extends \yii\db\ActiveRecord
                     'content-type' => 'application/json', // Send data in JSON format
                 ],
             ]);
-
-            echo "Message sent successfully: " . $response->getBody();
-
-        } catch (Exception $e) {
-            // Handle any errors during the request
-            // echo 'Error: ' . $e->getMessage();
-            
+        } catch (\GuzzleHttp\Exception\RequestException $e) {
+            Yii::$app->telegram->sendMessage([
+                'chat_id' => Yii::$app->params['requestTelegramChatId'],
+                'text' => 'Error sending to WhatsApp',
+                'parse_mode' => 'HTML'
+            ]);
+        }
+        catch (\GuzzleHttp\Exception\ConnectException $e) {
+            Yii::$app->telegram->sendMessage([
+                'chat_id' => Yii::$app->params['requestTelegramChatId'],
+                'text' => 'Error sending to WhatsApp',
+                'parse_mode' => 'HTML'
+            ]);
         }
     }
 
     public function getTrainTypeList()
     {
         return [
+            'baby' => Yii::t('app', 'Грудничковое плавание'),
             'kids' => Yii::t('app', 'Мини-группа (детская)'),
             'split' => Yii::t('app', 'Сплит-тренировки (2 человека)'),
             'one' => Yii::t('app', 'Индивидуальная тренировка'),

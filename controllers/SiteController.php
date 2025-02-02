@@ -95,8 +95,13 @@ class SiteController extends BaseController
             $model->source = $source;
 
             if ($model->validate() && $model->save()) {
-                $model->sendTelegramMessage();
-                $model->sendWhatsAppMessage();
+                try {
+                    $model->sendTelegramMessage();
+                    $model->sendWhatsAppMessage();
+                } catch (Exception $e) {
+                    //
+                }
+                
                 $model = new Sign();
                 $this->renderPartial('_sign-form'); 
             }

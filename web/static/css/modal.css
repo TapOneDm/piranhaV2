@@ -30,6 +30,10 @@
     color: white;
 }
 
+.modal-language .modal-content {
+    max-width: 400px;
+}
+
 .modal-close {
     cursor: pointer;
     position: absolute;
@@ -90,6 +94,7 @@
 .modal-adult,
 .modal-sign,
 .modal-benefit,
+.modal-language,
 .modal-ajax-error,
 .modal-ajax-success {
     display: none;
@@ -97,6 +102,7 @@
 
 .modal-ajax-success .modal-content,
 .modal-ajax-error .modal-content,
+.modal-language .modal-content,
 .modal-benefit .modal-content {
     height: fit-content;
 }
@@ -200,6 +206,33 @@
     flex-shrink: 0;
 }
 
+.modal-language ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.modal-language ul li a {
+    padding: 6px 18px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    color: var(--pink-color);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-language ul li a img {
+    width: 100%;
+    max-width: 30px;
+}
+
 @media (max-width: 767px) {
     .modal-adult-body-intro h3 {
         font-size: 20px;
@@ -221,5 +254,25 @@
 
     .modal-adult-body-content p {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-language .modal-content {
+        max-width: 300px;
+    }
+
+    .modal-language ul {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .modal-language ul li {
+        width: 100%;
+    }
+
+    .modal-language ul li a {
+        display: flex;
+        width: 100%;
     }
 }

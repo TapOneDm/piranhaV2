@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 
 class Price extends Model {
+    const BABY_VALUE = 'baby';
     const KIDS_VALUE = 'kids';
     const SPLIT_VALUE = 'split';
     const ONE_VALUE = 'one';
@@ -14,6 +15,20 @@ class Price extends Model {
     public static function getItems()
     {
         return [
+            [
+                'check' => 'baby',
+                'title' => Yii::t('app', 'Грудничковое плавание'),
+                'imageSrc' => '/static/img/price/baby.jpg',
+                'points' => [
+                    Yii::t('app', 'сильные мышцы – укрепляются с первых месяцев жизни'),
+                    Yii::t('app', 'крепкий сон – вода расслабляет и улучшает засыпание'),
+                    Yii::t('app', 'лучшее пищеварение – мягкая стимуляция ЖКТ'),
+                    Yii::t('app', 'меньше стресса – вода создает чувство комфорта'),
+                    Yii::t('app', 'сильный иммунитет – естественное закаливание'),
+                    Yii::t('app', 'быстрое развитие – дыхание, координация, моторика'),
+                ],
+                'price' => Yii::t('app', 'От 70 лари за тренировку'),
+            ],
             [
                 'check' => 'kids',
                 'title' => Yii::t('app', 'Мини-группа (детская)'),

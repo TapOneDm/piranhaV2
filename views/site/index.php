@@ -211,29 +211,31 @@ $this->registerMetaTag([
     </div>
 </div>
 
-<div id="review" class="page review">
-    <div class="container">
-        <div class="page-caption">
-            <h2 class="caption-text"><?= Yii::t('app', 'Ученики, которые пришли к желаемому результату') ?></h2>
-            <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Отзывы') ?></button>
-        </div>
-        <div class="page-content">
-            <div class="row">
-                <div class="column">
-                    <a href="/static/img/review/review_3.jpg" data-fancybox="reviews"><img src="/static/img/review/review_3.jpg" loading="lazy" alt="review"></a>
-                    <a href="/static/img/review/review_1.jpg" data-fancybox="reviews"><img src="/static/img/review/review_1.jpg" loading="lazy" alt="review"></a>
-                </div>
-                <div class="column">
-                    <a href="/static/img/review/review_4.jpg" data-fancybox="reviews"><img src="/static/img/review/review_4.jpg" loading="lazy" alt="review"></a>
-                    <a href="/static/img/review/review_5.jpg" data-fancybox="reviews"><img src="/static/img/review/review_5.jpg" loading="lazy" alt="review"></a>
-                </div>
-                <div class="column">
-                    <a href="/static/img/review/review_2.jpg" data-fancybox="reviews"><img src="/static/img/review/review_2.jpg" loading="lazy" alt="review"></a>
+<?php if (Yii::$app->language === 'ru') { ?>
+    <div id="review" class="page review">
+        <div class="container">
+            <div class="page-caption">
+                <h2 class="caption-text"><?= Yii::t('app', 'Ученики, которые пришли к желаемому результату') ?></h2>
+                <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Отзывы') ?></button>
+            </div>
+            <div class="page-content">
+                <div class="row">
+                    <div class="column">
+                        <a href="/static/img/review/review_3.jpg" data-fancybox="reviews"><img src="/static/img/review/review_3.jpg" loading="lazy" alt="review"></a>
+                        <a href="/static/img/review/review_1.jpg" data-fancybox="reviews"><img src="/static/img/review/review_1.jpg" loading="lazy" alt="review"></a>
+                    </div>
+                    <div class="column">
+                        <a href="/static/img/review/review_4.jpg" data-fancybox="reviews"><img src="/static/img/review/review_4.jpg" loading="lazy" alt="review"></a>
+                        <a href="/static/img/review/review_5.jpg" data-fancybox="reviews"><img src="/static/img/review/review_5.jpg" loading="lazy" alt="review"></a>
+                    </div>
+                    <div class="column">
+                        <a href="/static/img/review/review_2.jpg" data-fancybox="reviews"><img src="/static/img/review/review_2.jpg" loading="lazy" alt="review"></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+<?php } ?>
 
 <div id="questions" class="page questions">
     <div class="container">

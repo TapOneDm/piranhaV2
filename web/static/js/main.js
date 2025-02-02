@@ -119,11 +119,11 @@ let Piranha = (function () {
             $('.price-items').slick({
                 touchThreshold:100,
                 slidesToShow: 3,
-                infinite: false,
+                infinite: true,
                 slidesToScroll: 1,
-                autoplay: false,
+                autoplay: true,
                 dots: true,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 1500,
                 responsive: [
                     {
                       breakpoint: 1240,
@@ -205,6 +205,10 @@ let Piranha = (function () {
 
                     if ($(this).data('benefit')) {
                         self.setCookie('benefit', 'true', 1);
+                    }
+
+                    if ($(this).data('lang-choose')) {
+                        self.setCookie('lang-choose', 'true', 1);
                     }
 
                     if (!$(this).hasClass('adult-sign')) {
@@ -432,6 +436,14 @@ $(window).on('load', function(){
     //         $("body").addClass("disable-scroll");
     //     }, 90000)
     // }
+
+    let langChooseCookie = piranha.getCookie('lang-choose');
+    if (!langChooseCookie) {
+        setTimeout(() => {
+            $('.modal-language').fadeIn();
+            $("body").addClass("disable-scroll");
+        }, 1000)
+    }
 });
 
 $(document).on("pjax:start", function() {
