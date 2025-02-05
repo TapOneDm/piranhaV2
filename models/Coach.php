@@ -11,6 +11,7 @@ class Coach extends Model {
     {
         return [
             [
+                'show' => ['ru', 'en', 'ge'],
                 'name' => Yii::t('app', 'Нино Салакая'),
                 'status' => Yii::t('app', 'Тренер по плаванию'),
                 'imageSrc' => '/static/img/coach/nino_salakaya.jpg',
@@ -23,6 +24,7 @@ class Coach extends Model {
                 'caption' => Yii::t('app', 'Умею находить язык с любым ребёнком, даже с самым замкнутым.')
             ],
             [
+                'show' => ['ru'],
                 'name' => Yii::t('app', 'Евгений Пономарев'),
                 'status' => Yii::t('app', 'Тренер по плаванию'),
                 'imageSrc' => '/static/img/coach/evgeniy_ponomarev.jpg',
@@ -36,6 +38,7 @@ class Coach extends Model {
                 'caption' => Yii::t('app', 'Индивидуально подхожу к каждому ребёнку, чтобы развить его уникальные способности.')
             ],
             [
+                'show' => ['ru', 'en', 'ge'],
                 'name' => Yii::t('app', 'Александр Колотыгин'),
                 'status' => Yii::t('app', 'Старший тренер'),
                 'imageSrc' => '/static/img/coach/alexander_colotygin.jpg',
@@ -49,6 +52,7 @@ class Coach extends Model {
                 'caption' => Yii::t('app', 'Тренирую будущих чемпионов — мои ученики регулярно побеждают в соревнованиях')
             ],
             [
+                'show' => ['ru', 'en', 'ge'],
                 'name' => Yii::t('app', 'Мариам Имнадзе'),
                 'status' => Yii::t('app', 'Администратор'),
                 'imageSrc' => '/static/img/coach/imnadze_mariam.jpg',
@@ -61,6 +65,7 @@ class Coach extends Model {
                 'caption' => Yii::t('app', 'С нетерпением жду вас для записи на тренировки!')
             ],
             [
+                'show' => ['ru', 'en', 'ge'],
                 'name' => Yii::t('app', 'Нана Эзугбая'),
                 'status' => Yii::t('app', 'Контент-менеджер'),
                 'imageSrc' => '/static/img/coach/ezukbaya_nana.jpg',
@@ -68,6 +73,51 @@ class Coach extends Model {
                     Yii::t('app', 'Образование: стратегические коммуникации, Университет Грузии'),
                 ],
                 'caption' => Yii::t('app', 'Люблю фотографировать искренние улыбки детей и их достижения')
+            ],
+            [
+                'show' => ['ru', 'en', 'ge'],
+                'name' => Yii::t('app', 'Лиза Калинина'),
+                'status' => Yii::t('app', 'Тренер по плаванию'),
+                'imageSrc' => '/static/img/coach/liza_kalinina.jpg',
+                'skills' => [
+                    Yii::t('app', 'Образование: Унивеситет «Геомеди» специальность «физическая медицинаи реабилитация»'),
+                    Yii::t('app', 'Многократная Чемпионка Грузии по плавани'),
+                    Yii::t('app', 'Тренерский стаж: 1 год'),
+                    Yii::t('app', 'Спортивный стаж: 9 лет'),
+                    Yii::t('app', 'Опыт работы с детьми с трех лет и также со взрослыми'),
+
+                ],
+                'caption' => Yii::t('app', 'Могу проводить занятие на 3 языках что бы точно найти подход во всем')
+            ],
+            [
+                'show' => ['ru', 'en', 'ge'],
+                'name' => Yii::t('app', 'Вероника Гиоргадзе'),
+                'status' => Yii::t('app', 'Тренер по плаванию'),
+                'imageSrc' => '/static/img/coach/veronika_giorgadze.jpg',
+                'skills' => [
+                    Yii::t('app', 'Образование: Национальный государственный университет физической культуры, спорта и здоровья'),
+                    Yii::t('app', 'Кандидат в мастера спорта по плаванию'),
+                    Yii::t('app', 'Тренерский стаж: 3 года'),
+                    Yii::t('app', 'Спортивный стаж: 9 лет'),
+                    Yii::t('app', 'Опыт работы с детьми от 2-ух месяцев'),
+
+                ],
+                'caption' => Yii::t('app', 'Мои тренировки- это не просто плавание, а путь к новым возможностям')
+            ],
+            [
+                'show' => ['ru', 'en', 'ge'],
+                'name' => Yii::t('app', 'Анастасия Оганджанова'),
+                'status' => Yii::t('app', 'Тренер по плаванию'),
+                'imageSrc' => '/static/img/coach/anastasya_oganjanova.jpg',
+                'skills' => [
+                    Yii::t('app', 'Образование: спортивный колледж специальность-плавание'),
+                    Yii::t('app', 'Многократная Чемпионка Грузии по синхронному плаванию'),
+                    Yii::t('app', 'Тренерский стаж: 6 лет'),
+                    Yii::t('app', 'Спортивный стаж: 8 лет'),
+                    Yii::t('app', 'Опыт работы с грудинчками от 2 месяцев и также со взрослыми'),
+
+                ],
+                'caption' => Yii::t('app', 'Я не просто учу поплавать , я открываю  путь к новым горизонтом -сначала в воде ,а потом и в жизни')
             ],
         ];
     }

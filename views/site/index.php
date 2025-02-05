@@ -162,19 +162,21 @@ $this->registerMetaTag([
         <div class="page-content">
             <div class="coach-items">
                 <?php foreach (\app\models\Coach::getItems() as $item) { ?>
-                    <div class="coach-item">
-                        <a href="<?= $item['imageSrc'] ?>" loading="lazy" data-fancybox="coach" class="coach-item-image"><img src="<?= $item['imageSrc'] ?>" alt="<?= $item['name'] ?>"></a>
-                        <div class="coach-item-info">
-                            <div class="coach-item-info-status"><?= $item['status'] ?></div>
-                            <div class="coach-item-info-name"><?= $item['name'] ?></div>
-                            <ul class="coach-item-skills">
-                                <?php foreach ($item['skills'] as $skill) { ?>
-                                    <li><?= $skill ?></li>
-                                <?php } ?>
-                            </ul>
-                            <div class="coach-item-info-caption"><?= $item['caption'] ?></div>
+                    <?php if (in_array(Yii::$app->language, $item['show'])) { ?>
+                        <div class="coach-item">
+                            <a href="<?= $item['imageSrc'] ?>" loading="lazy" data-fancybox="coach" class="coach-item-image"><img src="<?= $item['imageSrc'] ?>" alt="<?= $item['name'] ?>"></a>
+                            <div class="coach-item-info">
+                                <div class="coach-item-info-status"><?= $item['status'] ?></div>
+                                <div class="coach-item-info-name"><?= $item['name'] ?></div>
+                                <ul class="coach-item-skills">
+                                    <?php foreach ($item['skills'] as $skill) { ?>
+                                        <li><?= $skill ?></li>
+                                    <?php } ?>
+                                </ul>
+                                <div class="coach-item-info-caption"><?= $item['caption'] ?></div>
+                            </div>
                         </div>
-                    </div>
+                    <?php } ?>
                 <?php } ?>
             </div>
         </div>
