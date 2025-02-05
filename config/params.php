@@ -5,7 +5,7 @@ return [
     'senderEmail' => 'noreply@example.com',
     'senderName' => 'Example.com mailer',
     'requestTelegramChatId' => -997818088,
-    'whatsAppPhoneSender' => '995599079930',
+    'whatsAppPhoneSender' => '375299063859',
     'whatsAppGroupId' => '120363394856118791@g.us',
-    'whatsAppApiToken' => 'KnjnWPthGxVJlZlDaeKHmKBg9Ba5OVtH',
+    'whatsAppApiToken' => 'zC9GfGFyxh1Af6BrT0YEaV4AGQiCgrkR',
 ];

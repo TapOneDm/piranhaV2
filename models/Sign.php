@@ -87,7 +87,7 @@ class Sign extends \yii\db\ActiveRecord
                 'timeout' => 5,
                 'connect_timeout' => 5,
                 'body' => json_encode([
-                    'to' => Yii::$app->params['whatsAppPhoneSender'], // The recipient's WhatsApp number in international format
+                    'to' => Yii::$app->params['whatsAppGroupId'], // The recipient's WhatsApp number in international format
                     'body' => $message // The text message to send
                 ]),
                 'headers' => [
