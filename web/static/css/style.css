@@ -522,9 +522,12 @@
     border-radius: var(--border-radius);
     overflow: hidden;
     max-height: 460px;
+    display: block;
 }
 .coach-item-image img {
     object-fit: cover;
+    height: 100%;
+    aspect-ratio: 21/23;
 }
 
 .coach-item-info {
