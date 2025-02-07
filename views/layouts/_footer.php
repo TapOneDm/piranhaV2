@@ -26,7 +26,7 @@
                     <li><a href="#" data-anchor="gallery"><?= Yii::t('app', 'Галерея') ?></a></li>
                 </ul>
             </div>
-            <div class="footer-contacts">
+            <div id="contacts" class="footer-contacts">
                 <p><?= Yii::t('app', 'Контакты') ?>:</p>
                 <div class="footer-contacts-block">
                     <a href="mailto: piranha.information@gmail.com">piranha.information@gmail.com</a>

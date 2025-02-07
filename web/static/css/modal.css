@@ -96,20 +96,23 @@
 .modal-benefit,
 .modal-language,
 .modal-ajax-error,
-.modal-ajax-success {
+.modal-ajax-success,
+.modal-address-request {
     display: none;
 }
 
 .modal-ajax-success .modal-content,
 .modal-ajax-error .modal-content,
 .modal-language .modal-content,
-.modal-benefit .modal-content {
+.modal-benefit .modal-content,
+.modal-address-request .modal-content {
     height: fit-content;
 }
 
 .modal-ajax-success .modal-content, .modal-body,
 .modal-ajax-error .modal-content, .modal-body,
-.modal-benefit .modal-content .modal-body {
+.modal-benefit .modal-content .modal-body,
+.modal-address-request .modal-content {
     text-align: center;
 }
 
@@ -275,4 +278,8 @@
         display: flex;
         width: 100%;
     }
+}
+
+.modal-address-request .modal-content {
+    background-color: var(--blue-color);
 }

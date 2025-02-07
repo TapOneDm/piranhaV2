@@ -1,7 +1,7 @@
 :root {
-    --pink-color: #E3007B;
+    --pink-color: rgb(227, 0, 123);
     --light-pink-color: #ff91cd;
-    --blue-color: #390BF2;
+    --blue-color: rgb(57, 11, 242);
     --light-blue-color: #7250fb;
     --extra-light-blue-color: rgb(168, 203, 255);
     --orange-color: #ff8562;

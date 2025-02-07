@@ -19,6 +19,7 @@ let Piranha = (function () {
             this.initCollapse();
             this.loadMoreGallery();
             this.toggleExpandedMobile();
+            this.onAddressRequest();
         }
 
         initCollapse() {
@@ -96,7 +97,11 @@ let Piranha = (function () {
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 autoplay: true,
+                infinite: false,
                 dots: true,
+                arrows: true,
+                prevArrow: $('.address-items + .slider-arrows .prev-arrow'),
+                nextArrow: $('.address-items + .slider-arrows .next-arrow'),
                 autoplaySpeed: 2000,
                 responsive: [
                     {
@@ -124,6 +129,9 @@ let Piranha = (function () {
                 autoplay: true,
                 dots: true,
                 autoplaySpeed: 1500,
+                arrows: true,
+                prevArrow: $('.price-items + .slider-arrows .prev-arrow'),
+                nextArrow: $('.price-items + .slider-arrows .next-arrow'),
                 responsive: [
                     {
                       breakpoint: 1240,
@@ -156,6 +164,9 @@ let Piranha = (function () {
                 slidesToScroll: 1,
                 autoplay: false,
                 infinite: false,
+                arrows: true,
+                prevArrow: $('.coach-items + .slider-arrows .prev-arrow'),
+                nextArrow: $('.coach-items + .slider-arrows .next-arrow'),
                 dots: true,
                 responsive: [
                     {
@@ -408,6 +419,13 @@ let Piranha = (function () {
                     });
                 })
             }
+        }
+
+        onAddressRequest() {
+            $(document).on('click', '.disabled-sign', function(e) {
+                console.log($(this).data('address'));
+                $('#address-request-form #addressrequest-address').val($(this).data('address'));
+            })
         }
 
         mobileAndTabletCheck() {

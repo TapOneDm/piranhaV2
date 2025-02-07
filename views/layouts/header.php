@@ -14,6 +14,7 @@
                 <li><a href="#" data-anchor="review"><?= Yii::t('app', 'Отзывы') ?></a></li>
                 <li><a href="#" data-anchor="questions"><?= Yii::t('app', 'FAQ') ?></a></li>
                 <li><a href="#" data-anchor="gallery"><?= Yii::t('app', 'Галерея') ?></a></li>
+                <li><a href="#" data-anchor="contacts"><?= Yii::t('app', 'Контакты') ?></a></li>
             </ul>
             <?= $this->render('_lang') ?>
             <button data-modal-open data-modal="modal-sign" class="header-sign-button btn"><?= Yii::t('app', 'Записаться') ?></button>

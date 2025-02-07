@@ -148,6 +148,10 @@ $this->registerMetaTag([
                     </div>
                 <?php } ?>
             </div>
+            <div class="slider-arrows">
+                <button class="prev-arrow"><i class="icon-chevron-left"></i></button>
+                <button class="next-arrow"><i class="icon-chevron-right"></i></button>
+            </div>
         </div>
     </div>
 </div>
@@ -179,6 +183,10 @@ $this->registerMetaTag([
                     <?php } ?>
                 <?php } ?>
             </div>
+            <div class="slider-arrows">
+                <button class="prev-arrow"><i class="icon-chevron-left"></i></button>
+                <button class="next-arrow"><i class="icon-chevron-right"></i></button>
+            </div>
         </div>
     </div>
 </div>
@@ -193,21 +201,48 @@ $this->registerMetaTag([
         <div class="page-content">
             <div class="address-items">
                 <?php foreach(\app\models\Address::getItems() as $item) { ?>
-                    <div class="address-item">
+                    <div class="address-item <?= $item['disabled'] ? 'disabled' : '' ?>">
                         <div class="item-image">
                             <img src="<?= $item['imageSrc'] ?>" loading="lazy" alt="<?= $item['title'] ?>">
                         </div>
                         <div class="item-content">
-                            <div class="item-content-title"><?= $item['title'] ?></div>
-                            <div class="item-content-text"><?= $item['text'] ?></div>
+                            <div
+                                style="visibility: <?= !empty($item['title']) ? 'visible;' : 'hidden;' ?>" class="item-content-title"><?= $item['title'] ?></div>
+                            <div
+                                style="visibility: <?= !empty($item['text']) ? 'visible;' : 'hidden;' ?>"
+                                class="item-content-text"><?= $item['text'] ?></div>
                             <a
-                                href="<?= $item['coords'] ?>"
+                                href="<?= $item['coords_google'] ?>"
                                 class="item-content-link"
                                 target="_blank"
-                            ><?= Yii::t('app', 'Показать на карте') ?></a>
+                                style="visibility: <?= !empty($item['coords_google']) ? 'visible;' : 'hidden;' ?>"
+                            ><?= Yii::t('app', 'Показать на карте') ?>&nbsp;Google</a>
+                            <a
+                                href="<?= $item['coords_yandex'] ?>"
+                                class="item-content-link"
+                                target="_blank"
+                                style="visibility: <?= !empty($item['coords_yandex']) ? 'visible;' : 'hidden;' ?>"
+                            ><?= Yii::t('app', 'Показать на карте') ?>&nbsp;Yandex</a>
                         </div>
+
+                        <?php if ($item['disabled']) { ?>
+                            <div class="address-disabled">
+                                <div class="coming-soon">Coming soon</div>
+                                <button
+                                    class="disabled-sign btn"
+                                    type="button"
+                                    data-address="<?= $item['text'] ?>"
+                                    data-modal-open
+                                    data-modal="modal-address-request"
+                                ><?= Yii::t('app', 'Оставить заявку') ?></button>
+                            </div>
+                        <?php } ?>
                     </div>
                 <?php } ?>
+            </div>
+            <div class="slider-arrows">
+                <button class="prev-arrow"><i class="icon-chevron-left"></i></button>
+                <button class="next-arrow"><i class="icon-chevron-right"></i></button>
             </div>
         </div>
     </div>

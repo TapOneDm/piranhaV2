@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\controllers\base\BaseController;
+use app\models\AddressRequest;
 use app\models\Sign;
 use Yii;
 use yii\filters\AccessControl;
@@ -110,6 +111,28 @@ class SiteController extends BaseController
         return $this->renderPartial('_sign-form');
     }
 
+    public function actionAddressRequest()
+    {
+        $model = new AddressRequest();
+        if (Yii::$app->request->isPost) {
+            $model->load(Yii::$app->request->post());
+
+            if ($model->validate() && $model->save()) {
+                try {
+                    $model->sendTelegramMessage();
+                    $model->sendWhatsAppMessage();
+                } catch (Exception $e) {
+                    //
+                }
+                
+                $model = new AddressRequest();
+                $this->renderPartial('_address-request-form'); 
+            }
+            return $this->renderPartial('_address-request-form');
+        }
+        return $this->renderPartial('_address-request-form');
+    }
+
     public function actionGalleryList()
     {
         Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
@@ -121,30 +144,6 @@ class SiteController extends BaseController
     public function actionError()
     {
         return $this->render('error');
-    }
-
-    public function actionBot()
-    {
-        try {
-            $client = new \GuzzleHttp\Client();
-            $response = $client->request('POST', 'https://gate.whapi.cloud/messages/text', [
-                'body' => json_encode([
-                    'to' => '375299063859', // The recipient's WhatsApp number in international format
-                    'body' => 'Hello world from NEGR!' // The text message to send
-                ]),
-                'headers' => [
-                    'accept' => 'application/json', // Specify that we expect a JSON response
-                    'authorization' => 'Bearer zC9GfGFyxh1Af6BrT0YEaV4AGQiCgrkR', // Replace YOUR_TOKEN_HERE with your API token
-                    'content-type' => 'application/json', // Send data in JSON format
-                ],
-            ]);
-
-            echo "Message sent successfully: " . $response->getBody();
-
-        } catch (\GuzzleHttp\Exception\RequestException $e) {
-            // Handle any errors during the request
-            echo 'Error: ' . $e->getMessage();
-        }
     }
 
 }
