@@ -13,7 +13,7 @@ class TranslateManager
     public function translate($callback, $cacheKey = '')
     {
         $data = $cacheKey ? Yii::$app->cache->get($cacheKey) : false;
-
+        $data = false;
         if ($data === false) {
             $data = [];
 
@@ -26,7 +26,7 @@ class TranslateManager
                 Yii::$app->cache->set($cacheKey, $data, $this->cacheDuration);
             }
         }
-
+        
         return $data;
     }
 

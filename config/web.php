@@ -5,8 +5,8 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
-    'language' => 'ru',
-    'sourceLanguage' => 'ru-Ru',
+    'language' => 'en',
+    'sourceLanguage' => 'en-US',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['assetsAutoCompress'],
     'aliases' => [
@@ -53,7 +53,7 @@ $config = [
         'db' => $db,
         'translateManager' => [
             'class' => 'app\components\TranslateManager',
-            'supportedLanguages' => ['ru', 'en', 'ge'],
+            'supportedLanguages' => ['en', 'ge', 'ru'],
             'cacheDuration' => 0
         ],
         'view' => [
@@ -89,7 +89,6 @@ $config = [
             'rules' => [
                 '/' => 'site/index',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
-                '/bot' => 'site/bot',
             ],
         ],
         'telegram' => [

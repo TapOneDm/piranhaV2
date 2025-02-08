@@ -527,7 +527,8 @@
 .coach-item-image img {
     object-fit: cover;
     height: 100%;
-    aspect-ratio: 21/23;
+    
+    aspect-ratio: 331/414;
 }
 
 .coach-item-info {
