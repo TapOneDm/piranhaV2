@@ -97,7 +97,8 @@
 .modal-language,
 .modal-ajax-error,
 .modal-ajax-success,
-.modal-address-request {
+.modal-address-request,
+.modal-feedback {
     display: none;
 }
 
@@ -105,7 +106,8 @@
 .modal-ajax-error .modal-content,
 .modal-language .modal-content,
 .modal-benefit .modal-content,
-.modal-address-request .modal-content {
+.modal-address-request .modal-content,
+.modal-feedback .modal-content {
     height: fit-content;
 }
 
@@ -280,6 +282,39 @@
     }
 }
 
+.modal-feedback .modal-content {
+    background-color: var(--light-blue-color);
+}
+
 .modal-address-request .modal-content {
     background-color: var(--blue-color);
+}
+
+.modal-feedback .modal-content
+.modal-sign .modal-content {
+    max-height: 100%;
+}
+
+.modal-feedback .feedback-intro {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    font-size: 14px;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.modal-feedback .feedback-intro a + p,
+.modal-feedback .feedback-intro p + a {
+    margin-top: 6px;
+}
+
+.modal-feedback .feedback-intro a {
+    color: var(--orange-color);
+}
+
+.modal-feedback .feedback-intro a + p {
+    margin-top: 10px;
+    font-size: 16px;
 }

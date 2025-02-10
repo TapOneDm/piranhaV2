@@ -5,3 +5,5 @@
 <?= $this->render('_ajax-error-modal') ?>
 <?= $this->render('_ajax-success-modal') ?>
 <?= $this->render('_address-request-modal') ?>
+<?= $this->render('_address-request-modal') ?>
+<?= $this->render('_modal-feedback') ?>

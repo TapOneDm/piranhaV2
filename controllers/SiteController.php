@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\controllers\base\BaseController;
 use app\models\AddressRequest;
+use app\models\Feedback;
 use app\models\Sign;
 use Yii;
 use yii\filters\AccessControl;
@@ -131,6 +132,27 @@ class SiteController extends BaseController
             return $this->renderPartial('_address-request-form');
         }
         return $this->renderPartial('_address-request-form');
+    }
+
+    public function actionFeedback()
+    {
+        $model = new Feedback();
+        if (Yii::$app->request->isPost) {
+            $model->load(Yii::$app->request->post());
+
+            if ($model->validate() && $model->save()) {
+                try {
+                    $model->sendTelegramMessage();
+                } catch (Exception $e) {
+                    //
+                }
+                
+                $model = new Feedback();
+                $this->renderPartial('_feedback-form'); 
+            }
+            return $this->renderPartial('_feedback-form');
+        }
+        return $this->renderPartial('_feedback-form');
     }
 
     public function actionGalleryList()

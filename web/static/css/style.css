@@ -660,13 +660,20 @@ ul.coach-item-skills li::before {
 }
 
 
+.feedback-button,
 .sign-up-button {
     position: fixed;
-    bottom: 10%;
+    bottom: 13%;
     right: 5%;
     z-index: 100;
 }
 
+.feedback-button {
+    bottom: 6%;
+    font-weight: 700;
+}
+
+.feedback-button button,
 .sign-up-button button {
     background-color: var(--orange-color);
     padding: 14px;
@@ -684,14 +691,22 @@ ul.coach-item-skills li::before {
     transition: opacity 0.3s;
 }
 
+.feedback-button button {
+    min-width: 44px;
+    background-color: var(--light-blue-color);
+}
+
+.feedback-button button:hover,
 .sign-up-button button:hover {
     opacity: 0.9;
 }
 
+.feedback-button button span,
 .sign-up-button button span {
     display: none;
 }
 
+.feedback-button button:hover span,
 .sign-up-button button:hover span {
     display: block;
 }
@@ -1312,11 +1327,19 @@ form .form-group:has(input[type="text"]) {
     color: white;
 }
 
+
 .modal-address-request form .form-group:has(input[type="text"]),
 .modal-address-request form .form-group input[type="text"] {
     background-color: var(--blue-color) !important;
 }
 
+.modal-feedback form .form-group textarea,
+.modal-feedback form .form-group input[type="text"],
+.modal-feedback form .form-group:has(input[type="text"]) {
+    background-color: var(--light-blue-color) !important;
+}
+
+form .form-group textarea,
 form .form-group input[type="text"] {
     width: 100%;
     background-color: var(--pink-color);
@@ -1326,6 +1349,7 @@ form .form-group input[type="text"] {
     border-bottom: 2px solid white;
 }
 
+form .form-group textarea::placeholder,
 form .form-group input[type="text"]::placeholder {
     color: white;
     opacity: 0.5;
@@ -1333,6 +1357,7 @@ form .form-group input[type="text"]::placeholder {
 }
 
 @media (max-width: 576px) {
+    form .form-group textarea::placeholder,
     form .form-group input[type="text"]::placeholder {
         font-size: 14px;
         word-wrap: break-word;

@@ -12,6 +12,9 @@ $this->registerMetaTag([
 <div class="sign-up-button">
     <button data-modal-open data-modal="modal-sign" type="button"><i class="icon-pencil-alt"></i><span><?= Yii::t('app', 'Записаться на первое занятие') ?></span></button>
 </div>
+<div class="feedback-button">
+    <button data-modal-open data-modal="modal-feedback" type="button">?<span><?= Yii::t('app', 'Задать вопрос') ?></span></button>
+</div>
 
 <div id="intro" class="page intro">
     <div class="container">
@@ -66,7 +69,7 @@ $this->registerMetaTag([
                     <a href="/static/img/about/about_2.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_2.jpg" alt="about_2"></a>
                     <a href="/static/img/about/about_3.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_3.jpg" alt="about_3"></a>
                 </div>
-                <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем детям и взрослым от 2,5 до 99 лет <mark>избавиться от страха воды, проплыть свои первые метры</mark>, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также <mark>улучшить осанку</mark>, <mark>вернуть крепкий сон</mark> и найти друзей в другой стране.') ?></div>
+                <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем  детям от двух месяцев и взрослым <mark>избавиться от страха воды, проплыть свои первые метры</mark>, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также <mark>улучшить осанку</mark>, <mark>вернуть крепкий сон</mark> и найти друзей в другой стране.') ?></div>
             </div>
 
             <div class="about-indicators">

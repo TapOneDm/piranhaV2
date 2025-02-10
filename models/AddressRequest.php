@@ -45,7 +45,7 @@ class AddressRequest extends \yii\db\ActiveRecord
             'id' => 'ID',
             'dt' => 'Dt',
             'name' => Yii::t('app', 'Как вас зовут'),
-            'phone' => Yii::t('app', 'Номер телефона или ник в телеграмме'),
+            'phone' => Yii::t('app', 'Номер телефона / Telegram / WhatsApp'),
         ];
     }
 
