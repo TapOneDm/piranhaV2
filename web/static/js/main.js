@@ -52,11 +52,11 @@ let Piranha = (function () {
                 indicator.style.width = percentScroll + '%';
                 let currentScrollPos = window.scrollY;
 
-                if (currentScrollPos > introBlock.offsetHeight / 2) {
-                    $('.fixed-buttons').fadeIn();
-                } else {
-                    $('.fixed-buttons').fadeOut();
-                }
+                $('.fixed-buttons').toggleClass('visible', currentScrollPos > introBlock.offsetHeight / 2);
+                // if (currentScrollPos > introBlock.offsetHeight / 2) {
+                // } else {
+                //     $('.fixed-buttons').fadeOut();
+                // }
                 
                 /* if we're scrolling up, or we haven't passed the header,  show the header at the top */
                 if (prevScrollpos > currentScrollPos  || currentScrollPos < headerBottom){  

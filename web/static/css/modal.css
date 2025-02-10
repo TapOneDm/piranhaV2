@@ -308,7 +308,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 32px;
 }
 .modal-feedback .feedback-intro a + p,
 .modal-feedback .feedback-intro p + a {
@@ -317,8 +317,15 @@
 
 .modal-feedback .feedback-intro a {
     color: var(--orange-color);
-    font-size: 24px;
+    font-size: 30px;
     transition: opacity o.3s ease;
+}
+
+.modal-feedback .feedback-intro a i.icon-telegram-plane {
+    color: #24A1DE;
+}
+.modal-feedback .feedback-intro a i.icon-whatsapp {
+    color: #25D366;
 }
 
 .modal-feedback .feedback-intro a:hover {
