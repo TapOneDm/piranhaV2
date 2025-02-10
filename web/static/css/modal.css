@@ -290,7 +290,7 @@
     background-color: var(--blue-color);
 }
 
-.modal-feedback .modal-content
+.modal-feedback .modal-content,
 .modal-sign .modal-content {
     max-height: 100%;
 }
