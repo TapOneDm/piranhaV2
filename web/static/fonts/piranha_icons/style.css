@@ -82,3 +82,9 @@
 .icon-tiktok:before {
   content: "\e912";
 }
+.icon-whatsapp:before {
+  content: "\e913";
+}
+.icon-telegram-plane:before {
+  content: "\e914";
+}

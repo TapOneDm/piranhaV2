@@ -6,8 +6,10 @@
             <div class="feedback-intro">
                 <p><?= Yii::t('app', 'Мы с радостью ответим') ?></p>
                 <p><?= Yii::t('app', 'Напиши нам') ?>:</p>
-                <a target="_blank" href="https://t.me/piranhageoswim">t.me/piranhageoswim</a>
-                <a target="_blank" href="https://wa.me/995599079930">wa.me/piranhageoswim</a>
+                <div class="feedback-links">
+                    <a target="_blank" href="https://t.me/piranhageoswim"><i class="icon-telegram-plane"></i></a>
+                    <a target="_blank" href="https://wa.me/995599079930"><i class="icon-whatsapp"></i></a>
+                </div>
                 <p><?= Yii::t('app', 'Или здесь и мы свяжемся с тобой') ?></p>
             </div>
             <?= $this->render('_feedback-form') ?>

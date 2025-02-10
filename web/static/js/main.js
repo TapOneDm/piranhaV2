@@ -42,6 +42,7 @@ let Piranha = (function () {
 
             /* Get the header element and it's position */
             let headerDiv = document.querySelector(".header");
+            let introBlock = document.querySelector('.intro')
             let indicator = document.querySelector('.indicator');
             let firstPageDiv = document.querySelector('.page');
             let headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
@@ -50,11 +51,20 @@ let Piranha = (function () {
                 let percentScroll = (scrollY / (this.documentHeight - this.viewportHeight)) * 100;
                 indicator.style.width = percentScroll + '%';
                 let currentScrollPos = window.scrollY;
-            
+                console.log(introBlock.offsetHeight);
+                console.log(currentScrollPos);
+
+                if (currentScrollPos > introBlock.offsetHeight / 2) {
+                    $('.fixed-buttons').fadeIn();
+                } else {
+                    $('.fixed-buttons').fadeOut();
+                }
+                
                 /* if we're scrolling up, or we haven't passed the header,  show the header at the top */
                 if (prevScrollpos > currentScrollPos  || currentScrollPos < headerBottom){  
                     headerDiv.style.top = "0";
                     firstPageDiv.style.paddingTop = "5.2rem";
+                    
                 } else{
                     /* otherwise we're scrolling down & have passed the header so hide it */
                     headerDiv.style.top = `-${(headerDiv.offsetHeight - 6)}px`;
