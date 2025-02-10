@@ -675,14 +675,6 @@ ul.coach-item-skills li::before {
     align-items: flex-end;
 }
 
-.feedback-button {
-    font-weight: 900;
-}
-
-.sign-up-button + .feedback-button {
-    margin-top: 16px;
-} 
-
 .feedback-button button,
 .sign-up-button button {
     background-color: var(--orange-color);
@@ -703,6 +695,7 @@ ul.coach-item-skills li::before {
 
 .feedback-button button {
     min-width: 44px;
+    font-weight: 900;
     background-color: var(--light-blue-color);
     -webkit-box-shadow: -1px 9px 21px -9px rgba(9, 103, 243, 1);
     -moz-box-shadow: -1px 9px 21px -9px rgba(9, 103, 243, 1);
@@ -712,6 +705,10 @@ ul.coach-item-skills li::before {
 .feedback-button button:hover,
 .sign-up-button button:hover {
     opacity: 0.9;
+}
+
+.feedback-button button span {
+    font-weight: 500;
 }
 
 .feedback-button button span,
