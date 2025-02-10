@@ -9,11 +9,13 @@ $this->registerMetaTag([
 
 ?>
 
-<div class="sign-up-button">
-    <button data-modal-open data-modal="modal-sign" type="button"><i class="icon-pencil-alt"></i><span><?= Yii::t('app', 'Записаться на первое занятие') ?></span></button>
-</div>
-<div class="feedback-button">
-    <button data-modal-open data-modal="modal-feedback" type="button">?<span><?= Yii::t('app', 'Задать вопрос') ?></span></button>
+<div class="fixed-buttons">
+    <div class="sign-up-button">
+        <button data-modal-open data-modal="modal-sign" type="button"><i class="icon-pencil-alt"></i><span><?= Yii::t('app', 'Записаться на первое занятие') ?></span></button>
+    </div>
+    <div class="feedback-button">
+        <button data-modal-open data-modal="modal-feedback" type="button"><span><?= Yii::t('app', 'Задать вопрос') ?></span>?</button>
+    </div>
 </div>
 
 <div id="intro" class="page intro">
