@@ -51,8 +51,6 @@ let Piranha = (function () {
                 let percentScroll = (scrollY / (this.documentHeight - this.viewportHeight)) * 100;
                 indicator.style.width = percentScroll + '%';
                 let currentScrollPos = window.scrollY;
-                console.log(introBlock.offsetHeight);
-                console.log(currentScrollPos);
 
                 if (currentScrollPos > introBlock.offsetHeight / 2) {
                     $('.fixed-buttons').fadeIn();
@@ -434,7 +432,6 @@ let Piranha = (function () {
 
         onAddressRequest() {
             $(document).on('click', '.disabled-sign', function(e) {
-                console.log($(this).data('address'));
                 $('#address-request-form #addressrequest-address').val($(this).data('address'));
             })
         }
