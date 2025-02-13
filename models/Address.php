@@ -43,7 +43,7 @@ class Address extends Model {
             [
                 'disabled' => false,
                 'imageSrc' => '/static/img/address/olimp.jpg',                
-                'title' => Yii::t('app', 'Olimp'),
+                'title' => Yii::t('app', 'Olymp'),
                 'text' => Yii::t('app', 'Басейн в Сабуртало'),
                 'coords_google' => 'https://maps.app.goo.gl/7BCYVuhFVuiEGzUw6',
                 'coords_yandex' => 'https://yandex.com.ge/maps/-/CHeTi44v',

@@ -27,6 +27,7 @@ $this->registerMetaTag([
         </div>
         <div data-modal-open data-modal="modal-adult" class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Хочу на тренировки  для взрослых') ?></button></div>
         <div class="intro-image"><img src="/static/img/main-logo.svg" loading="lazy" alt="Piranha"></div>
+        <div class="intro-instagram"><a href="https://www.instagram.com/piranhageo/?igsh=OXFzdXR1NnJsZzU3" target="_blank"><i class="icon-instagram"></i></a></div>
     </div>
 </div>
 <img class="wave" src="/static/img/wave_pink.svg" alt="wave">
