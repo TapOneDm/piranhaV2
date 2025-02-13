@@ -726,6 +726,7 @@ ul.coach-item-skills li::before {
 
 .sign-up-button {
     animation: heartbeat 3.5s infinite linear;
+    -webkit-animation: heartbeat 3.5s infinite linear;
 }
 
 .sign-up-button:hover {
@@ -733,6 +734,21 @@ ul.coach-item-skills li::before {
 }
 
 @keyframes heartbeat {
+    0%, 90% {
+        transform: scale(1);
+        -webkit-transform: scale(1);   
+    }
+    95% {
+        transform: scale(2,2);
+        -webkit-transform: scale(2,2);
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes heartbeat {
     0%, 90% {
         transform: scale(1);
         -webkit-transform: scale(1);   
@@ -997,7 +1013,7 @@ ul.coach-item-skills li::before {
     }
 
     .sign-up-button button span {
-        display: none;
+        display: none !important;
     }
 
     .mobile-menu-button {
