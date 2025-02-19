@@ -139,7 +139,7 @@ img {
 }
 
 .page.intro {
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 @media (max-height: 500px) {

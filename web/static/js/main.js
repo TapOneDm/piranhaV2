@@ -43,6 +43,8 @@ let Piranha = (function () {
             /* Get the header element and it's position */
             let headerDiv = document.querySelector(".header");
             let introBlock = document.querySelector('.intro')
+            let footerBlock = document.querySelector('.footer')
+
             let indicator = document.querySelector('.indicator');
             let firstPageDiv = document.querySelector('.page');
             let headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
@@ -52,7 +54,10 @@ let Piranha = (function () {
                 indicator.style.width = percentScroll + '%';
                 let currentScrollPos = window.scrollY;
 
-                $('.fixed-buttons').toggleClass('visible', currentScrollPos > introBlock.offsetHeight / 2);
+                $('.fixed-buttons').toggleClass(
+                    'visible',
+                    currentScrollPos > introBlock.offsetHeight / 2
+                );
                 // if (currentScrollPos > introBlock.offsetHeight / 2) {
                 // } else {
                 //     $('.fixed-buttons').fadeOut();

@@ -24,7 +24,7 @@ return [
     '8 человек' => '',
     '95%' => '',
     'FAQ' => '',
-    'Olimp' => '',
+    'Olymp' => '',
     'PRIME FIT' => '',
     'Piranha Swimming School' => '',
     'SPORT TIME' => '',

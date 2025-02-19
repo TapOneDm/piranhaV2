@@ -699,7 +699,7 @@ ul.coach-item-skills li::before {
 
 .feedback-button button,
 .sign-up-button button {
-    background-color: var(--orange-color);
+    background-color: var(--pink-color);
     padding: 14px;
     display: flex;
     align-items: center;
@@ -709,9 +709,9 @@ ul.coach-item-skills li::before {
     justify-content: center;
     color: white;
     border-radius: var(--border-radius);
-    -webkit-box-shadow: -1px 9px 21px -9px rgba(250, 191, 13, 1);
-    -moz-box-shadow: -1px 9px 21px -9px rgba(250, 191, 13, 1);
-    box-shadow: -1px 9px 21px -9px rgba(250, 191, 13, 1);
+    -webkit-box-shadow: -1px 9px 21px -9px var(--pink-color);
+    -moz-box-shadow: -1px 9px 21px -9px var(--pink-color);
+    box-shadow: -1px 9px 21px -9px var(--pink-color);
     transition: opacity 0.3s;
 }
 
