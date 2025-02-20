@@ -49,6 +49,14 @@ class Address extends Model {
                 'coords_yandex' => 'https://yandex.com.ge/maps/-/CHeTi44v',
             ],
             [
+                'disabled' => false,
+                'imageSrc' => '/static/img/address/shota_rustavelli.jpg',                
+                'title' => Yii::t('app', 'Shota Rustaveli'),
+                'text' => Yii::t('app', 'Бассейн за зданием парламента'),
+                'coords_google' => 'https://maps.app.goo.gl/yKFVNB3bQZnfVumu8?g_st=it',
+                'coords_yandex' => 'https://yandex.ru/maps/org/shota_rustaveli_boutique_hotel/1676411149?si=z8tvta62f3hpdww5q92uh8ccmm',
+            ],
+            [
                 'disabled' => true,
                 'imageSrc' => '/static/img/address/lisi.jpg',
                 'title' => '',
