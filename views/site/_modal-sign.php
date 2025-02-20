@@ -11,7 +11,6 @@
                     <a target="_blank" href="https://t.me/piranhageoswim"><i class="icon-telegram-plane"></i></a>
                     <a target="_blank" href="https://wa.me/995599079930"><i class="icon-whatsapp"></i></a>
                 </div>
-                <p><?= Yii::t('app', 'Или здесь и мы свяжемся с тобой') ?></p>
             </div>
         </div>
         <div class="modal-actions">
