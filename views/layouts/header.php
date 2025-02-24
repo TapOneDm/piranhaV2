@@ -16,6 +16,7 @@
                 <li><a href="#" data-anchor="gallery"><?= Yii::t('app', 'Галерея') ?></a></li>
                 <li><a href="#" data-anchor="contacts"><?= Yii::t('app', 'Контакты') ?></a></li>
             </ul>
+            <div class="header-instagram"><a href="<?= Yii::$app->language == 'ru' ? 'https://www.instagram.com/piranha.ge?igsh=MXN3bnRla2Z5YzNnMg==' : 'https://www.instagram.com/piranhageo/?igsh=OXFzdXR1NnJsZzU3' ?>" target="_blank"><i class="icon-instagram"></i></a></div>
             <?= $this->render('_lang') ?>
             <button data-modal-open data-modal="modal-sign" class="header-sign-button btn"><?= Yii::t('app', 'Записаться') ?></button>
         </div>   

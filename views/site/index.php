@@ -222,13 +222,13 @@ $this->registerMetaTag([
                                 class="item-content-link"
                                 target="_blank"
                                 style="visibility: <?= !empty($item['coords_google']) ? 'visible;' : 'hidden;' ?>"
-                            ><?= Yii::t('app', 'Показать на карте') ?>&nbsp;Google</a>
+                            ><?= Yii::t('app', 'Показать на карте', ['title' => 'Google']) ?></a>
                             <a
                                 href="<?= $item['coords_yandex'] ?>"
                                 class="item-content-link"
                                 target="_blank"
                                 style="visibility: <?= !empty($item['coords_yandex']) ? 'visible;' : 'hidden;' ?>"
-                            ><?= Yii::t('app', 'Показать на карте') ?>&nbsp;Yandex</a>
+                            ><?= Yii::t('app', 'Показать на карте', ['title' => 'Yandex']) ?></a>
                         </div>
 
                         <?php if ($item['disabled']) { ?>

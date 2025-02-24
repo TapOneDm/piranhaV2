@@ -27,6 +27,15 @@ $priceItems = \app\models\Price::getItems();
 
     <?php ActiveForm::end() ?>
 
+    <div style="text-align: center; margin-top: 15px;" class="feedback-intro">
+        <p><?= Yii::t('app', 'Мы с радостью ответим') ?></p>
+        <p><?= Yii::t('app', 'Напиши нам') ?>:</p>
+        <div class="feedback-links">
+            <a target="_blank" href="https://t.me/piranhageoswim"><i class="icon-telegram-plane"></i></a>
+            <a target="_blank" href="https://wa.me/995599079930"><i class="icon-whatsapp"></i></a>
+        </div>
+    </div>
+
     <div class="sign-description">
         <?php foreach($priceItems as $priceItem) { ?>
             <ul class="<?= $priceItem['check'] ?>">
