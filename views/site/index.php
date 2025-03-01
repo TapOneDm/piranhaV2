@@ -183,7 +183,9 @@ $this->registerMetaTag([
                                         <li><?= $skill ?></li>
                                     <?php } ?>
                                 </ul>
-                                <div class="coach-item-info-caption"><?= $item['caption'] ?></div>
+                                <?php if (!empty($item['caption'])) { ?>
+                                    <div class="coach-item-info-caption"><?= $item['caption'] ?></div>
+                                <?php } ?>
                             </div>
                         </div>
                     <?php } ?>
