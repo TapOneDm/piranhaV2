@@ -2,6 +2,33 @@
     background-color: var(--pink-color);
     color: white;
     align-items: center;
+    position: relative;
+}
+
+.intro-slider {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.intro-slider::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.intro-slider .intro-slider-items,
+.intro-slider .intro-slider-item {
+    height: 100%;
+}
+
+.intro-slider .intro-slider-items .intro-slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* max-height: 600px; */
 }
 
 .intro-title {

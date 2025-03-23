@@ -19,6 +19,11 @@ $this->registerMetaTag([
 </div>
 
 <div id="intro" class="page intro">
+    <div class="intro-slider">
+        <div class="intro-slider-items">
+            <div class="intro-slider-item"><img src="/static/img/intro/1.jpg" alt=""></div>
+        </div>
+    </div>
     <div class="container">
         <h1 class="intro-title"><?= Yii::t('app', 'Научим плавать, укрепим здоровье и исправим осанку. Вы полюбите спорт и уверенно будете держаться на воде.') ?></h1>
         <div class="intro-actions">
@@ -26,17 +31,17 @@ $this->registerMetaTag([
             <button type="button" data-anchor="prices" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
         </div>
         <div data-modal-open data-modal="modal-adult" class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Хочу на тренировки  для взрослых') ?></button></div>
-        <div class="intro-image"><img src="/static/img/main-logo.svg" loading="lazy" alt="Piranha"></div>
+        <!-- <div class="intro-image"><img src="/static/img/main-logo.svg" loading="lazy" alt="Piranha"></div> -->
         <div class="intro-instagram"><a href="<?= Yii::$app->language == 'ru' ? 'https://www.instagram.com/piranha.ge?igsh=MXN3bnRla2Z5YzNnMg==' : 'https://www.instagram.com/piranhageo/?igsh=OXFzdXR1NnJsZzU3' ?>" target="_blank"><i class="icon-instagram"></i></a></div>
     </div>
 </div>
-<img class="wave" src="/static/img/wave_pink.svg" alt="wave">
+<img class="wave" src="/static/img/wave_blue.svg" alt="wave">
 
 <div id="privileges" class="page privileges">
     <div class="container">
         <div class="page-caption">
             <h2 class="caption-text"><?= Yii::t('app', 'Если важно (не только) научиться <br/> плавать') ?></h2>
-            <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Мы можем помочь') ?></button>
+            <button class="caption-button"><?= Yii::t('app', 'Мы можем помочь') ?></button>
         </div>
 
         <div class="page-content">
@@ -62,7 +67,7 @@ $this->registerMetaTag([
     <div class="container">
         <div class="page-caption">
             <h2 class="caption-text"><?= Yii::t('app', 'Школа Piranha') ?></h2>
-            <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'О нас') ?></button>
+            <button class="caption-button right"><?= Yii::t('app', 'О нас') ?></button>
         </div>
 
         <div class="page-content">
@@ -91,7 +96,7 @@ $this->registerMetaTag([
     <div class="container">
         <div class="page-caption">
             <h2 class="caption-text"><?= Yii::t('app', '«За» индивидуальный подход, <br/>раскрывающий потенциал каждого ученика') ?></h2>
-            <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Как мы учим') ?></button>
+            <button class="caption-button"><?= Yii::t('app', 'Как мы учим') ?></button>
         </div>
 
         <div class="page-content">
@@ -166,7 +171,7 @@ $this->registerMetaTag([
     <div class="container">
         <div class="page-caption">
             <h2 class="caption-text"><?= Yii::t('app', 'Команда профессионалов своего дела') ?></h2>
-            <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Команда') ?></button>
+            <button class="caption-button"><?= Yii::t('app', 'Команда') ?></button>
         </div>
 
         <div class="page-content">
@@ -203,7 +208,7 @@ $this->registerMetaTag([
     <div class="container">
         <div class="page-caption">
             <h2 class="caption-text"><?= Yii::t('app', 'Наши адреса') ?></h2>
-            <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'Мы на карте') ?></button>
+            <button class="caption-button right"><?= Yii::t('app', 'Мы на карте') ?></button>
         </div>
 
         <div class="page-content">
@@ -261,7 +266,7 @@ $this->registerMetaTag([
         <div class="container">
             <div class="page-caption">
                 <h2 class="caption-text"><?= Yii::t('app', 'Ученики, которые пришли к желаемому результату') ?></h2>
-                <button data-modal-open data-modal="modal-sign" class="caption-button"><?= Yii::t('app', 'Отзывы') ?></button>
+                <button class="caption-button"><?= Yii::t('app', 'Отзывы') ?></button>
             </div>
             <div class="page-content">
                 <div class="row">
@@ -286,7 +291,7 @@ $this->registerMetaTag([
     <div class="container">
         <div class="page-caption">
             <h2 class="caption-text"><?= Yii::t('app', 'Всё, что вам нужно знать перед началом занятий') ?></h2>
-            <button data-modal-open data-modal="modal-sign" class="caption-button right"><?= Yii::t('app', 'Вопросы') ?></button>
+            <button class="caption-button right"><?= Yii::t('app', 'Вопросы') ?></button>
         </div>
         <div class="page-content">
             <div class="collapse-items answer-items">
