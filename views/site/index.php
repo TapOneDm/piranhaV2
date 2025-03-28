@@ -30,7 +30,7 @@ $this->registerMetaTag([
             <button data-modal-open data-modal="modal-sign" type="button" class="btn active"><?= Yii::t('app', 'Записаться на пробное занятие') ?></button>
             <button type="button" data-anchor="prices" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
         </div>
-        <a data-anchor="adults" class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Хочу на тренировки  для взрослых') ?></button></a>
+        <a data-modal-open data-modal="modal-adult" class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Хочу на тренировки  для взрослых') ?></button></a>
         <!-- <div class="intro-image"><img src="/static/img/main-logo.svg" loading="lazy" alt="Piranha"></div> -->
         <div class="intro-instagram"><a href="<?= Yii::$app->language == 'ru' ? 'https://www.instagram.com/piranha.ge?igsh=MXN3bnRla2Z5YzNnMg==' : 'https://www.instagram.com/piranhageo/?igsh=OXFzdXR1NnJsZzU3' ?>" target="_blank"><i class="icon-instagram"></i></a></div>
     </div>
@@ -303,28 +303,6 @@ $this->registerMetaTag([
                         </div>
                     </div>
                 <?php }?>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="adults" class="page adults">
-    <div class="container">
-        <div class="page-caption">
-            <h2 class="caption-text"><?= Yii::t('app', 'Улучшить психоэмоциональное состояние и почувствовать себя лучше во всех аспектах жизни') ?></h2>
-            <button class="caption-button"><?= Yii::t('app', 'Для взрослых') ?></button>
-        </div>
-        <div class="page-content">
-            <div class="adult-items">
-                <?php foreach (\app\models\Adults::getItems() as $idx => $adultItem) { ?>
-                    <div class="adult-item">
-                        <div class="adult-item-title"><?= $adultItem['title'] ?></div>
-                        <div class="adult-item-img">
-                            <img class="<?= in_array($idx, [4,7]) ? 'position-top' : ''?>" src="<?= $adultItem['img'] ?>" alt="<?= $adultItem['title'] ?>">
-                        </div>
-                        <div class="adult-item-img-text"><?= $adultItem['text'] ?></div>
-                    </div>
-                <?php } ?>
             </div>
         </div>
     </div>
