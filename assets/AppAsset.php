@@ -29,6 +29,7 @@ class AppAsset extends AssetBundle
         'css/reset.css',
         'css/modal.css',
         'css/style.css',
+        'css/adults.css',
     ];
     public $js = [
         'js/vendor/fancybox/fancybox.min.js',

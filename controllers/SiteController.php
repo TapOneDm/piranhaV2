@@ -163,6 +163,11 @@ class SiteController extends BaseController
         }
     }
 
+    public function actionAdults()
+    {
+        return $this->render('adults', ['adultItems' => \app\models\Adults::getItems()]);
+    }
+
     public function actionError()
     {
         return $this->render('error');

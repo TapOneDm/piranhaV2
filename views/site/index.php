@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->registerMetaTag([
     'name' => 'description',
@@ -30,8 +31,7 @@ $this->registerMetaTag([
             <button data-modal-open data-modal="modal-sign" type="button" class="btn active"><?= Yii::t('app', 'Записаться на пробное занятие') ?></button>
             <button type="button" data-anchor="prices" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
         </div>
-        <a data-modal-open data-modal="modal-adult" class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Хочу на тренировки  для взрослых') ?></button></a>
-        <!-- <div class="intro-image"><img src="/static/img/main-logo.svg" loading="lazy" alt="Piranha"></div> -->
+        <a href="<?= Url::to('/adults') ?>" class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Хочу на тренировки  для взрослых') ?></button></a>
         <div class="intro-instagram"><a href="<?= Yii::$app->language == 'ru' ? 'https://www.instagram.com/piranha.ge?igsh=MXN3bnRla2Z5YzNnMg==' : 'https://www.instagram.com/piranhageo/?igsh=OXFzdXR1NnJsZzU3' ?>" target="_blank"><i class="icon-instagram"></i></a></div>
     </div>
 </div>
@@ -43,22 +43,20 @@ $this->registerMetaTag([
             <h2 class="caption-text"><?= Yii::t('app', 'Если важно (не только) научиться <br/> плавать') ?></h2>
             <button class="caption-button"><?= Yii::t('app', 'Мы можем помочь') ?></button>
         </div>
-
         <div class="page-content">
-
-        </div>
-        <div class="privileges-items">
-            <?php foreach (\app\models\Privelege::getItems() as $item) { ?>
-                <div class="privileges-item">
-                    <div class="privileges-item-caption">
-                        <i class="icon-<?= $item['icon'] ?>"></i>
-                        <span><?= $item['title'] ?></span>
+            <div class="privileges-items">
+                <?php foreach (\app\models\Privelege::getItems() as $item) { ?>
+                    <div class="privileges-item">
+                        <div class="privileges-item-caption">
+                            <i class="icon-<?= $item['icon'] ?>"></i>
+                            <span><?= $item['title'] ?></span>
+                        </div>
+                        <div class="privileges-item-text">
+                            <?= $item['text'] ?>
+                        </div>
                     </div>
-                    <div class="privileges-item-text">
-                        <?= $item['text'] ?>
-                    </div>
-                </div>
-            <?php } ?>
+                <?php } ?>
+            </div>
         </div>
     </div>
 </div>

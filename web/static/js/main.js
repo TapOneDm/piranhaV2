@@ -42,39 +42,41 @@ let Piranha = (function () {
 
             /* Get the header element and it's position */
             let headerDiv = document.querySelector(".header");
-            let introBlock = document.querySelector('.intro')
-            let footerBlock = document.querySelector('.footer')
-
-            let indicator = document.querySelector('.indicator');
-            let firstPageDiv = document.querySelector('.page');
-            let headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
-            
-            window.onscroll = function() {
-                let percentScroll = (scrollY / (this.documentHeight - this.viewportHeight)) * 100;
-                indicator.style.width = percentScroll + '%';
-                let currentScrollPos = window.scrollY;
-
-                $('.fixed-buttons').toggleClass(
-                    'visible',
-                    currentScrollPos > introBlock.offsetHeight / 2
-                );
-                // if (currentScrollPos > introBlock.offsetHeight / 2) {
-                // } else {
-                //     $('.fixed-buttons').fadeOut();
-                // }
+            if (headerDiv) {
+                let introBlock = document.querySelector('.intro')
+                let footerBlock = document.querySelector('.footer')
+    
+                let indicator = document.querySelector('.indicator');
+                let firstPageDiv = document.querySelector('.page');
+                let headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
                 
-                /* if we're scrolling up, or we haven't passed the header,  show the header at the top */
-                if (prevScrollpos > currentScrollPos  || currentScrollPos < headerBottom){  
-                    headerDiv.style.top = "0";
-                    firstPageDiv.style.paddingTop = "5.2rem";
+                window.onscroll = function() {
+                    let percentScroll = (scrollY / (this.documentHeight - this.viewportHeight)) * 100;
+                    indicator.style.width = percentScroll + '%';
+                    let currentScrollPos = window.scrollY;
+    
+                    $('.fixed-buttons').toggleClass(
+                        'visible',
+                        currentScrollPos > introBlock.offsetHeight / 2
+                    );
+                    // if (currentScrollPos > introBlock.offsetHeight / 2) {
+                    // } else {
+                    //     $('.fixed-buttons').fadeOut();
+                    // }
                     
-                } else{
-                    /* otherwise we're scrolling down & have passed the header so hide it */
-                    headerDiv.style.top = `-${(headerDiv.offsetHeight - 6)}px`;
-                    firstPageDiv.style.paddingTop = "5.2rem";
-                } 
-            
-                prevScrollpos = currentScrollPos;
+                    /* if we're scrolling up, or we haven't passed the header,  show the header at the top */
+                    if (prevScrollpos > currentScrollPos  || currentScrollPos < headerBottom){  
+                        headerDiv.style.top = "0";
+                        firstPageDiv.style.paddingTop = "5.2rem";
+                        
+                    } else{
+                        /* otherwise we're scrolling down & have passed the header so hide it */
+                        headerDiv.style.top = `-${(headerDiv.offsetHeight - 6)}px`;
+                        firstPageDiv.style.paddingTop = "5.2rem";
+                    } 
+                
+                    prevScrollpos = currentScrollPos;
+                }
             }
         }
 

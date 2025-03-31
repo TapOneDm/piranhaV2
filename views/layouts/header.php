@@ -1,4 +1,3 @@
-
 <div class="header">
     <div class="container">
         <a href="<?= $this->getWebsiteHomeUrl() ?>" class="logo"><img src="/static/img/logo.svg" alt="Logo"></a>
@@ -19,7 +18,8 @@
             <div class="header-instagram"><a href="<?= Yii::$app->language == 'ru' ? 'https://www.instagram.com/piranha.ge?igsh=MXN3bnRla2Z5YzNnMg==' : 'https://www.instagram.com/piranhageo/?igsh=OXFzdXR1NnJsZzU3' ?>" target="_blank"><i class="icon-instagram"></i></a></div>
             <?= $this->render('_lang') ?>
             <button data-modal-open data-modal="modal-sign" class="header-sign-button btn"><?= Yii::t('app', 'Записаться') ?></button>
-        </div>   
+        </div>
+
         <div class="mobile-menu-button">
             <span></span>
             <span></span>

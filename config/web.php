@@ -88,6 +88,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '/' => 'site/index',
+                '/adults' => 'site/adults',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],
