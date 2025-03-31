@@ -236,6 +236,7 @@ return [
     'Хотите, запишем вас на первое занятие со скидкой 50%? {emoji}' => 'Would you like to sign up for your first class at 50% off? {emoji}',
     'Хочу заниматься здесь' => 'I want to swim here',
     'Хочу на тренировки  для взрослых' => 'Swimming for adults',
+    'Тренировки  для взрослых' => 'Swimming for adults',
     'Член национальной сборной Грузии по футболу' => 'Member of the Georgian national football team',
     'Что нужно на первое занятие?' => 'What do you need for your first lesson?',
     'Чувствуете себя одиноко в новом городе?' => 'Feeling lonely in a new city?',

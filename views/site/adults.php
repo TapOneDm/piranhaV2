@@ -29,7 +29,6 @@ $this->registerMetaTag([
         <h1 class="intro-title"><?= Yii::t('app', 'Плавание в нашей школе помогает не только укрепить тело, но и обрести новые социальные связи, улучшить психоэмоциональное состояние и почувствовать себя лучше во всех аспектах жизни.') ?></h1>
         <div class="intro-actions">
             <button data-modal-open data-modal="modal-sign" type="button" class="btn active"><?= Yii::t('app', 'Записаться на пробное занятие') ?></button>
-            <button type="button" data-anchor="prices" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
         </div>
         <div class="intro-instagram"><a href="<?= Yii::$app->language == 'ru' ? 'https://www.instagram.com/piranha.ge?igsh=MXN3bnRla2Z5YzNnMg==' : 'https://www.instagram.com/piranhageo/?igsh=OXFzdXR1NnJsZzU3' ?>" target="_blank"><i class="icon-instagram"></i></a></div>
     </div>
@@ -40,7 +39,7 @@ $this->registerMetaTag([
     <div class="container">
         <div class="page-caption">
             <h2 class="caption-text"><?= Yii::t('app', 'Обучаем плаванию с нуля и готовим к международным заплывам!') ?></h2>
-            <button class="caption-button"><?= Yii::t('app', 'Мы можем помочь') ?></button>
+            <button class="caption-button"><?= Yii::t('app', 'Тренировки  для взрослых') ?></button>
         </div>
         <div class="page-content">
             <div class="adult-items">

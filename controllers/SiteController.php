@@ -99,7 +99,7 @@ class SiteController extends BaseController
             if ($model->validate() && $model->save()) {
                 try {
                     $model->sendTelegramMessage();
-                    $model->sendWhatsAppMessage();
+                    // $model->sendWhatsAppMessage();
                 } catch (Exception $e) {
                     //
                 }
