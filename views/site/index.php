@@ -31,11 +31,11 @@ $this->registerMetaTag([
             <button data-modal-open data-modal="modal-sign" type="button" class="btn active"><?= Yii::t('app', 'Записаться на пробное занятие') ?></button>
             <button type="button" data-anchor="prices" class="btn"><?= Yii::t('app', 'Посмотреть тарифы') ?></button>
         </div>
-        <a href="<?= Url::to('/adults') ?>" class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Хочу на тренировки  для взрослых') ?></button></a>
+        <a href="adults" class="intro-adult"><button type="button" class="btn"><?= Yii::t('app', 'Хочу на тренировки  для взрослых') ?></button></a>
         <div class="intro-instagram"><a href="<?= Yii::$app->language == 'ru' ? 'https://www.instagram.com/piranha.ge?igsh=MXN3bnRla2Z5YzNnMg==' : 'https://www.instagram.com/piranhageo/?igsh=OXFzdXR1NnJsZzU3' ?>" target="_blank"><i class="icon-instagram"></i></a></div>
     </div>
 </div>
-<img class="wave" src="/static/img/wave_blue.svg" alt="wave">
+<img class="wave" src="/static/img/wave_intro.svg" alt="wave">
 
 <div id="privileges" class="page privileges">
     <div class="container">

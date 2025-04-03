@@ -1,8 +1,22 @@
 .page.intro {
-    background-color: var(--light-blue-color);
+    position: relative;
+    background-color: #A892FF;
     color: white;
     align-items: center;
     position: relative;
+    overflow: hidden;
+}
+
+.page.intro::after {
+    content: '';
+    position: absolute;
+    display: block;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #A892FF;
+    top: 80%;
+    z-index: -1;
 }
 
 .intro-slider {
@@ -16,7 +30,6 @@
     content: '';
     position: absolute;
     inset: 0;
-    /* background-color: rgba(0, 0, 0, 0.6); */
 }
 
 .intro-slider .intro-slider-items,
@@ -29,7 +42,7 @@
     height: 100%;
     object-fit: cover;
     -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.5)));
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0, 0, 0, 0));
 }
 
 .intro-title {

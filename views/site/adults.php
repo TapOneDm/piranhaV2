@@ -33,7 +33,7 @@ $this->registerMetaTag([
         <div class="intro-instagram"><a href="<?= Yii::$app->language == 'ru' ? 'https://www.instagram.com/piranha.ge?igsh=MXN3bnRla2Z5YzNnMg==' : 'https://www.instagram.com/piranhageo/?igsh=OXFzdXR1NnJsZzU3' ?>" target="_blank"><i class="icon-instagram"></i></a></div>
     </div>
 </div>
-<img class="wave" src="/static/img/wave_blue.svg" alt="wave">
+<img class="wave" src="/static/img/wave_intro.svg" alt="wave">
 
 <div class="page">
     <div class="container">
