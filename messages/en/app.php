@@ -86,7 +86,7 @@ return [
     'Как вас зовут' => 'What is your name?',
     'Как мы учим' => 'How we teach',
     'Как отменить запись без потери?' => 'How to cancel without losing a lesson?',
-    'Калинина Ванда' => 'Kalinina  Wanda',
+    'Ванда Калинина' => 'Wanda Kalinina',
     'Кандидат в мастера спорта (КМС) по плаванию' => 'Candidate for Master of Sports in swimming',
     'Кандидат в мастера спорта по плаванию' => 'Candidate for Master of Sports in swimming',
     'Количество занятий зависит от нескольких факторов: возраста, уровня подготовки, наличия страха воды и регулярности тренировок.<br>Наша методика позволяет детям 3–5 лет уже через 8 занятий самостоятельно проплыть первые 15 метров. Для детей старшего возраста этот процесс займет меньше времени' => 'The number of lessons depends on several factors: age, skill level, fear of water, and training regularity. <br>Our methodology allows children aged 3–5 to swim their first 15 meters independently after just 8 lessons. For older children, this process takes less time.',

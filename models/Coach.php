@@ -98,7 +98,7 @@ class Coach extends Model {
             // ],
             [
                 'show' => ['ru', 'en', 'ge'],
-                'name' => Yii::t('app', 'Калинина Ванда'),
+                'name' => Yii::t('app', 'Ванда Калинина'),
                 'status' => Yii::t('app', 'Тренер по плаванию'),
                 'imageSrc' => '/static/img/coach/kalinina_vanda.jpg',
                 'skills' => [
