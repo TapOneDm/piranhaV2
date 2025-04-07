@@ -309,9 +309,11 @@ let Piranha = (function () {
                         let scrollToElement = $(selector)[0];
     
                         if (scrollToElement) {
-                            scrollToElement.scrollIntoView({
-                                behavior: 'smooth'
-                            });
+                            setTimeout(() => {
+                                scrollToElement.scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }, 400)
                         }
                     }
                 })

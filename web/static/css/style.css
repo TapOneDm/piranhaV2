@@ -24,6 +24,8 @@
     inset: 0;
     overflow: hidden;
     height: 100%;
+    height: 100%;
+
 }
 
 .intro-slider::after {
@@ -38,11 +40,12 @@
 }
 
 .intro-slider .intro-slider-items .intro-slider-item img {
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
     -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.5)));
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to bottom, rgba(0 0 0 / 100%), rgba(0, 0, 0, 0));
 }
 
 .intro-title {
@@ -995,18 +998,19 @@ ul.coach-item-skills li::before {
 
 
 .questions .collapse-items {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+    /* flex-direction: column; */
     color: white;
+
 }
 
 .questions .collapse-items .collapse-item  {
     background-color: var(--light-blue-color);
     border-radius: var(--border-radius);
-}
-
-.questions .collapse-items .collapse-item + .collapse-item {
-    margin-top: 14px;
+    height: 100%;
 }
 
 .questions .collapse-items .collapse-item .collapse-caption {
@@ -1408,16 +1412,17 @@ ul.coach-item-skills li::before {
         font-size: 14px;
     }
 
-    .questions .collapse-items .collapse-item+.collapse-item {
-     margin-top: 10px;   
-    }
-
     .address-item .item-content .item-content-link {
         font-size: 14px;
     }
 }
 
 @media (max-width: 576px) {
+    .questions .collapse-items {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 14px;
+    }
+
     .price-item-top img {
         height: 280px;
     }

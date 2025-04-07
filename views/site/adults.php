@@ -51,5 +51,9 @@ $this->registerMetaTag([
                 <?php } ?>
             </div>
         </div>
+
+        <div class="adults-signup">
+            <button data-modal-open data-modal="modal-sign" type="button" class="btn active"><?= Yii::t('app', 'Записаться') ?></button>
+        </div>
     </div>
 </div>

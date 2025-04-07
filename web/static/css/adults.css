@@ -53,6 +53,25 @@
     width: 100%;
 }
 
+.adults-signup {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pink-color);
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 160px;
+    border-radius: var(--border-radius);
+}
+
+.adults-signup button {
+    background-color: inherit !important;
+    color: white !important;
+    border: none;
+}
+
 @media (max-width: 1120px) {
     .adult-items {
         gap: 40px;
@@ -78,5 +97,9 @@
     .adult-items {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 80px;
+    }
+
+    .adults-signup {
+        margin-top: 124px;
     }
 }

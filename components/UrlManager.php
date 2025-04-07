@@ -12,7 +12,6 @@ class UrlManager extends \yii\web\UrlManager
         preg_match('%^([a-z]+)%', Yii::$app->language, $m);
         return $m[1];
     }
-
     public function createUrl($params)
     {
         $url = parent::createUrl($params);
@@ -27,7 +26,6 @@ class UrlManager extends \yii\web\UrlManager
     {
         return '/' . $this->getLangShort() . $url;
     }
-
     public function parseRequest($request)
     {
         $request = clone $request;
