@@ -31,6 +31,7 @@
                 <div class="footer-contacts-block">
                     <a href="mailto: piranha.information@gmail.com">piranha.information@gmail.com</a>
                     <a href="tel: +995568825259">+995 568 825 259</a>
+                    <a href="tel: +995599972737">+995 599 972 737</a>
                 </div>
             </div>
         </div>
