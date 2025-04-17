@@ -241,4 +241,6 @@ class Chat extends Type
     * Optional. For supergroups, the location to which the supergroup is connected. Returned only in getChat.
     */
     public $location;
+
+    public $accepted_gift_types;
 }
