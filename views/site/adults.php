@@ -1,13 +1,11 @@
 <?php
 
-use yii\helpers\Html;
-use yii\helpers\Url;
-
 $this->registerMetaTag([
     'name' => 'description',
     'content' => Yii::t('app', 'Плавание в нашей школе помогает не только укрепить тело, но и обрести новые социальные связи, улучшить психоэмоциональное состояние и почувствовать себя лучше во всех аспектах жизни.')
 ]);
 
+$this->title = Yii::t('app', 'Школа плавания для взрослых - Piranha');
 ?>
 
 <div class="fixed-buttons">

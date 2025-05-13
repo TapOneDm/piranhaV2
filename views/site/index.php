@@ -1,7 +1,6 @@
 <?php
 
 use yii\helpers\Html;
-use yii\helpers\Url;
 
 $this->registerMetaTag([
     'name' => 'description',
@@ -22,7 +21,7 @@ $this->registerMetaTag([
 <div id="intro" class="page intro">
     <div class="intro-slider">
         <div class="intro-slider-items">
-            <div class="intro-slider-item"><img src="/static/img/intro/1.jpg" alt=""></div>
+            <div class="intro-slider-item"><img src="/static/img/intro/1.jpg" loading="lazy" alt="intro image"></div>
         </div>
     </div>
     <div class="container">
@@ -35,7 +34,7 @@ $this->registerMetaTag([
         <div class="intro-instagram"><a href="<?= Yii::$app->language == 'ru' ? 'https://www.instagram.com/piranha.ge?igsh=MXN3bnRla2Z5YzNnMg==' : 'https://www.instagram.com/piranhageo/?igsh=OXFzdXR1NnJsZzU3' ?>" target="_blank"><i class="icon-instagram"></i></a></div>
     </div>
 </div>
-<img class="wave" src="/static/img/wave_intro.svg" alt="wave">
+<img class="wave" src="/static/img/wave_intro.svg" loading="lazy" alt="wave">
 
 <div id="privileges" class="page privileges">
     <div class="container">
@@ -71,9 +70,9 @@ $this->registerMetaTag([
         <div class="page-content">
             <div class="about-content">
                 <div class="about-images">
-                    <a href="/static/img/about/about_1.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_1.jpg" alt="about_1"></a>
-                    <a href="/static/img/about/about_2.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_2.jpg" alt="about_2"></a>
-                    <a href="/static/img/about/about_3.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_3.jpg" alt="about_3"></a>
+                    <a href="/static/img/about/about_1.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_1.jpg" alt="about_1" loading="lazy"></a>
+                    <a href="/static/img/about/about_2.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_2.jpg" alt="about_2" loading="lazy"></a>
+                    <a href="/static/img/about/about_3.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_3.jpg" alt="about_3" loading="lazy"></a>
                 </div>
                 <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем  детям от двух месяцев и взрослым <mark>избавиться от страха воды, проплыть свои первые метры</mark>, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также <mark>улучшить осанку</mark>, <mark>вернуть крепкий сон</mark> и найти друзей в другой стране.') ?></div>
             </div>
@@ -319,11 +318,11 @@ $this->registerMetaTag([
                     <a href="/static/img/gallery/gallery_2.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_2.jpg" loading="lazy" alt="gallery"></a>
                 </div>
                 <div class="column">
-                    <a href="/static/img/gallery/gallery_15.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_15.jpg" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_15.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_15.jpg" loading="lazy" alt="gallery"></a>
                     <a href="/static/img/gallery/gallery_5.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_5.jpg" loading="lazy" alt="gallery"></a>
                 </div>
                 <div class="column">
-                    <a href="/static/img/gallery/gallery_16.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_16.jpg" alt="gallery"></a>
+                    <a href="/static/img/gallery/gallery_16.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_16.jpg" loading="lazy" alt="gallery"></a>
                     <a href="/static/img/gallery/gallery_6.jpg" data-fancybox="gallery"><img src="/static/img/gallery/gallery_6.jpg" loading="lazy" alt="gallery"></a>
                 </div>
             </div>

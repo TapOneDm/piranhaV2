@@ -17,7 +17,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <title><?= Html::encode($this->title ?? Yii::t('app', 'Школа плавания Piranha')) ?></title>
+    <title><?= Html::encode($this->title ?? Yii::t('app', 'Школа плавания - Piranha')) ?></title>
     <?= $this->render('_favicon') ?>
     <meta name="msapplication-TileColor" content="#E3007B">
     <meta name="theme-color" content="#E3007B">    

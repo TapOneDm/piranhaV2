@@ -44,8 +44,6 @@ let Piranha = (function () {
             let headerDiv = document.querySelector(".header");
             if (headerDiv) {
                 let introBlock = document.querySelector('.intro')
-                let footerBlock = document.querySelector('.footer')
-    
                 let indicator = document.querySelector('.indicator');
                 let firstPageDiv = document.querySelector('.page');
                 let headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
@@ -468,23 +466,14 @@ let Piranha = (function () {
     
     return Piranha;        
 })();
-// zC9GfGFyxh1Af6BrT0YEaV4AGQiCgrkR
-let piranha = new Piranha();
 
+let piranha = new Piranha();
 
 $(window).on('load', function(){
     let $overlay = $('#overlay');
 
     $overlay.addClass('hidden');
-    setTimeout(() => $overlay.remove(), 300);
-
-    // let benefitCookie = piranha.getCookie('benefit');
-    // if (!benefitCookie) {
-    //     setTimeout(() => {
-    //         $('.modal-benefit').fadeIn();
-    //         $("body").addClass("disable-scroll");
-    //     }, 90000)
-    // }
+    setTimeout(() => $overlay.remove());
 
     let langChooseCookie = piranha.getCookie('lang-choose');
     if (!langChooseCookie) {

@@ -80,6 +80,9 @@ $config = [
         ],
         'assetsAutoCompress' => [
             'class' => '\skeeks\yii2\assetsAuto\AssetsAutoCompressComponent',
+            'enabled' => true,
+            // 'cssFileBottom'         => true,       //Moving down the page css files
+            'cssFileBottomLoadOnJs' => true,
         ],
         'urlManager' => [
             'class'=>'\app\components\UrlManager',
