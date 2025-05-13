@@ -473,7 +473,15 @@ $(window).on('load', function(){
     let $overlay = $('#overlay');
 
     $overlay.addClass('hidden');
-    setTimeout(() => $overlay.remove());
+    setTimeout(() => $overlay.remove(), 1);
+
+    // let benefitCookie = piranha.getCookie('benefit');
+    // if (!benefitCookie) {
+    //     setTimeout(() => {
+    //         $('.modal-benefit').fadeIn();
+    //         $("body").addClass("disable-scroll");
+    //     }, 90000)
+    // }
 
     let langChooseCookie = piranha.getCookie('lang-choose');
     if (!langChooseCookie) {

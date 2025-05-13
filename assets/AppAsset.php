@@ -17,7 +17,7 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
+    // public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
     public $basePath = '@webroot/static';
     public $baseUrl = '@web/static';
     public $css = [
