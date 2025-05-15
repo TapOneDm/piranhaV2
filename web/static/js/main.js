@@ -20,6 +20,12 @@ let Piranha = (function () {
             this.loadMoreGallery();
             this.toggleExpandedMobile();
             this.onAddressRequest();
+            this.initIntroImage();
+        }
+
+        initIntroImage() {
+            let img = document.querySelector('#intro-img');
+            img.src = '/static/img/intro/1.jpg'
         }
 
         initCollapse() {
