@@ -21,7 +21,12 @@ $this->registerMetaTag([
 <div id="intro" class="page intro">
     <div class="intro-slider">
         <div class="intro-slider-items">
-            <div class="intro-slider-item"><img src="/static/img/intro/1.jpg" loading="lazy" alt="intro image"></div>
+            <div class="intro-slider-item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/static/img/intro/1_m.jpg" />
+                    <img src="/static/img/intro/1.jpg" loading="lazy" alt="intro image">
+                </picture>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -70,9 +75,24 @@ $this->registerMetaTag([
         <div class="page-content">
             <div class="about-content">
                 <div class="about-images">
-                    <a href="/static/img/about/about_1.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_1.jpg" alt="about_1" loading="lazy"></a>
-                    <a href="/static/img/about/about_2.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_2.jpg" alt="about_2" loading="lazy"></a>
-                    <a href="/static/img/about/about_3.jpg" data-fancybox="about" loading="lazy" class="about-image"><img src="/static/img/about/about_3.jpg" alt="about_3" loading="lazy"></a>
+                    <a href="/static/img/about/about_1.jpg" data-fancybox="about" loading="lazy" class="about-image">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/static/img/about/about_1.jpg" />
+                            <img src="/static/img/about/about_1.jpg" alt="about_1" loading="lazy">
+                        </picture>    
+                    </a>
+                    <a href="/static/img/about/about_2.jpg" data-fancybox="about" loading="lazy" class="about-image">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/static/img/about/about_2.jpg" />
+                            <img src="/static/img/about/about_2.jpg" alt="about_2" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="/static/img/about/about_3.jpg" data-fancybox="about" loading="lazy" class="about-image">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/static/img/about/about_3.jpg" />
+                            <img src="/static/img/about/about_3.jpg" alt="about_3" loading="lazy">
+                        </picture>
+                    </a>
                 </div>
                 <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем  детям от двух месяцев и взрослым <mark>избавиться от страха воды, проплыть свои первые метры</mark>, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также <mark>улучшить осанку</mark>, <mark>вернуть крепкий сон</mark> и найти друзей в другой стране.') ?></div>
             </div>
