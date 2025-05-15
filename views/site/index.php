@@ -22,7 +22,7 @@ $this->registerMetaTag([
     <div class="intro-slider">
         <picture>
             <source media="(max-width: 768px)" srcset="/static/img/intro/1_m.jpg" />
-            <img src="/static/img/intro/1.jpg" loading="lazy" alt="intro image" width="960" height="460">
+            <img src="/static/img/intro/1.jpg" alt="intro image" width="960" height="460">
         </picture>
     </div>
     <div class="container">
