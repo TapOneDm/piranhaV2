@@ -64,10 +64,10 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
             <!-- /Yandex.Metrika counter -->
         <?php } ?>
 
-    <!-- <div id="overlay">
+    <div id="overlay">
         <img src="/static/img/logo.svg" alt="logo">
         <span class="loader"></span>
-    </div> -->
+    </div>
     <?php $this->endBody() ?>
 </body>
 

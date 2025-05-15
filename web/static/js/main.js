@@ -470,10 +470,10 @@ let Piranha = (function () {
 let piranha = new Piranha();
 
 $(window).on('load', function(){
-    // let $overlay = $('#overlay');
+    let $overlay = $('#overlay');
 
-    // $overlay.addClass('hidden');
-    // setTimeout(() => $overlay.remove(), 1);
+    $overlay.addClass('hidden');
+    setTimeout(() => $overlay.remove(), 1);
 
     // let benefitCookie = piranha.getCookie('benefit');
     // if (!benefitCookie) {
