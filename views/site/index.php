@@ -20,11 +20,10 @@ $this->registerMetaTag([
 
 <div id="intro" class="page intro">
     <div class="intro-slider">
-        <!-- <picture>
-            <source media="(max-width: 768px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4
-        //8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" />
-    </picture> -->
-    <img id="intro-img" src="<?= $this->placeholder ?>" alt="intro image" width="960" height="460">
+        <picture>
+            <source media="(max-width: 768px)" srcset="/static/img/intro/1_m.jpg" />
+            <img src="/static/img/intro/1.jpg" alt="intro image" width="960" height="460">
+        </picture>
     </div>
     <div class="container">
         <h1 class="intro-title"><?= Yii::t('app', 'Научим плавать, укрепим здоровье и исправим осанку. Вы полюбите спорт и уверенно будете держаться на воде.') ?></h1>
