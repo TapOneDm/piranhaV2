@@ -20,14 +20,10 @@ $this->registerMetaTag([
 
 <div id="intro" class="page intro">
     <div class="intro-slider">
-        <div class="intro-slider-items">
-            <div class="intro-slider-item">
-                <picture>
-                    <source media="(max-width: 768px)" srcset="/static/img/intro/1_m.jpg" />
-                    <img src="/static/img/intro/1.jpg" loading="lazy" alt="intro image">
-                </picture>
-            </div>
-        </div>
+        <picture>
+            <source media="(max-width: 768px)" srcset="/static/img/intro/1_m.jpg" />
+            <img src="/static/img/intro/1.jpg" loading="lazy" alt="intro image">
+        </picture>
     </div>
     <div class="container">
         <h1 class="intro-title"><?= Yii::t('app', 'Научим плавать, укрепим здоровье и исправим осанку. Вы полюбите спорт и уверенно будете держаться на воде.') ?></h1>
