@@ -22,7 +22,7 @@ $this->registerMetaTag([
     <div class="intro-slider">
         <picture>
             <source media="(max-width: 768px)" srcset="/static/img/intro/1_m.jpg" />
-            <img src="/static/img/intro/1.jpg" loading="lazy" alt="intro image">
+            <img src="/static/img/intro/1.jpg" loading="lazy" alt="intro image" width="960" height="460">
         </picture>
     </div>
     <div class="container">
@@ -72,22 +72,13 @@ $this->registerMetaTag([
             <div class="about-content">
                 <div class="about-images">
                     <a href="/static/img/about/about_1.jpg" data-fancybox="about" loading="lazy" class="about-image">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="/static/img/about/about_1.jpg" />
-                            <img src="/static/img/about/about_1.jpg" alt="about_1" loading="lazy">
-                        </picture>    
+                        <img src="/static/img/about/about_1.jpg" alt="about_1" loading="lazy">
                     </a>
                     <a href="/static/img/about/about_2.jpg" data-fancybox="about" loading="lazy" class="about-image">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="/static/img/about/about_2.jpg" />
-                            <img src="/static/img/about/about_2.jpg" alt="about_2" loading="lazy">
-                        </picture>
+                        <img src="/static/img/about/about_2.jpg" alt="about_2" loading="lazy">
                     </a>
                     <a href="/static/img/about/about_3.jpg" data-fancybox="about" loading="lazy" class="about-image">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="/static/img/about/about_3.jpg" />
-                            <img src="/static/img/about/about_3.jpg" alt="about_3" loading="lazy">
-                        </picture>
+                        <img src="/static/img/about/about_3.jpg" alt="about_3" loading="lazy">
                     </a>
                 </div>
                 <div class="about-text"><?= Yii::t('app', 'Международная плавательная школа Piranha существует больше 7 лет. За это время мы разработали авторские методики и помогаем  детям от двух месяцев и взрослым <mark>избавиться от страха воды, проплыть свои первые метры</mark>, освоить четыре стиля плавания, замотивироваться на участие в соревнованиях, а также <mark>улучшить осанку</mark>, <mark>вернуть крепкий сон</mark> и найти друзей в другой стране.') ?></div>
@@ -192,7 +183,7 @@ $this->registerMetaTag([
                 <?php foreach (\app\models\Coach::getItems() as $item) { ?>
                     <?php if (in_array(Yii::$app->language, $item['show'])) { ?>
                         <div class="coach-item">
-                            <a href="<?= $item['imageSrc'] ?>" loading="lazy" data-fancybox="coach" class="coach-item-image"><img src="<?= $item['imageSrc'] ?>" alt="<?= $item['name'] ?>"></a>
+                            <a href="<?= $item['imageSrc'] ?>" data-fancybox="coach" class="coach-item-image"><img src="<?= $item['imageSrc'] ?>" alt="<?= $item['name'] ?>" loading="lazy"></a>
                             <div class="coach-item-info">
                                 <div class="coach-item-info-status"><?= $item['status'] ?></div>
                                 <div class="coach-item-info-name"><?= $item['name'] ?></div>
