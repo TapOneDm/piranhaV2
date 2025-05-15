@@ -6,6 +6,7 @@ $this->registerMetaTag([
 ]);
 
 $this->title = Yii::t('app', 'Школа плавания для взрослых - Piranha');
+$this->description = Yii::t('app', 'Избавление от болей, обучение с нуля за месяц и подготовка к заплывам — плавание для взрослых в Тбилиси.');
 ?>
 
 <div class="fixed-buttons">

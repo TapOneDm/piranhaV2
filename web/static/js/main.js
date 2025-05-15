@@ -483,13 +483,13 @@ $(window).on('load', function(){
     //     }, 90000)
     // }
 
-    let langChooseCookie = piranha.getCookie('lang-choose');
-    if (!langChooseCookie) {
-        setTimeout(() => {
-            $('.modal-language').fadeIn();
-            $("body").addClass("disable-scroll");
-        }, 1000)
-    }
+    // let langChooseCookie = piranha.getCookie('lang-choose');
+    // if (!langChooseCookie) {
+    //     setTimeout(() => {
+    //         $('.modal-language').fadeIn();
+    //         $("body").addClass("disable-scroll");
+    //     }, 1000)
+    // }
 });
 
 $(document).on("pjax:start", function() {
