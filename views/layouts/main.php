@@ -17,7 +17,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <?php if ((getenv('ENV') === 'DEV')) { ?>
+    <?php if ((getenv('ENV') !== 'DEV')) { ?>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG2R4RJ3X5"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -58,7 +58,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
     <meta name="theme-color" content="#E3007B">    
     <meta charset="utf-8">
     <?= $this->initMetaTags() ?>
-
+    <meta name="google-site-verification" content="2rk-_lIGisq-kN04StS7HijBaU9UzKNRf7nn9mXlBi8" />
     <?php $this->head() ?>
 </head>
 
