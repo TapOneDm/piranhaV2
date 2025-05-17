@@ -17,7 +17,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <?php if ((getenv('ENV') !== 'DEV')) { ?>
+    <?php if ((getenv('ENV') === 'DEV')) { ?>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG2R4RJ3X5"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
