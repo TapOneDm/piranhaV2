@@ -35,15 +35,17 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
         <?= $this->render('../site/_modals') ?>
     </div>
         <?php if ((getenv('ENV') !== 'DEV')) { ?>
-            <!-- Google tag (gtag.js) -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG2R4RJ3X5"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
+            <?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false) { ?>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG2R4RJ3X5"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
 
-                gtag('config', 'G-VG2R4RJ3X5');
-            </script>
+                    gtag('config', 'G-VG2R4RJ3X5');
+                </script>
+            <?php } ?>
+            <!-- Google tag (gtag.js) -->
 
             <!-- Yandex.Metrika counter -->
             <script data-cfasync="false" type="text/javascript">
