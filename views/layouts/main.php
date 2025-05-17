@@ -35,7 +35,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
         <?= $this->render('../site/_modals') ?>
     </div>
         <?php if ((getenv('ENV') !== 'DEV')) { ?>
-            <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG2R4RJ3X5"></script>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG2R4RJ3X5"></script>
             <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -43,9 +43,9 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 
                 gtag('config', 'G-VG2R4RJ3X5');
             </script> -->
-            <!-- Google tag (gtag.js) -->
+            <!-- Google tag (gtag.js)
 
-            <!-- Yandex.Metrika counter -->
+             Yandex.Metrika counter -->
             <script data-cfasync="false" type="text/javascript">
             (function(){
             var a = function() {try{return !!window.addEventListener} catch(e) {return !1} },
