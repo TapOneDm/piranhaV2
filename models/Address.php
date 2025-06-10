@@ -26,12 +26,15 @@ class Address extends Model {
                 'coords_google' => 'https://maps.app.goo.gl/h2mYEjx9QaXHAJ2h9?g_st=com.google.maps.preview.copy',
                 'coords_yandex' => 'https://yandex.by/maps/org/prime_fit/104225704357/?ll=44.730388%2C41.724465&z=17',
             ],
-            // [
-            //     'imageSrc' => '/static/img/address/school.jpg',                
-            //     'title' => Yii::t('app', 'БАССЕЙН ШКОЛЫ №35'),
-            //     'text' => Yii::t('app', 'Бассейн в районе Сабуртало'),
-            //     'coords' => 'https://yandex.by/maps/10277/tbilisi/?ll=44.723902%2C41.721033&mode=whatshere&whatshere%5Bpoint%5D=44.724503%2C41.721386&whatshere%5Bzoom%5D=18&z=17'
-            // ],
+            [
+                'disabled' => false,
+                'imageSrc' => '/static/img/address/school.jpg',                
+                'title' => Yii::t('app', 'БАССЕЙН ШКОЛЫ №35'),
+                'text' => Yii::t('app', 'Бассейн в районе Сабуртало'),
+                // 'coords' => 'https://yandex.by/maps/10277/tbilisi/?ll=44.723902%2C41.721033&mode=whatshere&whatshere%5Bpoint%5D=44.724503%2C41.721386&whatshere%5Bzoom%5D=18&z=17'
+                'coords_google' => '',
+                'coords_yandex' => '',
+            ],
             [
                 'disabled' => false,
                 'imageSrc' => '/static/img/address/wyndxam.jpg',                
@@ -48,22 +51,30 @@ class Address extends Model {
                 'coords_google' => 'https://maps.app.goo.gl/7BCYVuhFVuiEGzUw6',
                 'coords_yandex' => 'https://yandex.com.ge/maps/-/CHeTi44v',
             ],
-            [
-                'disabled' => false,
-                'imageSrc' => '/static/img/address/shota_rustavelli.jpg',                
-                'title' => Yii::t('app', 'Shota Rustaveli'),
-                'text' => Yii::t('app', 'Бассейн за зданием парламента'),
-                'coords_google' => 'https://maps.app.goo.gl/yKFVNB3bQZnfVumu8?g_st=it',
-                'coords_yandex' => 'https://yandex.ru/maps/org/shota_rustaveli_boutique_hotel/1676411149?si=z8tvta62f3hpdww5q92uh8ccmm',
-            ],
-            [
-                'disabled' => true,
-                'imageSrc' => '/static/img/address/lisi.jpg',
-                'title' => '',
-                'text' => Yii::t('app', 'Бассейн на Лиси'),
-                'coords_google' => '',
-                'coords_yandex' => '',
-            ],
+            // [
+            //     'disabled' => false,
+            //     'imageSrc' => '/static/img/address/olimp.jpg',                
+            //     'title' => Yii::t('app', 'Olymp'),
+            //     'text' => Yii::t('app', 'Басейн в Сабуртало'),
+            //     'coords_google' => 'https://maps.app.goo.gl/7BCYVuhFVuiEGzUw6',
+            //     'coords_yandex' => 'https://yandex.com.ge/maps/-/CHeTi44v',
+            // ],
+            // [
+            //     'disabled' => false,
+            //     'imageSrc' => '/static/img/address/shota_rustavelli.jpg',                
+            //     'title' => Yii::t('app', 'Shota Rustaveli'),
+            //     'text' => Yii::t('app', 'Бассейн за зданием парламента'),
+            //     'coords_google' => 'https://maps.app.goo.gl/yKFVNB3bQZnfVumu8?g_st=it',
+            //     'coords_yandex' => 'https://yandex.ru/maps/org/shota_rustaveli_boutique_hotel/1676411149?si=z8tvta62f3hpdww5q92uh8ccmm',
+            // ],
+            // [
+            //     'disabled' => true,
+            //     'imageSrc' => '/static/img/address/lisi.jpg',
+            //     'title' => '',
+            //     'text' => Yii::t('app', 'Бассейн на Лиси'),
+            //     'coords_google' => '',
+            //     'coords_yandex' => '',
+            // ],
             [
                 'disabled' => true,
                 'imageSrc' => '/static/img/address/temka.jpg',
@@ -72,22 +83,22 @@ class Address extends Model {
                 'coords_google' => '',
                 'coords_yandex' => '',
             ],
-            [
-                'disabled' => true,
-                'imageSrc' => '/static/img/address/isani.jpg',
-                'title' => '',
-                'text' => Yii::t('app', 'Бассейн в Исани'),
-                'coords_google' => '',
-                'coords_yandex' => '',
-            ],
-            [
-                'disabled' => true,
-                'imageSrc' => '/static/img/address/mtacmidna.jpg',
-                'title' => '',
-                'text' => Yii::t('app', 'Бассейн на Мтацминда'),
-                'coords_google' => '',
-                'coords_yandex' => '',
-            ],
+            // [
+            //     'disabled' => true,
+            //     'imageSrc' => '/static/img/address/isani.jpg',
+            //     'title' => '',
+            //     'text' => Yii::t('app', 'Бассейн в Исани'),
+            //     'coords_google' => '',
+            //     'coords_yandex' => '',
+            // ],
+            // [
+            //     'disabled' => true,
+            //     'imageSrc' => '/static/img/address/mtacmidna.jpg',
+            //     'title' => '',
+            //     'text' => Yii::t('app', 'Бассейн на Мтацминда'),
+            //     'coords_google' => '',
+            //     'coords_yandex' => '',
+            // ],
         ];
     }
 }
