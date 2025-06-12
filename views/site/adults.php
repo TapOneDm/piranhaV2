@@ -19,9 +19,10 @@ $this->title = Yii::t('app', 'Школа плавания для взрослы�
 
 <div id="intro" class="page intro">
     <div class="intro-slider">
-        <div class="intro-slider-items">
-            <div class="intro-slider-item"><img src="/static/img/adult/4.jpg" alt=""></div>
-        </div>
+        <picture>
+            <source media="(max-width: 768px)" srcset="/static/img/adult/4.jpg" />
+            <img src="/static/img/adult/4.jpg" alt="intro image" width="960" height="460">
+        </picture>
     </div>
     <div class="container">
         <h1 class="intro-title"><?= Yii::t('app', 'Плавание в нашей школе помогает не только укрепить тело, но и обрести новые социальные связи, улучшить психоэмоциональное состояние и почувствовать себя лучше во всех аспектах жизни.') ?></h1>
