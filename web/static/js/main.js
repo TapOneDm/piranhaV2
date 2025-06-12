@@ -471,7 +471,6 @@ let piranha = new Piranha();
 
 $(window).on('load', function(){
     let $overlay = $('#overlay');
-
     $overlay.addClass('hidden');
     setTimeout(() => $overlay.remove(), 1);
 
@@ -483,13 +482,14 @@ $(window).on('load', function(){
     //     }, 90000)
     // }
 
-    let langChooseCookie = piranha.getCookie('lang-choose');
-    if (!langChooseCookie) {
-        setTimeout(() => {
-            $('.modal-language').fadeIn();
-            $("body").addClass("disable-scroll");
-        }, 1000)
-    }
+    // lang popup
+    // let langChooseCookie = piranha.getCookie('lang-choose');
+    // if (!langChooseCookie) {
+    //     setTimeout(() => {
+    //         $('.modal-language').fadeIn();
+    //         $("body").addClass("disable-scroll");
+    //     }, 1000)
+    // }
 });
 
 $(document).on("pjax:start", function() {
