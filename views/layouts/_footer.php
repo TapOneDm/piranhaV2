@@ -29,7 +29,7 @@
             <div id="contacts" class="footer-contacts">
                 <p><?= Yii::t('app', 'Контакты') ?>:</p>
                 <div class="footer-contacts-block">
-                    <a href="mailto: piranha.information@gmail.com">piranha.information@gmail.com</a>
+                    <a href="mailto: info@piranha.ge">info@piranha.ge</a>
                     <a href="tel: +995568825259">+995 568 825 259</a>
                 </div>
             </div>
