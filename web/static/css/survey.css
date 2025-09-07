@@ -147,7 +147,15 @@ form .help-block {
     padding: 16px;
     background-color: var(--survey-answer-item-bg-color);
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    -webkit-user-select: none; /* Safari, Chrome, Opera */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;  
+}
+
+.survey-answers label:active {
+    transform: scale(0.96);
 }
 
 .survey-answers label.selected {
