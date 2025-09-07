@@ -151,7 +151,8 @@ form .help-block {
     -webkit-user-select: none; /* Safari, Chrome, Opera */
     -moz-user-select: none;    /* Firefox */
     -ms-user-select: none;     /* Internet Explorer/Edge */
-    user-select: none;  
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .survey-answers label:hover,
