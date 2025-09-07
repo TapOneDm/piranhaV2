@@ -44,6 +44,7 @@ form .help-block {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .spage-header h1 {

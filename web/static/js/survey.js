@@ -3,7 +3,9 @@ let getProgress = () => {
 }
 
 let setProgress = (step) => {
-    getProgress().css('width', `calc(100% / 8 * ${step})`);
+    if (step <= 8) {
+        getProgress().css('width', `calc(100% / 8 * ${step})`);
+    }
 }
 
 $(document).on('pjax:complete', function() {
