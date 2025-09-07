@@ -20,8 +20,8 @@ $this->title = Yii::t('app', 'Тест');
         <head>
             <title><?= Html::encode($this->title ?? Yii::t('app', 'Тест')) ?></title>
             <?= $this->render('_favicon') ?>
-            <meta name="msapplication-TileColor" content="#E3007B">
-            <meta name="theme-color" content="#E3007B">    
+            <meta name="msapplication-TileColor" content="#f91adf">
+            <meta name="theme-color" content="#f91adf">
             <meta charset="utf-8">
             <?= $this->initMetaTags() ?>
             <?php $this->head() ?>
