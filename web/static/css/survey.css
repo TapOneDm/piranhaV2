@@ -154,6 +154,7 @@ form .help-block {
     user-select: none;  
 }
 
+.survey-answers label:hover,
 .survey-answers label:active {
     transform: scale(0.96);
 }
