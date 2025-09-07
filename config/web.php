@@ -92,6 +92,15 @@ $config = [
             'rules' => [
                 '/' => 'site/index',
                 '/adults' => 'site/adults',
+                '/survey' => 'survey/site/index',
+                '/survey/step1' => 'survey/site/step1',
+                '/survey/step2' => 'survey/site/step2',
+                '/survey/step3' => 'survey/site/step3',
+                '/survey/step4' => 'survey/site/step4',
+                '/survey/step5' => 'survey/site/step5',
+                '/survey/step6' => 'survey/site/step6',
+                '/survey/step7' => 'survey/site/step7',
+                '/survey/step8' => 'survey/site/step8',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],
@@ -99,6 +108,9 @@ $config = [
             'class' => 'aki\telegram\Telegram',
             'botToken' => '6529055067:AAGT824FS1E3nxVHT9EEQw1HbBvovNaGv9E'
         ],
+        'survey' => [
+            'class' => 'app\components\Survey'
+        ]
     ],
     'params' => $params,
 ];

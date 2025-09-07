@@ -1,0 +1,196 @@
+body {
+    background-color: var(--survey-bg-color);
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pjax-survey {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    position: relative;
+    padding-top: 30px;
+}
+
+form .help-block {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.spage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.spage-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spage-header h1 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.spage-header img {
+    width: 100%;
+    max-width: 100px;
+}
+
+.spage-content {
+    width: 100%;
+}
+.spage-content p {
+    text-align: center;
+}
+
+.spage-content .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group .control-label {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    height: 120px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.spage-footer {
+    flex: 1;
+}
+
+.spage-footer .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    background-color: white;
+    color: var(--pink-color);
+    display: block;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0;
+    justify-content: center;
+    width: 110px;
+    font-weight: 600;
+    border: 1px solid white;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
+
+.btn.outline {
+    background-color: transparent;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.btn.outline:hover {
+    transform: scale(0.9);
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background-color: var(--orange-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.survey-answers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.survey-answers label {
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    border-radius: var(--border-radius);
+    padding: 16px;
+    background-color: var(--survey-answer-item-bg-color);
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.survey-answers label.selected {
+    background-color: var(--survey-answer-item-bg-color-selected);
+}
+
+.survey-answers label input[type="radio"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.step-legend {
+    text-align: center;
+    font-weight: 700;
+}
+
+
+@media (max-width: 1180px) {
+    html, body {
+        font-size: 14px;
+    }
+
+    .form-group .control-label {
+        font-size: 18px;
+        height: 70px;
+    }
+
+    .survey-answers label {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .wrapper:has(.step-legend) {
+        display: block;
+    }
+    .survey-answers {
+        gap: 16px;
+    }
+
+    .survey-answers label {
+        padding: 14px;
+    }
+}

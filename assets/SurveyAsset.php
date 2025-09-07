@@ -1,0 +1,35 @@
+<?php
+/**
+ * @link https://www.yiiframework.com/
+ * @copyright Copyright (c) 2008 Yii Software LLC
+ * @license https://www.yiiframework.com/license/
+ */
+
+namespace app\assets;
+
+use yii\web\AssetBundle;
+
+/**
+ * Main application asset bundle.
+ *
+ * @author Qiang Xue <qiang.xue@gmail.com>
+ * @since 2.0
+ */
+class SurveyAsset extends AssetBundle
+{
+    public $basePath = '@webroot/static';
+    public $baseUrl = '@web/static';
+    public $css = [
+        'css/variables.css',
+        'css/fonts.css',
+        'fonts/piranha_icons/style.css',
+        'css/reset.css',
+        'css/survey.css',
+    ];
+    public $js = [
+        'js/survey.js',
+    ];
+    public $depends = [
+        'yii\web\YiiAsset',
+    ];
+}

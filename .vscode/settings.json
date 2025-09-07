@@ -1,7 +1,8 @@
 {
     "restructuredtext.pythonRecommendation.disabled": true,
     "cSpell.words": [
-        "Privelege"
+        "Privelege",
+        "spage"
     ],
     "php.version": "8.2"
 }

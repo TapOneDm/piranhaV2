@@ -6,4 +6,10 @@
     --extra-light-blue-color: rgb(168, 203, 255);
     --orange-color: #f1c005;
     --border-radius: 10px;
+
+    --extra-light-blue-color-alt: rgb(249, 26, 223);
+
+    --survey-bg-color: var(--extra-light-blue-color-alt);
+    --survey-answer-item-bg-color: var(--light-pink-color);
+    --survey-answer-item-bg-color-selected: var(--pink-color);
 }
