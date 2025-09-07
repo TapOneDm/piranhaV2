@@ -155,10 +155,10 @@ form .help-block {
     -webkit-tap-highlight-color: transparent;
 }
 
-.survey-answers label:hover,
+/* .survey-answers label:hover,
 .survey-answers label:active {
     transform: scale(0.96);
-}
+} */
 
 .survey-answers label.selected {
     background-color: var(--survey-answer-item-bg-color-selected);
