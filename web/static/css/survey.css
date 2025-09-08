@@ -220,5 +220,6 @@ form .help-block {
     .progress {
         border-radius: 0;
         position: fixed;
+        z-index: 1;
     }
 }
