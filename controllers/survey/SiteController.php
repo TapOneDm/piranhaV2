@@ -21,6 +21,11 @@ class SiteController extends BaseController
             exit;
         }
 
+        // echo '<pre>';
+        // print_r(\app\components\Helper::getSurveyQuestionResultMap());
+        // echo '<\pre>';
+        // ;exit;
+
         $isPost = Yii::$app->request->isPost;
         
         if (!$isPost) {

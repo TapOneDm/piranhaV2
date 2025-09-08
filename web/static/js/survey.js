@@ -10,7 +10,8 @@ let setProgress = (step) => {
 
 $(document).on('pjax:complete', function() {
     let step = $('.step-legend').data('step');
-    setProgress(step)
+    setTimeout(() => setProgress(step), 50);
+    // setProgress(step)
 
     $('.spage-footer .actions').on('click', 'button, a', function (e) {
         let step = $('.step-legend').data('step');
@@ -18,10 +19,13 @@ $(document).on('pjax:complete', function() {
 
         if (target.is('button')) {
             step += 1;
+            target.html('<span class="loader"></span>');
         } else if (target.is('a')) {
             step -= 1;
+            target.html('<span class="loader alt"></span>');
         }
 
-        setProgress(step)
+
+        setTimeout(() => setProgress(step), 50);
     });
 })

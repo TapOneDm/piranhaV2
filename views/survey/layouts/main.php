@@ -30,13 +30,8 @@ $this->title = Yii::t('app', 'Тест');
             <?php $this->beginBody() ?>
                 <div class="wrapper">
                     <div class="container">
-                        <?php Pjax::begin(['id' => 'pjax-survey', 'enablePushState' => false]); ?>
-                            <?php
-                                $answered = Yii::$app->survey->getFilledQuestions();
-                            ?>
-                            <?php if ($answered !== false) { ?>
-                                <div class="progress"></div>
-                            <?php } ?>
+                        <div class="progress"></div>
+                        <?php Pjax::begin(['id' => 'pjax-survey', 'enablePushState' => false, 'timeout' => 20000]); ?>
                             <?= $content ?>
                         <?php Pjax::end(); ?>
                     </div>

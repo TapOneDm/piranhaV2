@@ -54,7 +54,7 @@ class Survey extends Model {
     public function attributeLabels() {
         return [
             'question1' => Yii::t('app', 'Как ваш ребёнок чаще всего ведёт себя на площадке?'),
-            'question2' => Yii::t('app', 'Что ему интереснее всего дома?'),
+            'question2' => Yii::t('app', 'А что дома увлекает вашего ребёнка больше всего?'),
             'question3' => Yii::t('app', 'Как он реагирует на новые ситуации?'),
             'question4' => Yii::t('app', 'Как вы думаете, где его сильная сторона?'),
             'question5' => Yii::t('app', 'Что больше всего утомляет вашего ребёнка?'),
@@ -89,10 +89,10 @@ class Survey extends Model {
             ],
             'question2' => [
                 1 => 'Футбол или активные игры.',
-                2 => 'Настольные игры, задачки.',
-                3 => 'Рисование, творчество.',
-                4 => 'Театральные постановки/игры с друзьями.',
-                5 => 'Компьютер, книги, эксперименты.',
+                2 => 'Настольные игры, задачки или эксперименты.',
+                3 => 'Рисование и творчество.',
+                4 => 'Книги и чтение.',
+                5 => 'Компьютерные игры.',
             ],
             'question3' => [
                 1 => 'Сразу бежит навстречу приключениям.',
@@ -198,15 +198,7 @@ class Survey extends Model {
             return '';
         }
 
-        $priorityOrder = [
-            static::TAG_TECH,
-            static::TAG_DIPLOMACY,
-            static::TAG_SPORTS,
-            static::TAG_CREATIVE,
-            static::TAG_BUSINESS,
-            static::TAG_ADVENTURE,
-            static::TAG_ANALYSIS,
-        ];
+        $priorityOrder = static::getTagsWithOrder();
 
         $maxSum = max($sums);
 
@@ -234,5 +226,18 @@ class Survey extends Model {
         $tag = $this->calculateSumTags();
 
         return static::getResultDataMap()[$tag];
+    }
+
+    public static function getTagsWithOrder()
+    {
+        return [
+            static::TAG_TECH,
+            static::TAG_DIPLOMACY,
+            static::TAG_SPORTS,
+            static::TAG_CREATIVE,
+            static::TAG_BUSINESS,
+            static::TAG_ADVENTURE,
+            static::TAG_ANALYSIS,
+        ];
     }
 }

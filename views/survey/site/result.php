@@ -3,6 +3,11 @@
 /** @var $data */
 
 ?>
+<style>
+    .progress {
+        display: none;
+    }
+</style>
 
 <div class="spage">
     <div class="spage-header">
