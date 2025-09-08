@@ -11,5 +11,5 @@
 
     --survey-bg-color: var(--extra-light-blue-color-alt);
     --survey-answer-item-bg-color: var(--light-pink-color);
-    --survey-answer-item-bg-color-selected: var(--pink-color);
+    --survey-answer-item-bg-color-selected:#960078;
 }

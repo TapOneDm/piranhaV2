@@ -216,4 +216,9 @@ form .help-block {
     .survey-answers label {
         padding: 14px;
     }
+
+    .progress {
+        border-radius: 0;
+        position: fixed;
+    }
 }
