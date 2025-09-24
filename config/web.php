@@ -93,6 +93,7 @@ $config = [
                 '/' => 'site/index',
                 '/adults' => 'site/adults',
                 '/survey' => 'survey/site/index',
+                '/survey/step0' => 'survey/site/step0',
                 '/survey/step1' => 'survey/site/step1',
                 '/survey/step2' => 'survey/site/step2',
                 '/survey/step3' => 'survey/site/step3',

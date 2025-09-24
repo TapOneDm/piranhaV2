@@ -21,11 +21,6 @@ class SiteController extends BaseController
             exit;
         }
 
-        // echo '<pre>';
-        // print_r(\app\components\Helper::getSurveyQuestionResultMap());
-        // echo '<\pre>';
-        // ;exit;
-
         $isPost = Yii::$app->request->isPost;
         
         if (!$isPost) {
@@ -37,10 +32,23 @@ class SiteController extends BaseController
 
         if ($model->load(Yii::$app->request->post())) {
             Yii::$app->survey->updateSurvey($model);
-            return $this->render('step1');
+            return $this->render('step0');
         }
 
         return $this->render('index', ['model' => $model]);
+    }
+
+    public function actionStep0()
+    {
+        $model = Yii::$app->survey->getSurvey();
+        $model->setScenario('q0');
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            Yii::$app->survey->updateSurvey($model);
+            return $this->render('step1');
+        }
+
+		return $this->render('step0');
     }
 
     public function actionStep1() {

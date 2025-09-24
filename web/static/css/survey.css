@@ -61,6 +61,10 @@ form .help-block {
 .spage-content {
     width: 100%;
 }
+.spage-content img {
+    display: block;
+    width: 100%;
+}
 .spage-content p {
     text-align: center;
 }

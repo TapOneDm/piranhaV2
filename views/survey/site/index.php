@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
     <div class="spage-content">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minus nostrum atque cum tempore error possimus impedit magnam nam, sequi at? Beatae temporibus, error quasi quisquam explicabo magni odit fugiat sit harum laboriosam perspiciatis tempore maxime nemo minima in nobis?</p>
     </div>
-    <div class="spage-footer"><?= Html::a(Yii::t('app', 'Начать'), Url::to(['/survey/step1']), ['class' => 'btn'])?></div>
+    <div class="spage-footer"><?= Html::a(Yii::t('app', 'Начать'), Url::to(['/survey/step0']), ['class' => 'btn'])?></div>
 </div>
 
 <?php ActiveForm::end(); ?>

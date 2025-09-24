@@ -73,6 +73,25 @@ class Helper extends Component
     public static function getSurveyQuestionResultMap()
     {
         $items = [
+            'question0' => [
+                1 => [
+                    Survey::TAG_SPORTS => 0,
+                    Survey::TAG_ADVENTURE => 0,
+                ],
+                2 => [
+                    Survey::TAG_DIPLOMACY => 0,
+                ],
+                3 => [
+                    Survey::TAG_ANALYSIS => 0,
+                ],
+                4 => [
+                    Survey::TAG_CREATIVE => 0,
+                ],
+                5 => [
+                    Survey::TAG_TECH => 0,
+                    Survey::TAG_ANALYSIS => 0,
+                ],
+            ],
             'question1' => [
                 1 => [
                     Survey::TAG_SPORTS => 2,

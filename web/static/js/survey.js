@@ -11,7 +11,6 @@ let setProgress = (step) => {
 $(document).on('pjax:complete', function() {
     let step = $('.step-legend').data('step');
     setTimeout(() => setProgress(step), 50);
-    // setProgress(step)
 
     $('.spage-footer .actions').on('click', 'button, a', function (e) {
         let step = $('.step-legend').data('step');
