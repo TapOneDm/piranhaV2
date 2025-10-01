@@ -43,7 +43,12 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
     function generateTelegramShareLink(surveyUrl, imageUrl, title, text) {
         const fullText = encodeURIComponent(title + "\n\n" + text + "\n\n" + imageUrl);
         const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(surveyUrl)}&text=${fullText}`;
-        // https://t.me/share/url?url=https://piranha.ge/static/img/survey/boy_tech.jpg&text=bobo
+        return shareUrl;
+    }
+
+    function generateWhatsAppShareLink(surveyUrl, imageUrl, title, text) {
+        const fullText = encodeURIComponent(surveyUrl + "\n\n" + title + "\n\n" + text + "\n\n" + imageUrl);
+        const shareUrl = `https://wa.me/?text=${fullText}`;
         return shareUrl;
     }
 
@@ -58,9 +63,13 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
 
         let targetLinkBtn = $(e.target).data('messenger');
 
+        let shareUrl = '';
         if (targetLinkBtn === 'telegram') {
-            let shareUrl = generateTelegramShareLink(surveyUrl, fullImageUrl, title, text);
-            window.open(shareUrl, '_blank');
+            shareUrl = generateTelegramShareLink(surveyUrl, fullImageUrl, title, text);
+        } else if (targetLinkBtn === 'whatsapp') {
+            shareUrl = generateWhatsAppShareLink(surveyUrl, fullImageUrl, title, text);
         }
+
+        window.open(shareUrl, '_blank');
     })
 </script>
