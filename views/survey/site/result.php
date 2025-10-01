@@ -30,10 +30,10 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
         <div><?= $data['text'] ?></div>
 
         <div class="result-share">
-            <a href="https://www.instagram.com/piranha.ge/?igsh=MXN3bnRla2Z5YzNnMg%3D%3D#"><?= Yii::t('app', 'Записаться со скидкой') ?></a>
+            <a href="https://www.instagram.com/piranha.ge/?igsh=MXN3bnRla2Z5YzNnMg%3D%3D#" class="btn"><?= Yii::t('app', 'Записаться со скидкой') ?></a>
             <div class="result-share-other">
-                <button class="share" data-messenger="telegram"><?= Yii::t('app', 'Поделиться в Telegram') ?></button>
-                <button class="share" data-messenger="whatsapp"><?= Yii::t('app', 'Поделиться в WhatsApp') ?></button>
+                <button class="share btn" data-messenger="telegram"><?= Yii::t('app', 'Поделиться в Telegram') ?></button>
+                <button class="share btn" data-messenger="whatsapp"><?= Yii::t('app', 'Поделиться в WhatsApp') ?></button>
             </div>
         </div>
     </div>

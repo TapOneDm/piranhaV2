@@ -227,3 +227,25 @@ form .help-block {
         z-index: 1;
     }
 }
+
+.result-share {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;   
+}
+
+.result-share a.btn {
+    width: 100%;
+}
+
+.result-share-other {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+}
+
+.result-share-other button.btn {
+    width: 100%;
+    padding: 0 20px;
+}
