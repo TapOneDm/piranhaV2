@@ -141,7 +141,7 @@ class SiteController extends BaseController
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             Yii::$app->survey->updateSurvey($model);
-            return $this->render('result', ['data' => $model->getResultData()]);
+            return $this->render('result', ['data' => $model->getResultData(), 'model' => $model]);
         }
 
 		return $this->render('step8');
