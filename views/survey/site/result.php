@@ -17,6 +17,7 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
 
 <div
     class="spage"
+    data-share-survey="<?= Yii::$app->request->hostInfo . '/' . Yii::$app->language . '/survey' ?>"
     data-share-img="https://piranha.ge<?= $imageSrc ?>"
     data-share-title="<?= $data['title'] ?>"
     data-share-text="<?= $data['text'] ?>"
@@ -39,10 +40,9 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
 </div>
 
 <script>
-    function generateTelegramShareLink(imageUrl, title, text) {
-        const surveyLink = '';
+    function generateTelegramShareLink(surveyUrl, imageUrl, title, text) {
         const fullText = encodeURIComponent(title + "\n\n" + imageUrl + "\n\n" + text);
-        const shareUrl = `https://telegram.me/share/url?text=${fullText}`;
+        const shareUrl = `https://telegram.me/share/url?url=${encodeURIComponent(surveyUrl)}&text=${fullText}`;
         return shareUrl;
     }
 
@@ -50,6 +50,7 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
         e.preventDefault();
 
         const spage = $('.spage');
+        const surveyUrl = spage.data('share-survey');
         const fullImageUrl = spage.data('share-img');
         const title = spage.data('share-title');
         const text = spage.data('share-text');
@@ -57,7 +58,7 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
         let targetLinkBtn = $(e.target).data('messenger');
 
         if (targetLinkBtn === 'telegram') {
-            let shareUrl = generateTelegramShareLink(fullImageUrl, title, text);
+            let shareUrl = generateTelegramShareLink(surveyUrl, fullImageUrl, title, text);
             window.open(shareUrl, '_blank');
         }
     })
