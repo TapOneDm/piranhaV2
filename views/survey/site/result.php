@@ -1,11 +1,14 @@
 <?php
 
+use yii\helpers\Url;
+
 /** @var $data
- *   @var $model \app\models\Survey
- */
+*   @var $model \app\models\Survey
+*/
 
 $imageSrc =  $data['image'][intval($model->question0) - 1];
 ?>
+
 <style>
     .progress {
         display: none;
@@ -14,6 +17,7 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
 
 <div
     class="spage"
+    data-share-img="https://piranha.ge<?= $imageSrc ?>"
     data-share-title="<?= $data['title'] ?>"
     data-share-text="<?= $data['text'] ?>"
 >
@@ -36,19 +40,17 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
 
 <script>
     function generateTelegramShareLink(imageUrl, title, text) {
+        const surveyLink = '';
         const fullText = encodeURIComponent(title + "\n\n" + imageUrl + "\n\n" + text);
-        const shareUrl = `https://telegram.me/share/url?url=${encodeURIComponent(imageUrl)}&text=${fullText}`;
+        const shareUrl = `https://telegram.me/share/url?text=${fullText}`;
         return shareUrl;
     }
 
     $(document).on('click', 'button.share', function(e) {
         e.preventDefault();
 
-        const domain = 'piranha.ge'; // например, "example.com"
-        const imagePath = "/static/img/survey/boy_sport.jpg";
-        const fullImageUrl = `https://${domain}${imagePath}`;
-
         const spage = $('.spage');
+        const fullImageUrl = spage.data('share-img');
         const title = spage.data('share-title');
         const text = spage.data('share-text');
 
@@ -59,7 +61,4 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
             window.open(shareUrl, '_blank');
         }
     })
-
-    // const telegramLink = generateTelegramShareLink(fullImageUrl, title, text);
-    // console.log(telegramLink);
 </script>
