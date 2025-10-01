@@ -7,6 +7,12 @@ use yii\helpers\Url;
 */
 
 $imageSrc =  $data['image'][intval($model->question0) - 1];
+$lang = Yii::$app->language;
+$instagramLink = 'https://www.instagram.com/piranha.ge/?igsh=MXN3bnRla2Z5YzNnMg%3D%3D#';
+
+if ($lang === 'en' || $lang === 'ge') {
+    $instagramLink = 'https://www.instagram.com/piranhageo/?igsh=OXFzdXR1NnJsZzU3#';
+}
 ?>
 
 <style>
@@ -30,10 +36,10 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
         <div><?= $data['text'] ?></div>
 
         <div class="result-share">
-            <a href="https://www.instagram.com/piranha.ge/?igsh=MXN3bnRla2Z5YzNnMg%3D%3D#" class="btn"><?= Yii::t('app', 'Записаться со скидкой') ?></a>
+            <a href="<?= $instagramLink ?>" class="btn" target="_blank"><?= Yii::t('app', 'Записаться со скидкой') ?></a>
             <div class="result-share-other">
-                <button class="share btn" data-messenger="telegram"><?= Yii::t('app', 'Поделиться в Telegram') ?></button>
-                <button class="share btn" data-messenger="whatsapp"><?= Yii::t('app', 'Поделиться в WhatsApp') ?></button>
+                <button class="share btn" data-messenger="telegram"><?= Yii::t('app', 'Поделиться в ') ?><i class="icon-telegram-plane"></i></button>
+                <button class="share btn" data-messenger="whatsapp"><?= Yii::t('app', 'Поделиться в ') ?><i class="icon-whatsapp"></i></button>
             </div>
         </div>
     </div>

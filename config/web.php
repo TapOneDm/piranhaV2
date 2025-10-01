@@ -107,7 +107,8 @@ $config = [
         ],
         'telegram' => [
             'class' => 'aki\telegram\Telegram',
-            'botToken' => '6529055067:AAGT824FS1E3nxVHT9EEQw1HbBvovNaGv9E'
+            // 'botToken' => '6529055067:AAGT824FS1E3nxVHT9EEQw1HbBvovNaGv9E'
+            'botToken' => '8414678634:AAGsRMZLnNtURyJ1shF0uvrSMcDH3BLsbDI'
         ],
         'survey' => [
             'class' => 'app\components\Survey'

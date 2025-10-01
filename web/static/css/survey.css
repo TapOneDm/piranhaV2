@@ -248,4 +248,9 @@ form .help-block {
 .result-share-other button.btn {
     width: 100%;
     padding: 0 20px;
+    white-space: nowrap;
+}
+
+.result-share-other button.btn i {
+    margin-left: 6px;
 }
