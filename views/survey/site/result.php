@@ -47,7 +47,7 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
     }
 
     function generateWhatsAppShareLink(surveyUrl, imageUrl, title, text) {
-        const fullText = encodeURIComponent(surveyUrl + "\n\n" + title + "\n\n" + text + "\n\n" + imageUrl);
+        const fullText = encodeURIComponent(surveyUrl + "\n\n" + title + "\n\n" + text + "\n" + imageUrl);
         const shareUrl = `https://wa.me/?text=${fullText}`;
         return shareUrl;
     }
