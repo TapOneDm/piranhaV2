@@ -11,15 +11,15 @@ class SiteController extends BaseController
 
     public function actionIndex()
     {
-        if (
-            !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']) ||
-            $_SERVER['PHP_AUTH_USER'] !== 'admin' ||
-            $_SERVER['PHP_AUTH_PW'] !== 'admin'
-        ) {
-            header('WWW-Authenticate: Basic realm="Please enter your credentials"');
-            header('HTTP/1.0 401 Unauthorized');
-            exit;
-        }
+        // if (
+        //     !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']) ||
+        //     $_SERVER['PHP_AUTH_USER'] !== 'admin' ||
+        //     $_SERVER['PHP_AUTH_PW'] !== 'admin'
+        // ) {
+        //     header('WWW-Authenticate: Basic realm="Please enter your credentials"');
+        //     header('HTTP/1.0 401 Unauthorized');
+        //     exit;
+        // }
 
         $isPost = Yii::$app->request->isPost;
         
