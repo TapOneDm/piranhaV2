@@ -36,7 +36,7 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
 
 <script>
     function generateTelegramShareLink(imageUrl, title, text) {
-        const fullText = encodeURIComponent(title + "\n" + imageUrl + "\n" + text);
+        const fullText = encodeURIComponent(title + "\n\n" + imageUrl + "\n\n" + text);
         const shareUrl = `https://telegram.me/share/url?url=${encodeURIComponent(imageUrl)}&text=${fullText}`;
         return shareUrl;
     }
@@ -44,7 +44,7 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
     $(document).on('click', 'button.share', function(e) {
         e.preventDefault();
 
-        const domain = 'https://piranha.ge'; // например, "example.com"
+        const domain = 'piranha.ge'; // например, "example.com"
         const imagePath = "/static/img/survey/boy_sport.jpg";
         const fullImageUrl = `https://${domain}${imagePath}`;
 
