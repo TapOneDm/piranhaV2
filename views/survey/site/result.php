@@ -41,8 +41,8 @@ $imageSrc =  $data['image'][intval($model->question0) - 1];
 
 <script>
     function generateTelegramShareLink(surveyUrl, imageUrl, title, text) {
-        const fullText = encodeURIComponent(title + "\n\n" + "\n\n" + text);
-        const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(imageUrl)}&text=${fullText}`;
+        const fullText = encodeURIComponent(title + "\n\n" + imageUrl + "\n\n" + text);
+        const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(surveyUrl)}&text=${fullText}`;
         // https://t.me/share/url?url=https://piranha.ge/static/img/survey/boy_tech.jpg&text=bobo
         return shareUrl;
     }
