@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 $model = Yii::$app->survey->getSurvey();
 
 ?>
-<div class="step-legend" data-step="4">Вопрос 4 / 8</div>
+<div class="step-legend" data-step="4"><?= Yii::t('app', 'Вопрос') ?> 4 / 8</div>
 <?php $form = ActiveForm::begin([
     'options' => ['data-pjax' => true],
     'action' => '/survey/step4',

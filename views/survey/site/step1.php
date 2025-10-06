@@ -9,7 +9,7 @@ $model = Yii::$app->survey->getSurvey();
 
 ?>
 
-<div class="step-legend" data-step="1">Вопрос 1 / 8</div>
+<div class="step-legend" data-step="1"><?= Yii::t('app', 'Вопрос') ?> 1 / 8</div>
 <?php $form = ActiveForm::begin([
     'options' => ['data-pjax' => true],
     'action' => '/survey/step1',
